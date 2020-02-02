@@ -1,0 +1,11 @@
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+
+<> a ldp:BasicContainer;
+    dc:title "index for nested resource users/alice/subscriptions";
+    foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
+    foot:footprintInstancePath "users/alice/subscriptions";
+    foot:footprintInstanceRoot <../../../>;
+    ldp:contains <subscr1.ttl>.

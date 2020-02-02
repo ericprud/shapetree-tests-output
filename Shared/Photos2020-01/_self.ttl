@@ -1,0 +1,11 @@
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+
+<> a ldp:BasicContainer;
+    dc:title "index for nested resource .";
+    foot:footprintRoot <//localhost:12345/photo/PhotoFootprint#root>;
+    foot:footprintInstancePath ".";
+    foot:footprintInstanceRoot <>;
+    ldp:contains <m33.jpeg>.

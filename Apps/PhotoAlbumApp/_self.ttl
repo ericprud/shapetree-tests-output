@@ -1,0 +1,26 @@
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+_:b1 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>;
+    foot:footprintInstancePath "www/Shared/bad-nonexistent-shape".
+<//store.example/PhotoAlbumApp> foot:name "PhotoAlbumApp".
+<> foot:installedIn _:b1, _:b4, _:b7, _:b11, _:b14, _:b54, _:b57.
+_:b4 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>;
+    foot:footprintInstancePath "www/Shared/bad-unGETtable-shape".
+_:b7 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>;
+    foot:footprintInstancePath "www/Shared/bad-nonconformant-POST".
+_:b11 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/bad/FootprintNestedTwoStaticNames#root>;
+    foot:footprintInstancePath "www/Shared/bad-malformed-footprint-nested-two-names".
+_:b14 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/bad/FootprintNoShapeProperty#root>;
+    foot:footprintInstancePath "www/Shared/bad-missing-shape-property".
+_:b54 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
+    foot:footprintInstancePath "www/Shared/Albums2019".
+_:b57 foot:app <//store.example/PhotoAlbumApp>;
+    foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
+    foot:footprintInstancePath "www/some/deep/path/Albums2019".

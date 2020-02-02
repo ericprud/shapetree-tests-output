@@ -1,0 +1,29 @@
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+
+<> a ldp:BasicContainer;
+    dc:title "index for nested resource users/alice-1";
+    foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
+    foot:footprintInstancePath "users/alice-1";
+    foot:footprintInstanceRoot <../../>;
+    ldp:contains <followers>, <received_events>, <subscriptions>, <orgs>, <repos>.
+<#alice> <http://github.example/ns#url> <//github.example/user/alice>;
+    <http://github.example/ns#id> "1234"^^xsd:integer;
+    <http://github.example/ns#node_id> "alice1234";
+    <http://github.example/ns#login> "alice";
+    <http://github.example/ns#avatar_url> <//github.example/user/alice-avatar>;
+    <http://github.example/ns#gravatar_id> "g-allice1234";
+    <http://github.example/ns#html_url> "http://github.example/user/{user}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#followers_url> <//github.example/user/alice/followers/>;
+    <http://github.example/ns#following_url> "http://github.example/user/alice/follower/{user}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#gists_url> "http://github.example/user/alice/{gist}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#starred_url> "http://github.example/user/{user}/starred"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#subscriptions_url> <//github.example/user/alice/subscriptions/>;
+    <http://github.example/ns#organizations_url> <//github.example/user/alice/organizations/>;
+    <http://github.example/ns#repos_url> <//github.example/user/alice/repose/>;
+    <http://github.example/ns#events_url> "http://github.example/user/{eventNo}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#received_events_url> <//github.example/user/alice/events/>;
+    <http://github.example/ns#type> "migrant knowledge worker";
+    <http://github.example/ns#site_admin> "false"^^xsd:boolean.
