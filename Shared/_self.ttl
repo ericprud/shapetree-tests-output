@@ -5,10 +5,10 @@
 
 <> a ldp:BasicContainer;
     dc:title "pre-installed Shared";
-    ldp:contains <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-POST>, <bad-malformed-footprint-nested-two-names>, <bad-missing-shape-property>, <Calendar>, <Google>, <Git>, <Photos2020-01>, <Albums2019>.
+    ldp:contains <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-posts>, <bad-malformed-footprint-nested-two-names>, <bad-missing-shape-property>, <Calendar>, <Google>, <Git>, <Photos2020-01>, <Albums2019>.
 <bad-nonexistent-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>.
 <bad-unGETtable-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>.
-<bad-nonconformant-POST/> foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>.
+<bad-nonconformant-posts/> foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>.
 <bad-malformed-footprint-nested-two-names/> foot:footprintRoot <//localhost:12345/bad/FootprintNestedTwoStaticNames#root>.
 <bad-missing-shape-property/> foot:footprintRoot <//localhost:12345/bad/FootprintNoShapeProperty#root>.
 <Calendar/> foot:footprintRoot <//localhost:12345/cal/CalendarFootprint#calendar>.

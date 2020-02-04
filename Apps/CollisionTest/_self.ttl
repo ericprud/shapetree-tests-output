@@ -1,8 +1,8 @@
 @prefix foot: <http://www.w3.org/ns/footprints#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-_:b50 foot:app <//store.example/gh>;
+_:b51 foot:app <//store.example/gh>;
     foot:footprintRoot <//localhost:12345/cal/GoogleFootprint#top>;
-    foot:footprintInstancePath "www/collisionDir/collision-2".
+    foot:footprintInstancePath "collisionDir/collision-2".
 <//store.example/gh> foot:name "CollisionTest".
-<> foot:installedIn _:b50.
+<> foot:installedIn _:b51.

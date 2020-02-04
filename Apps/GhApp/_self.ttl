@@ -1,11 +1,11 @@
 @prefix foot: <http://www.w3.org/ns/footprints#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-_:b36 foot:app <//store.example/gh>;
+_:b37 foot:app <//store.example/gh>;
     foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
-    foot:footprintInstancePath "www/Shared/Git".
+    foot:footprintInstancePath "Shared/Git".
 <//store.example/gh> foot:name "GhApp".
-<> foot:installedIn _:b36, _:b43.
-_:b43 foot:app <//store.example/gh>;
+<> foot:installedIn _:b37, _:b44.
+_:b44 foot:app <//store.example/gh>;
     foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
-    foot:footprintInstancePath "www/some/deep/path/Git".
+    foot:footprintInstancePath "some/deep/path/Git".
