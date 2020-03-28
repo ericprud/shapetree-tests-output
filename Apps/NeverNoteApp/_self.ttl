@@ -1,0 +1,8 @@
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+_:b53 foot:app <//store.example/NeverNoteApp>;
+    foot:footprintRoot <//localhost:12345/nevernote/NeverNoteFootprint#root>;
+    foot:footprintInstancePath "Shared/NeverNotes".
+<//store.example/NeverNoteApp> foot:name "NeverNoteApp".
+<> foot:installedIn _:b53.

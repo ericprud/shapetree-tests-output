@@ -15,6 +15,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── MultiCalApp
 │   │   └── _self.ttl
+│   ├── NeverNoteApp
+│   │   └── _self.ttl
 │   ├── PhotoAlbumApp
 │   │   └── _self.ttl
 │   ├── PhotoApp
@@ -32,6 +34,18 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345calGoogleFootprinttop
 │   ├── httplocalhost12345ghghFootprintroot
 │   ├── httplocalhost12345photoPhotoFootprintroot
+│   ├── httplocalhost46175albumPhotoAlbumFootprintroot
+│   ├── httplocalhost46175badFootprintMissingSchemaroot
+│   ├── httplocalhost46175badFootprintMissingShaperoot
+│   ├── httplocalhost46175badFootprintNestedTwoStaticNamesroot
+│   ├── httplocalhost46175badFootprintNoShapePropertyroot
+│   ├── httplocalhost46175badFootprintTwoStaticNamesroot
+│   ├── httplocalhost46175badPhotoAlbumFootprintroot
+│   ├── httplocalhost46175calCalendarFootprintcalendar
+│   ├── httplocalhost46175calGoogleFootprinttop
+│   ├── httplocalhost46175ghghFootprintroot
+│   ├── httplocalhost46175nevernoteNeverNoteFootprintroot
+│   ├── httplocalhost46175photoPhotoFootprintroot
 │   └── _self.ttl
 ├── collisionDir
 │   ├── collision-2
@@ -49,7 +63,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── bad-missing-shape-property
 │   │   └── _self.ttl
-│   ├── bad-nonconformant-POST
+│   ├── bad-nonconformant-posts
 │   │   └── _self.ttl
 │   ├── bad-nonexistent-shape
 │   │   └── _self.ttl
@@ -116,6 +130,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 │   │   │   ├── 19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+│   │   │   └── _self.ttl
+│   │   └── _self.ttl
+│   ├── NeverNotes
+│   │   ├── note1
+│   │   │   ├── M33_IR.jpg
 │   │   │   └── _self.ttl
 │   │   └── _self.ttl
 │   ├── Photos2020-01
@@ -186,7 +205,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-78 directories, 101 files
+81 directories, 117 files
 ```
 
 
@@ -194,11 +213,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 ```
 
-> footprint-tests@0.0.0 test /home/eric/checkouts/janeirodigital/footprint-tests
+> footprint-tests@0.0.0 test /home/eric/checkouts/janeirodigital/footprints
 > npm run prepare-tests && nyc mocha --slow 200
 
 
-> footprint-tests@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprint-tests
+> footprint-tests@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprints
 > mkdir -p www && ls -d www/* | grep -v README.md | xargs rm -rf
 
 
@@ -231,16 +250,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       create /Shared/bad-unGETtable-shape/ref-1
         ✓ should POST /Shared/bad-unGETtable-shape/
         ✓ should !GET /Shared/bad-unGETtable-shape/ref-1.ttl
-    create /Shared/bad-nonconformant-POST/ hierarchy -- POSTed data does not validate
-      create /Shared/bad-nonconformant-POST/
-        ✓ should STOMP /Shared/bad-nonconformant-POST
-        ✓ should GET /Shared/bad-nonconformant-POST/
-      create /Shared/bad-nonconformant-POST/malformed-ref-1
-        ✓ should POST /Shared/bad-nonconformant-POST/
-        ✓ should !GET /Shared/bad-nonconformant-POST/malformed-ref-1.ttl
-      create /Shared/bad-nonconformant-POST/ref-invalid-2
-        ✓ should POST /Shared/bad-nonconformant-POST/
-        ✓ should !GET /Shared/bad-nonconformant-POST/ref-invalid-2.ttl
+    create /Shared/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /Shared/bad-nonconformant-posts/
+        ✓ should STOMP /Shared/bad-nonconformant-posts
+        ✓ should GET /Shared/bad-nonconformant-posts/
+      create /Shared/bad-nonconformant-posts/malformed-ref-1
+        ✓ should POST /Shared/bad-nonconformant-posts/
+        ✓ should !GET /Shared/bad-nonconformant-posts/malformed-ref-1.ttl
+      create /Shared/bad-nonconformant-posts/ref-invalid-2
+        ✓ should POST /Shared/bad-nonconformant-posts/
+        ✓ should !GET /Shared/bad-nonconformant-posts/ref-invalid-2.ttl
+      create /Shared/bad-nonconformant-posts/ref-valid-3
+        ✓ should POST /Shared/bad-nonconformant-posts/
+        ✓ should !GET /Shared/bad-nonconformant-posts/ref-valid-3.ttl
     create /Shared/bad-malformed-footprint-two-names/ hierarchy -- malformed footprint: two static names
       create /Shared/bad-malformed-footprint-two-names/
         ✓ should STOMP /Shared/bad-malformed-footprint-two-names
@@ -389,11 +411,29 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should throw on malformed POST JSON-LD body
     Footprint misc
       ✓ should construct all errors
+      ✓ should render RDFJS nodes
     STOMP
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
       ✓ should create a novel directory
+
+  test/nevernote.test.js installid in Shared
+    initial state
+      ✓ should GET /Shared/
+      ✓ should !GET /Shared/NeverNotes/
+    create /Shared/NeverNotes/ hierarchy
+      create /Shared/NeverNotes/
+        ✓ should STOMP /Shared/NeverNotes
+        ✓ should GET /Shared/NeverNotes/
+      create /Shared/NeverNotes/note1/
+        ✓ should POST /Shared/NeverNotes/
+        ✓ should GET /Shared/NeverNotes/note1/
+        ✓ should !GET /Shared/NeverNotes/note2/
+        ✓ should !GET /Shared/NeverNotes/note1/M33_IR.jpg
+      create /Shared/NeverNotes/note1/M33_IR.jpg
+        ✓ should POST /Shared/NeverNotes/note1/
+        ✓ should GET /Shared/NeverNotes/note1/M33_IR.jpg
 
   test/photo.test.js installid in Shared
     initial state
@@ -435,17 +475,17 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  145 passing (1s)
+  158 passing (1s)
 
-----------------------|---------|----------|---------|---------|-------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------------|---------|----------|---------|---------|-------------------
-All files             |     100 |      100 |     100 |     100 |                   
- footprint-tests      |     100 |      100 |     100 |     100 |                   
-  appStoreServer.js   |     100 |      100 |     100 |     100 |                   
-  ldpServer.js        |     100 |      100 |     100 |     100 |                   
- footprint-tests/util |     100 |      100 |     100 |     100 |                   
-  constants.js        |     100 |      100 |     100 |     100 |                   
-  footprint.js        |     100 |      100 |     100 |     100 |                   
-----------------------|---------|----------|---------|---------|-------------------
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |     100 |      100 |     100 |     100 |                   
+ footprints         |     100 |      100 |     100 |     100 |                   
+  appStoreServer.js |     100 |      100 |     100 |     100 |                   
+  ldpServer.js      |     100 |      100 |     100 |     100 |                   
+ footprints/util    |     100 |      100 |     100 |     100 |                   
+  constants.js      |     100 |      100 |     100 |     100 |                   
+  footprint.js      |     100 |      100 |     100 |     100 |                   
+--------------------|---------|----------|---------|---------|-------------------
 ```

@@ -5,7 +5,7 @@
 
 <> a ldp:BasicContainer;
     dc:title "pre-installed Shared";
-    ldp:contains <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-posts>, <bad-malformed-footprint-nested-two-names>, <bad-missing-shape-property>, <Calendar>, <Google>, <Git>, <Photos2020-01>, <Albums2019>.
+    ldp:contains <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-posts>, <bad-malformed-footprint-nested-two-names>, <bad-missing-shape-property>, <Calendar>, <Google>, <Git>, <NeverNotes>, <Photos2020-01>, <Albums2019>.
 <bad-nonexistent-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>.
 <bad-unGETtable-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>.
 <bad-nonconformant-posts/> foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>.
@@ -14,5 +14,6 @@
 <Calendar/> foot:footprintRoot <//localhost:12345/cal/CalendarFootprint#calendar>.
 <Google/> foot:footprintRoot <//localhost:12345/cal/GoogleFootprint#top>.
 <Git/> foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>.
+<NeverNotes/> foot:footprintRoot <//localhost:12345/nevernote/NeverNoteFootprint#root>.
 <Photos2020-01/> foot:footprintRoot <//localhost:12345/photo/PhotoFootprint#root>.
 <Albums2019/> foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>.

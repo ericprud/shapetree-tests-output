@@ -1,0 +1,19 @@
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+
+<> a ldp:BasicContainer;
+    dc:title "index for nested resource ./note1";
+    foot:footprintRoot <//localhost:12345/nevernote/NeverNoteFootprint#root>;
+    foot:footprintInstancePath "./note1";
+    foot:footprintInstanceRoot <../>;
+    ldp:contains <M33_IR.jpg>.
+<#note1> <http://nevernote.example/ns#title> "Note1";
+    <http://nevernote.example/ns#content> "Don't believe the hype!";
+    <http://nevernote.example/ns#updated> "2020-01-01T12:34:00Z"^^xsd:dateTime;
+    <http://nevernote.example/ns#tagNames> _:b56.
+_:b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag1";
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b57.
+_:b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag2";
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <//www.w3.org/1999/02/22-rdf-syntax-ns#nil>.

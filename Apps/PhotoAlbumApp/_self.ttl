@@ -5,7 +5,7 @@ _:b1 foot:app <//store.example/PhotoAlbumApp>;
     foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>;
     foot:footprintInstancePath "Shared/bad-nonexistent-shape".
 <//store.example/PhotoAlbumApp> foot:name "PhotoAlbumApp".
-<> foot:installedIn _:b1, _:b4, _:b7, _:b12, _:b15, _:b55, _:b58.
+<> foot:installedIn _:b1, _:b4, _:b7, _:b12, _:b15, _:b61, _:b64.
 _:b4 foot:app <//store.example/PhotoAlbumApp>;
     foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>;
     foot:footprintInstancePath "Shared/bad-unGETtable-shape".
@@ -18,9 +18,9 @@ _:b12 foot:app <//store.example/PhotoAlbumApp>;
 _:b15 foot:app <//store.example/PhotoAlbumApp>;
     foot:footprintRoot <//localhost:12345/bad/FootprintNoShapeProperty#root>;
     foot:footprintInstancePath "Shared/bad-missing-shape-property".
-_:b55 foot:app <//store.example/PhotoAlbumApp>;
+_:b61 foot:app <//store.example/PhotoAlbumApp>;
     foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
     foot:footprintInstancePath "Shared/Albums2019".
-_:b58 foot:app <//store.example/PhotoAlbumApp>;
+_:b64 foot:app <//store.example/PhotoAlbumApp>;
     foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
     foot:footprintInstancePath "some/deep/path/Albums2019".

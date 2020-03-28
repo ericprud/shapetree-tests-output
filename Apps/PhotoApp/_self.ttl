@@ -1,8 +1,8 @@
 @prefix foot: <http://www.w3.org/ns/footprints#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-_:b53 foot:app <//store.example/PhotoApp>;
+_:b59 foot:app <//store.example/PhotoApp>;
     foot:footprintRoot <//localhost:12345/photo/PhotoFootprint#root>;
     foot:footprintInstancePath "Shared/Photos2020-01".
 <//store.example/PhotoApp> foot:name "PhotoApp".
-<> foot:installedIn _:b53.
+<> foot:installedIn _:b59.
