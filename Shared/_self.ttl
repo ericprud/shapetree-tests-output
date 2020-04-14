@@ -1,19 +1,20 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
 @prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
 <> a ldp:BasicContainer;
-    dc:title "pre-installed Shared";
-    ldp:contains <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-posts>, <bad-malformed-footprint-nested-two-names>, <bad-missing-shape-property>, <Calendar>, <Google>, <Git>, <NeverNotes>, <Photos2020-01>, <Albums2019>.
-<bad-nonexistent-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>.
-<bad-unGETtable-shape/> foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>.
-<bad-nonconformant-posts/> foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>.
-<bad-malformed-footprint-nested-two-names/> foot:footprintRoot <//localhost:12345/bad/FootprintNestedTwoStaticNames#root>.
-<bad-missing-shape-property/> foot:footprintRoot <//localhost:12345/bad/FootprintNoShapeProperty#root>.
-<Calendar/> foot:footprintRoot <//localhost:12345/cal/CalendarFootprint#calendar>.
-<Google/> foot:footprintRoot <//localhost:12345/cal/GoogleFootprint#top>.
-<Git/> foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>.
-<NeverNotes/> foot:footprintRoot <//localhost:12345/nevernote/NeverNoteFootprint#root>.
-<Photos2020-01/> foot:footprintRoot <//localhost:12345/photo/PhotoFootprint#root>.
-<Albums2019/> foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>.
+    dcterms:title "pre-installed Shared";
+    ldp:contains <Calendar>, <Google>, <Git>, <bad-nonexistent-shape>, <bad-unGETtable-shape>, <bad-nonconformant-posts>, <bad-malformed-blueprint-nested-two-names>, <bad-missing-shape-property>, <Photos2020-01>, <Albums2019>, <NeverNotes>.
+<Calendar/> foot:blueprintRoot <//localhost:12345/cal/CalendarBlueprint#calendar>.
+<Google/> foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>.
+<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.
+<bad-nonexistent-shape/> foot:blueprintRoot <//localhost:12345/bad/BlueprintMissingSchema#root>.
+<bad-unGETtable-shape/> foot:blueprintRoot <//localhost:12345/bad/BlueprintMissingShape#root>.
+<bad-nonconformant-posts/> foot:blueprintRoot <//localhost:12345/bad/PhotoAlbumBlueprint#root>.
+<bad-malformed-blueprint-nested-two-names/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNestedTwoStaticNames#root>.
+<bad-missing-shape-property/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNoShapeProperty#root>.
+<Photos2020-01/> foot:blueprintRoot <//localhost:12345/photo/PhotoBlueprint#root>.
+<Albums2019/> foot:blueprintRoot <//localhost:12345/album/PhotoAlbumBlueprint#root>.
+<NeverNotes/> foot:blueprintRoot <//localhost:12345/nevernote/NeverNoteBlueprint#root>.

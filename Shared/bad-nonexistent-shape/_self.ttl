@@ -1,10 +1,11 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
 @prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
 <> a ldp:BasicContainer;
-    dc:title "index for nested resource .";
-    foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>;
-    foot:footprintInstancePath ".";
-    foot:footprintInstanceRoot <>.
+    dcterms:title "index for nested resource .";
+    foot:blueprintRoot <//localhost:12345/bad/BlueprintMissingSchema#root>;
+    foot:blueprintInstancePath ".";
+    foot:blueprintInstanceRoot <>.

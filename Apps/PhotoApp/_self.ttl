@@ -1,8 +1,13 @@
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
-_:b59 foot:app <//store.example/PhotoApp>;
-    foot:footprintRoot <//localhost:12345/photo/PhotoFootprint#root>;
-    foot:footprintInstancePath "Shared/Photos2020-01".
+<> a ldp:BasicContainer;
+    dcterms:title "PhotoApp Directory";
+    foot:installedIn _:b46.
+_:b46 foot:app <//store.example/PhotoApp>;
+    foot:blueprintRoot </photo/PhotoBlueprint#root>;
+    foot:blueprintInstancePath "Shared/Photos2020-01/".
 <//store.example/PhotoApp> foot:name "PhotoApp".
-<> foot:installedIn _:b59.

@@ -1,8 +1,13 @@
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
-_:b53 foot:app <//store.example/NeverNoteApp>;
-    foot:footprintRoot <//localhost:12345/nevernote/NeverNoteFootprint#root>;
-    foot:footprintInstancePath "Shared/NeverNotes".
+<> a ldp:BasicContainer;
+    dcterms:title "NeverNoteApp Directory";
+    foot:installedIn _:b51.
+_:b51 foot:app <//store.example/NeverNoteApp>;
+    foot:blueprintRoot </nevernote/NeverNoteBlueprint#root>;
+    foot:blueprintInstancePath "Shared/NeverNotes/".
 <//store.example/NeverNoteApp> foot:name "NeverNoteApp".
-<> foot:installedIn _:b53.

@@ -1,26 +1,31 @@
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
-_:b1 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/bad/FootprintMissingSchema#root>;
-    foot:footprintInstancePath "Shared/bad-nonexistent-shape".
+<> a ldp:BasicContainer;
+    dcterms:title "PhotoAlbumApp Directory";
+    foot:installedIn _:b30, _:b33, _:b36, _:b41, _:b44, _:b48, _:b65.
+_:b30 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </bad/BlueprintMissingSchema#root>;
+    foot:blueprintInstancePath "Shared/bad-nonexistent-shape/".
+_:b33 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </bad/BlueprintMissingShape#root>;
+    foot:blueprintInstancePath "Shared/bad-unGETtable-shape/".
+_:b36 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </bad/PhotoAlbumBlueprint#root>;
+    foot:blueprintInstancePath "Shared/bad-nonconformant-posts/".
+_:b41 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </bad/BlueprintNestedTwoStaticNames#root>;
+    foot:blueprintInstancePath "Shared/bad-malformed-blueprint-nested-two-names/".
+_:b44 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </bad/BlueprintNoShapeProperty#root>;
+    foot:blueprintInstancePath "Shared/bad-missing-shape-property/".
+_:b48 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </album/PhotoAlbumBlueprint#root>;
+    foot:blueprintInstancePath "Shared/Albums2019/".
 <//store.example/PhotoAlbumApp> foot:name "PhotoAlbumApp".
-<> foot:installedIn _:b1, _:b4, _:b7, _:b12, _:b15, _:b61, _:b64.
-_:b4 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/bad/FootprintMissingShape#root>;
-    foot:footprintInstancePath "Shared/bad-unGETtable-shape".
-_:b7 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/bad/PhotoAlbumFootprint#root>;
-    foot:footprintInstancePath "Shared/bad-nonconformant-posts".
-_:b12 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/bad/FootprintNestedTwoStaticNames#root>;
-    foot:footprintInstancePath "Shared/bad-malformed-footprint-nested-two-names".
-_:b15 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/bad/FootprintNoShapeProperty#root>;
-    foot:footprintInstancePath "Shared/bad-missing-shape-property".
-_:b61 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
-    foot:footprintInstancePath "Shared/Albums2019".
-_:b64 foot:app <//store.example/PhotoAlbumApp>;
-    foot:footprintRoot <//localhost:12345/album/PhotoAlbumFootprint#root>;
-    foot:footprintInstancePath "some/deep/path/Albums2019".
+_:b65 foot:app <//store.example/PhotoAlbumApp>;
+    foot:blueprintRoot </album/PhotoAlbumBlueprint#root>;
+    foot:blueprintInstancePath "some/deep/path/Albums2019/".

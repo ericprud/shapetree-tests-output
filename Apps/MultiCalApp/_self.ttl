@@ -1,11 +1,16 @@
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
-_:b17 foot:app <//store.example/MultiCalApp>;
-    foot:footprintRoot <//localhost:12345/cal/CalendarFootprint#calendar>;
-    foot:footprintInstancePath "Shared/Calendar".
+<> a ldp:BasicContainer;
+    dcterms:title "MultiCalApp Directory";
+    foot:installedIn _:b3, _:b5.
+_:b3 foot:app <//store.example/MultiCalApp>;
+    foot:blueprintRoot </cal/CalendarBlueprint#calendar>;
+    foot:blueprintInstancePath "Shared/Calendar/".
 <//store.example/MultiCalApp> foot:name "MultiCalApp".
-<> foot:installedIn _:b17, _:b19.
-_:b19 foot:app <//store.example/MultiCalApp>;
-    foot:footprintRoot <//localhost:12345/cal/GoogleFootprint#top>;
-    foot:footprintInstancePath "Shared/Google".
+_:b5 foot:app <//store.example/MultiCalApp>;
+    foot:blueprintRoot </cal/GoogleBlueprint#top>;
+    foot:blueprintInstancePath "Shared/Google/".

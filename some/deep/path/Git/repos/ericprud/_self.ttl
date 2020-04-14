@@ -1,13 +1,14 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
 @prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
 <> a ldp:BasicContainer;
-    dc:title "index for nested resource repos/ericprud";
-    foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
-    foot:footprintInstancePath "repos/ericprud";
-    foot:footprintInstanceRoot <../../>;
+    dcterms:title "index for nested resource repos/ericprud";
+    foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
+    foot:blueprintInstancePath "repos/ericprud";
+    foot:blueprintInstanceRoot <../../>;
     ldp:contains <jsg>, <jsg/>.
 <#ericprud> <http://github.example/ns#url> <//github.example/user/ericsRepos>;
     <http://github.example/ns#id> "573478"^^xsd:integer;

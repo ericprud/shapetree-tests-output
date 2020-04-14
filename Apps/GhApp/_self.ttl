@@ -1,11 +1,16 @@
-@prefix foot: <http://www.w3.org/ns/footprints#>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
 
-_:b37 foot:app <//store.example/gh>;
-    foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
-    foot:footprintInstancePath "Shared/Git".
+<> a ldp:BasicContainer;
+    dcterms:title "GhApp Directory";
+    foot:installedIn _:b23, _:b58.
+_:b23 foot:app <//store.example/gh>;
+    foot:blueprintRoot </gh/ghBlueprint#root>;
+    foot:blueprintInstancePath "Shared/Git/".
 <//store.example/gh> foot:name "GhApp".
-<> foot:installedIn _:b37, _:b44.
-_:b44 foot:app <//store.example/gh>;
-    foot:footprintRoot <//localhost:12345/gh/ghFootprint#root>;
-    foot:footprintInstancePath "some/deep/path/Git".
+_:b58 foot:app <//store.example/gh>;
+    foot:blueprintRoot </gh/ghBlueprint#root>;
+    foot:blueprintInstancePath "some/deep/path/Git/".

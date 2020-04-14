@@ -1,8 +1,0 @@
-application/ld+json
-
-{ "@context": "../ns/footContext.jsonld",
-      "@id":    "#root", "type":"ldp:Container"   ,                                                           "contents":[
-  {   "@id":    "#note", "type":"ldp:Container"   , "uriTemplate":"{noteName}" , "shape":"NeverNote#Note",    "contents":[
-    { "@id":"#resource", "type":"ldp:NonRDFSource", "uriTemplate":"{entryName}", "shape":"NeverNote#Resource" }
-  ] }
-] }
