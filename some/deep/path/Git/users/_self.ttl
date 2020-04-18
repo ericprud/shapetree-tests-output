@@ -9,4 +9,4 @@
     foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
     foot:blueprintInstancePath "users";
     foot:blueprintInstanceRoot <../>;
-    ldp:contains <alice>, <alice/>, <alice-1>, <alice-1/>, <Container>, <Container/>.
+    ldp:contains <alice/>, <alice-1/>, <Container/>.

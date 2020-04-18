@@ -1,10 +1,8 @@
-@prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
-@prefix dc: <http://purl.org/dc/terms/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "pre-installed collisionDir";
-    ldp:contains <collision-2>.
+    dcterms:title "/collisionDir";
+    ldp:contains <collision-2/>.
 <collision-2/> foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>.

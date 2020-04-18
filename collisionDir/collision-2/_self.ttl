@@ -9,4 +9,4 @@
     foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>;
     foot:blueprintInstancePath ".";
     foot:blueprintInstanceRoot <>;
-    ldp:contains <Events>.
+    ldp:contains <Events/>.

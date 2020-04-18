@@ -9,7 +9,7 @@
     foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
     foot:blueprintInstancePath "repos/ericprud";
     foot:blueprintInstanceRoot <../../>;
-    ldp:contains <jsg>, <jsg/>.
+    ldp:contains <jsg/>.
 <#ericprud> <http://github.example/ns#url> <//github.example/user/ericsRepos>;
     <http://github.example/ns#id> "573478"^^xsd:integer;
     <http://github.example/ns#node_id> "MDQ6VXNlcjU3MzQ3OA==";

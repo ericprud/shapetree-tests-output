@@ -9,7 +9,7 @@
     foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
     foot:blueprintInstancePath "repos/ericprud/jsg";
     foot:blueprintInstanceRoot <../../../>;
-    ldp:contains <issues>, <labels>, <milestones>.
+    ldp:contains <issues/>, <labels/>, <milestones/>.
 <#jsg> <http://github.example/ns#id> "46061512"^^xsd:integer;
     <http://github.example/ns#node_id> "MDEwOlJlcG9zaXRvcnk0NjA2MTUxMg==";
     <http://github.example/ns#name> "jsg";
@@ -76,12 +76,12 @@
     <http://github.example/ns#archived> "false"^^xsd:boolean;
     <http://github.example/ns#disabled> "false"^^xsd:boolean;
     <http://github.example/ns#open_issues_count> "1"^^xsd:integer;
-    <http://github.example/ns#license> _:b63;
+    <http://github.example/ns#license> _:b39;
     <http://github.example/ns#forks> "1"^^xsd:integer;
     <http://github.example/ns#open_issues> "1"^^xsd:integer;
     <http://github.example/ns#watchers> "1"^^xsd:integer;
     <http://github.example/ns#default_branch> "master".
-_:b63 <http://github.example/ns#node_id> "MDc6TGljZW5zZTEz";
+_:b39 <http://github.example/ns#node_id> "MDc6TGljZW5zZTEz";
     <http://github.example/ns#name> "MIT License";
     <http://github.example/ns#url> <https://api.github.com/licenses/mit>;
     <http://github.example/ns#key> "mit";

@@ -1,9 +1,6 @@
-@prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
-@prefix dc: <http://purl.org/dc/terms/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "Apps Container";
-    ldp:contains <CollisionTest>, <MultiCalApp>, <GhApp>, <GhApp2>, <PhotoAlbumApp>, <PhotoApp>, <NeverNoteApp>, <PhotoAlbumApp>.
+    ldp:contains <CollisionTest>, <NeverNoteApp>, <PhotoApp>, <PhotoAlbumApp>, <GhApp>, <GhApp2>, <MultiCalApp>, <MultiCalApp>.

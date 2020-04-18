@@ -1,11 +1,9 @@
-@prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
-@prefix dc: <http://purl.org/dc/terms/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "pre-installed some/deep/path";
-    ldp:contains <Git>, <Albums2019>.
-<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.
+    dcterms:title "/some/deep/path";
+    ldp:contains <Albums2019/>, <Git/>.
 <Albums2019/> foot:blueprintRoot <//localhost:12345/album/PhotoAlbumBlueprint#root>.
+<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.

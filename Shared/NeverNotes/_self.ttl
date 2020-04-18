@@ -9,4 +9,4 @@
     foot:blueprintRoot <//localhost:12345/nevernote/NeverNoteBlueprint#root>;
     foot:blueprintInstancePath ".";
     foot:blueprintInstanceRoot <>;
-    ldp:contains <note1>, <note1/>.
+    ldp:contains <note1/>.
