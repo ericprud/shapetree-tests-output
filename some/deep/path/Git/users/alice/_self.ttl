@@ -9,7 +9,7 @@
     foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
     foot:blueprintInstancePath "users/alice";
     foot:blueprintInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <orgs/>, <subscriptions/>, <repos/>.
+    ldp:contains <followers/>, <subscriptions/>, <received_events/>, <orgs/>, <repos/>.
 <#alice> gh:url <//github.example/user/alice>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "alice1234";

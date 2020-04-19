@@ -1,6 +1,5 @@
-
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 
 <> a ldp:BasicContainer;
-   dcterms:title "pre-installed root".
+    dcterms:title "pre-installed root".
