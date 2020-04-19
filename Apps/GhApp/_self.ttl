@@ -5,11 +5,11 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "GhApp Directory";
-    foot:installedIn _:b34, _:b41.
+    foot:installedIn _:b34, _:b61.
 _:b34 foot:app <//store.example/gh>;
     foot:blueprintRoot </gh/ghBlueprint#root>;
     foot:blueprintInstancePath "some/deep/path/Git/".
 <//store.example/gh> foot:name "GhApp".
-_:b41 foot:app <//store.example/gh>;
+_:b61 foot:app <//store.example/gh>;
     foot:blueprintRoot </gh/ghBlueprint#root>;
     foot:blueprintInstancePath "Shared/Git/".

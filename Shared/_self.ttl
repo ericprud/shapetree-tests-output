@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "/Shared";
-    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-blueprint-nested-two-names/>, <bad-missing-shape-property/>, <Git/>, <Calendar/>, <Google/>.
+    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-blueprint-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>.
 <NeverNotes/> foot:blueprintRoot <//localhost:12345/nevernote/NeverNoteBlueprint#root>.
 <Photos2020-01/> foot:blueprintRoot <//localhost:12345/photo/PhotoBlueprint#root>.
 <Albums2019/> foot:blueprintRoot <//localhost:12345/album/PhotoAlbumBlueprint#root>.
@@ -13,6 +13,6 @@
 <bad-nonconformant-posts/> foot:blueprintRoot <//localhost:12345/bad/PhotoAlbumBlueprint#root>.
 <bad-malformed-blueprint-nested-two-names/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNestedTwoStaticNames#root>.
 <bad-missing-shape-property/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNoShapeProperty#root>.
-<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.
 <Calendar/> foot:blueprintRoot <//localhost:12345/cal/CalendarBlueprint#calendar>.
 <Google/> foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>.
+<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.

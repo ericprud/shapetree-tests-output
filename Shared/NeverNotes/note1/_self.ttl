@@ -1,8 +1,9 @@
-@prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
-@prefix dc: <http://purl.org/dc/terms/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ldp: <http://www.w3.org/ns/ldp#>.
+@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix : <http://nevernote.example/ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource ./note1";
@@ -10,10 +11,10 @@
     foot:blueprintInstancePath "./note1";
     foot:blueprintInstanceRoot <../>;
     ldp:contains <img-M33_IR.jpg>, <inc-M33_IR.ttl>.
-<#note1> <http://nevernote.example/ns#title> "Note1";
-    <http://nevernote.example/ns#content> "Don't believe the hype!";
-    <http://nevernote.example/ns#updated> "2020-01-01T12:34:00Z"^^xsd:dateTime;
-    <http://nevernote.example/ns#tagNames> _:b6.
+<#note1> :title "Note1";
+    :content "Don't believe the hype!";
+    :updated "2020-01-01T12:34:00Z"^^xsd:dateTime;
+    :tagNames _:b6.
 _:b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag1";
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b7.
 _:b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag2";

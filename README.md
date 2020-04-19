@@ -239,7 +239,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
-      ✓ should create a novel directory (183ms)
+      ✓ should create a novel directory (192ms)
 
   initial state
     ✓ should GET /Shared/
@@ -247,10 +247,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/NeverNotes/ hierarchy
     create /Shared/NeverNotes/
-      ✓ should STOMP /Shared/NeverNotes (125ms)
+      ✓ should STOMP /Shared/NeverNotes (120ms)
       ✓ should GET /Shared/NeverNotes/
     create /Shared/NeverNotes/note1/
-      ✓ should POST /Shared/NeverNotes/ (121ms)
+      ✓ should POST /Shared/NeverNotes/ (118ms)
       ✓ should GET /Shared/NeverNotes/note1/
       ✓ should !GET /Shared/NeverNotes/note2/
       ✓ should !GET /Shared/NeverNotes/note1/img-M33_IR.jpg
@@ -281,7 +281,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/Albums2019/ hierarchy
     create /Shared/Albums2019/
-      ✓ should STOMP /Shared/Albums2019 (113ms)
+      ✓ should STOMP /Shared/Albums2019 (111ms)
       ✓ should GET /Shared/Albums2019/
     create /Shared/Albums2019/ref-1
       ✓ should POST /Shared/Albums2019/
@@ -305,7 +305,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
     create /Shared/bad-nonexistent-shape/
-      ✓ should STOMP /Shared/bad-nonexistent-shape (117ms)
+      ✓ should STOMP /Shared/bad-nonexistent-shape (127ms)
       ✓ should GET /Shared/bad-nonexistent-shape/
     create /Shared/bad-nonexistent-shape/ref-1
       ✓ should POST /Shared/bad-nonexistent-shape/
@@ -313,7 +313,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
     create /Shared/bad-unGETtable-shape/
-      ✓ should STOMP /Shared/bad-unGETtable-shape (114ms)
+      ✓ should STOMP /Shared/bad-unGETtable-shape (130ms)
       ✓ should GET /Shared/bad-unGETtable-shape/
     create /Shared/bad-unGETtable-shape/ref-1
       ✓ should POST /Shared/bad-unGETtable-shape/
@@ -340,7 +340,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-malformed-blueprint-nested-two-names/ hierarchy -- malformed blueprint: two nested static names
     create /Shared/bad-malformed-blueprint-nested-two-names/
-      ✓ should STOMP /Shared/bad-malformed-blueprint-nested-two-names (113ms)
+      ✓ should STOMP /Shared/bad-malformed-blueprint-nested-two-names (130ms)
       ✓ should GET /Shared/bad-malformed-blueprint-nested-two-names/
     create /Shared/bad-malformed-blueprint-nested-two-names/ref-1
       ✓ should POST /Shared/bad-malformed-blueprint-nested-two-names/
@@ -348,7 +348,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-missing-shape-property/ hierarchy -- blueprint step has no shape property
     create /Shared/bad-missing-shape-property/
-      ✓ should STOMP /Shared/bad-missing-shape-property (125ms)
+      ✓ should STOMP /Shared/bad-missing-shape-property (135ms)
       ✓ should GET /Shared/bad-missing-shape-property/
     create /Shared/bad-missing-shape-property/ref-1
       ✓ should POST /Shared/bad-missing-shape-property/
@@ -360,7 +360,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /some/deep/path/Albums2019/ hierarchy
     create /some/deep/path/Albums2019/
-      ✓ should STOMP /some/deep/path/Albums2019 (101ms)
+      ✓ should STOMP /some/deep/path/Albums2019 (117ms)
       ✓ should GET /some/deep/path/Albums2019/
     create /some/deep/path/Albums2019/ref-1
       ✓ should POST /some/deep/path/Albums2019/
@@ -372,14 +372,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     ✓ should !GET /some/deep/path/Git/
 
   create /some/deep/path/Git/
-    ✓ should STOMP /some/deep/path/Git (143ms)
+    ✓ should STOMP /some/deep/path/Git (151ms)
     ✓ should GET /some/deep/path/Git/
 
   re-create /some/deep/path/Container/
     ✓ should STOMP /some/deep/path/-TBD-
 
   create /some/deep/path/Git/users/alice/
-    ✓ should POST /some/deep/path/Git/users/ (131ms)
+    ✓ should POST /some/deep/path/Git/users/ (133ms)
     ✓ should GET /some/deep/path/Git/users/alice/
     ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
     ✓ should !GET /some/deep/path/Git/users/alice-1/
@@ -388,7 +388,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
 
   create /some/deep/path/Git/users/alice-1/
-    ✓ should POST /some/deep/path/Git/users/ (122ms)
+    ✓ should POST /some/deep/path/Git/users/
     ✓ should GET /some/deep/path/Git/users/alice/
     ✓ should GET /some/deep/path/Git/users/alice-1/
 
@@ -404,7 +404,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
     create /some/deep/path/Git/repos/ericprud/jsg/
-      ✓ should POST /some/deep/path/Git/repos/ericprud/ (140ms)
+      ✓ should POST /some/deep/path/Git/repos/ericprud/ (137ms)
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
@@ -417,60 +417,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Shared/
-    ✓ should !GET /Shared/Git/
-
-  create /Shared/Git/
-    ✓ should STOMP /Shared/Git (136ms)
-    ✓ should GET /Shared/Git/
-
-  re-create /Shared/Container/
-    ✓ should STOMP /Shared/-TBD-
-
-  create /Shared/Git/users/alice/
-    ✓ should POST /Shared/Git/users/ (144ms)
-    ✓ should GET /Shared/Git/users/alice/
-    ✓ should GET /Shared/Git/users/alice/subscriptions/
-    ✓ should !GET /Shared/Git/users/alice-1/
-    create /Shared/Git/users/alice/subscriptions/
-      ✓ should POST /Shared/Git/users/alice/subscriptions/
-      ✓ should GET /Shared/Git/users/alice/subscriptions/subscr1.ttl
-
-  create /Shared/Git/users/alice-1/
-    ✓ should POST /Shared/Git/users/ (140ms)
-    ✓ should GET /Shared/Git/users/alice/
-    ✓ should GET /Shared/Git/users/alice-1/
-
-  create /Shared/Git/users/Container/
-    ✓ should POST /Shared/Git/users/ (116ms)
-    ✓ should GET /Shared/Git/users/alice-1/
-    ✓ should GET /Shared/Git/users/Container/
-
-  create /Shared/Git/repos/ericprud/ hiearchy
-    create /Shared/Git/repos/ericprud/
-      ✓ should POST /Shared/Git/repos/
-      ✓ should GET /Shared/Git/repos/ericprud/
-      ✓ should !GET /Shared/Git/repos/ericprud-1/
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/
-    create /Shared/Git/repos/ericprud/jsg/
-      ✓ should POST /Shared/Git/repos/ericprud/ (122ms)
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/labels/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/milestones/
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
-    create /Shared/Git/repos/ericprud/jsg/issues/1
-      ✓ should POST /Shared/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/2.ttl
-
-  initial state
-    ✓ should GET /Shared/
     ✓ should !GET /Shared/Calendar/
 
   create /Shared/Calendar/ hierarchy
     create /Shared/Calendar/
-      ✓ should STOMP /Shared/Calendar (102ms)
-      ✓ should STOMP /Shared/Google (130ms)
+      ✓ should STOMP /Shared/Calendar (115ms)
+      ✓ should STOMP /Shared/Google (150ms)
       ✓ should GET /Shared/Calendar/
     create /Shared/Calendar/event1
       ✓ should POST /Shared/Calendar/
@@ -484,6 +436,54 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Shared/Google/Events/
       ✓ should GET /Shared/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
       ✓ should GET /Shared/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+
+  initial state
+    ✓ should GET /Shared/
+    ✓ should !GET /Shared/Git/
+
+  create /Shared/Git/
+    ✓ should STOMP /Shared/Git (155ms)
+    ✓ should GET /Shared/Git/
+
+  re-create /Shared/Container/
+    ✓ should STOMP /Shared/-TBD-
+
+  create /Shared/Git/users/alice/
+    ✓ should POST /Shared/Git/users/ (132ms)
+    ✓ should GET /Shared/Git/users/alice/
+    ✓ should GET /Shared/Git/users/alice/subscriptions/
+    ✓ should !GET /Shared/Git/users/alice-1/
+    create /Shared/Git/users/alice/subscriptions/
+      ✓ should POST /Shared/Git/users/alice/subscriptions/
+      ✓ should GET /Shared/Git/users/alice/subscriptions/subscr1.ttl
+
+  create /Shared/Git/users/alice-1/
+    ✓ should POST /Shared/Git/users/ (107ms)
+    ✓ should GET /Shared/Git/users/alice/
+    ✓ should GET /Shared/Git/users/alice-1/
+
+  create /Shared/Git/users/Container/
+    ✓ should POST /Shared/Git/users/ (107ms)
+    ✓ should GET /Shared/Git/users/alice-1/
+    ✓ should GET /Shared/Git/users/Container/
+
+  create /Shared/Git/repos/ericprud/ hiearchy
+    create /Shared/Git/repos/ericprud/
+      ✓ should POST /Shared/Git/repos/
+      ✓ should GET /Shared/Git/repos/ericprud/
+      ✓ should !GET /Shared/Git/repos/ericprud-1/
+      ✓ should !GET /Shared/Git/repos/ericprud/jsg/
+    create /Shared/Git/repos/ericprud/jsg/
+      ✓ should POST /Shared/Git/repos/ericprud/ (140ms)
+      ✓ should GET /Shared/Git/repos/ericprud/jsg/
+      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/
+      ✓ should GET /Shared/Git/repos/ericprud/jsg/labels/
+      ✓ should GET /Shared/Git/repos/ericprud/jsg/milestones/
+      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
+    create /Shared/Git/repos/ericprud/jsg/issues/1
+      ✓ should POST /Shared/Git/repos/ericprud/jsg/issues/
+      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
+      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/2.ttl
 
 
   162 passing (5s)

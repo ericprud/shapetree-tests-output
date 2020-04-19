@@ -3,4 +3,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "Apps Container";
-    ldp:contains <CollisionTest>, <NeverNoteApp>, <PhotoApp>, <PhotoAlbumApp>, <GhApp>, <GhApp2>, <MultiCalApp>, <MultiCalApp>.
+    ldp:contains <CollisionTest>, <NeverNoteApp>, <PhotoApp>, <PhotoAlbumApp>, <GhApp>, <GhApp2>, <MultiCalApp>, <GhApp2>.
