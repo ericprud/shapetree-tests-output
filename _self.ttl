@@ -2,4 +2,5 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "pre-installed root".
+    dcterms:title "DocRoot Container";
+    ldp:contains <Apps/>, <Cache/>, <Shared/>.
