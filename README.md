@@ -203,8 +203,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 ```
 
-> blueprint-tests@0.0.0 test /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200
+> blueprint-tests@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=80
 
 
 > blueprint-tests@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
@@ -239,7 +239,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
-      ✓ should create a novel directory (185ms)
+      ✓ should create a novel directory (178ms)
 
   initial state
     ✓ should GET /Shared/
@@ -247,10 +247,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/NeverNotes/ hierarchy
     create /Shared/NeverNotes/
-      ✓ should STOMP /Shared/NeverNotes (123ms)
+      ✓ should STOMP /Shared/NeverNotes
       ✓ should GET /Shared/NeverNotes/
     create /Shared/NeverNotes/note1/
-      ✓ should POST /Shared/NeverNotes/ (123ms)
+      ✓ should POST /Shared/NeverNotes/
       ✓ should GET /Shared/NeverNotes/note1/
       ✓ should !GET /Shared/NeverNotes/note2/
       ✓ should !GET /Shared/NeverNotes/note1/img-M33_IR.jpg
@@ -268,7 +268,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/Photos2020-01/ hierarchy
     create /Shared/Photos2020-01/
-      ✓ should STOMP /Shared/Photos2020-01 (119ms)
+      ✓ should STOMP /Shared/Photos2020-01
       ✓ should GET /Shared/Photos2020-01/
     create /Shared/Photos2020-01/m33
       ✓ should POST /Shared/Photos2020-01/
@@ -281,7 +281,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/Albums2019/ hierarchy
     create /Shared/Albums2019/
-      ✓ should STOMP /Shared/Albums2019 (122ms)
+      ✓ should STOMP /Shared/Albums2019
       ✓ should GET /Shared/Albums2019/
     create /Shared/Albums2019/ref-1
       ✓ should POST /Shared/Albums2019/
@@ -305,7 +305,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
     create /Shared/bad-nonexistent-shape/
-      ✓ should STOMP /Shared/bad-nonexistent-shape (127ms)
+      ✓ should STOMP /Shared/bad-nonexistent-shape
       ✓ should GET /Shared/bad-nonexistent-shape/
     create /Shared/bad-nonexistent-shape/ref-1
       ✓ should POST /Shared/bad-nonexistent-shape/
@@ -313,7 +313,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
     create /Shared/bad-unGETtable-shape/
-      ✓ should STOMP /Shared/bad-unGETtable-shape (126ms)
+      ✓ should STOMP /Shared/bad-unGETtable-shape
       ✓ should GET /Shared/bad-unGETtable-shape/
     create /Shared/bad-unGETtable-shape/ref-1
       ✓ should POST /Shared/bad-unGETtable-shape/
@@ -321,7 +321,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
     create /Shared/bad-nonconformant-posts/
-      ✓ should STOMP /Shared/bad-nonconformant-posts (118ms)
+      ✓ should STOMP /Shared/bad-nonconformant-posts
       ✓ should GET /Shared/bad-nonconformant-posts/
     create /Shared/bad-nonconformant-posts/malformed-ref-1
       ✓ should POST /Shared/bad-nonconformant-posts/
@@ -340,7 +340,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-malformed-blueprint-nested-two-names/ hierarchy -- malformed blueprint: two nested static names
     create /Shared/bad-malformed-blueprint-nested-two-names/
-      ✓ should STOMP /Shared/bad-malformed-blueprint-nested-two-names (131ms)
+      ✓ should STOMP /Shared/bad-malformed-blueprint-nested-two-names
       ✓ should GET /Shared/bad-malformed-blueprint-nested-two-names/
     create /Shared/bad-malformed-blueprint-nested-two-names/ref-1
       ✓ should POST /Shared/bad-malformed-blueprint-nested-two-names/
@@ -348,7 +348,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/bad-missing-shape-property/ hierarchy -- blueprint step has no shape property
     create /Shared/bad-missing-shape-property/
-      ✓ should STOMP /Shared/bad-missing-shape-property (130ms)
+      ✓ should STOMP /Shared/bad-missing-shape-property
       ✓ should GET /Shared/bad-missing-shape-property/
     create /Shared/bad-missing-shape-property/ref-1
       ✓ should POST /Shared/bad-missing-shape-property/
@@ -360,7 +360,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /some/deep/path/Albums2019/ hierarchy
     create /some/deep/path/Albums2019/
-      ✓ should STOMP /some/deep/path/Albums2019 (112ms)
+      ✓ should STOMP /some/deep/path/Albums2019
       ✓ should GET /some/deep/path/Albums2019/
     create /some/deep/path/Albums2019/ref-1
       ✓ should POST /some/deep/path/Albums2019/
@@ -373,8 +373,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   create /Shared/Calendar/ hierarchy
     create /Shared/Calendar/
-      ✓ should STOMP /Shared/Calendar (123ms)
-      ✓ should STOMP /Shared/Google (160ms)
+      ✓ should STOMP /Shared/Calendar
+      ✓ should STOMP /Shared/Google
       ✓ should GET /Shared/Calendar/
     create /Shared/Calendar/event1
       ✓ should POST /Shared/Calendar/
@@ -394,14 +394,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     ✓ should !GET /Shared/Git/
 
   create /Shared/Git/
-    ✓ should STOMP /Shared/Git (159ms)
+    ✓ should STOMP /Shared/Git
     ✓ should GET /Shared/Git/
 
   re-create /Shared/Container/
     ✓ should STOMP /Shared/-TBD-
 
   create /Shared/Git/users/alice/
-    ✓ should POST /Shared/Git/users/ (147ms)
+    ✓ should POST /Shared/Git/users/
     ✓ should GET /Shared/Git/users/alice/
     ✓ should GET /Shared/Git/users/alice/subscriptions/
     ✓ should !GET /Shared/Git/users/alice-1/
@@ -410,23 +410,23 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should GET /Shared/Git/users/alice/subscriptions/subscr1.ttl
 
   create /Shared/Git/users/alice-1/
-    ✓ should POST /Shared/Git/users/ (127ms)
+    ✓ should POST /Shared/Git/users/
     ✓ should GET /Shared/Git/users/alice/
     ✓ should GET /Shared/Git/users/alice-1/
 
   create /Shared/Git/users/Container/
-    ✓ should POST /Shared/Git/users/ (143ms)
+    ✓ should POST /Shared/Git/users/
     ✓ should GET /Shared/Git/users/alice-1/
     ✓ should GET /Shared/Git/users/Container/
 
   create /Shared/Git/repos/ericprud/ hiearchy
     create /Shared/Git/repos/ericprud/
-      ✓ should POST /Shared/Git/repos/ (106ms)
+      ✓ should POST /Shared/Git/repos/
       ✓ should GET /Shared/Git/repos/ericprud/
       ✓ should !GET /Shared/Git/repos/ericprud-1/
       ✓ should !GET /Shared/Git/repos/ericprud/jsg/
     create /Shared/Git/repos/ericprud/jsg/
-      ✓ should POST /Shared/Git/repos/ericprud/ (142ms)
+      ✓ should POST /Shared/Git/repos/ericprud/
       ✓ should GET /Shared/Git/repos/ericprud/jsg/
       ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/
       ✓ should GET /Shared/Git/repos/ericprud/jsg/labels/
@@ -442,14 +442,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     ✓ should !GET /some/deep/path/Git/
 
   create /some/deep/path/Git/
-    ✓ should STOMP /some/deep/path/Git (149ms)
+    ✓ should STOMP /some/deep/path/Git
     ✓ should GET /some/deep/path/Git/
 
   re-create /some/deep/path/Container/
     ✓ should STOMP /some/deep/path/-TBD-
 
   create /some/deep/path/Git/users/alice/
-    ✓ should POST /some/deep/path/Git/users/ (138ms)
+    ✓ should POST /some/deep/path/Git/users/
     ✓ should GET /some/deep/path/Git/users/alice/
     ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
     ✓ should !GET /some/deep/path/Git/users/alice-1/
@@ -458,12 +458,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
 
   create /some/deep/path/Git/users/alice-1/
-    ✓ should POST /some/deep/path/Git/users/ (125ms)
+    ✓ should POST /some/deep/path/Git/users/
     ✓ should GET /some/deep/path/Git/users/alice/
     ✓ should GET /some/deep/path/Git/users/alice-1/
 
   create /some/deep/path/Git/users/Container/
-    ✓ should POST /some/deep/path/Git/users/ (117ms)
+    ✓ should POST /some/deep/path/Git/users/
     ✓ should GET /some/deep/path/Git/users/alice-1/
     ✓ should GET /some/deep/path/Git/users/Container/
 
@@ -474,7 +474,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
     create /some/deep/path/Git/repos/ericprud/jsg/
-      ✓ should POST /some/deep/path/Git/repos/ericprud/ (143ms)
+      ✓ should POST /some/deep/path/Git/repos/ericprud/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
@@ -486,12 +486,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  162 passing (5s)
+  162 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   99.74 |      100 |   96.51 |   99.73 |                   
+All files               |     100 |      100 |   97.59 |     100 |                   
  footprints             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
@@ -499,8 +499,8 @@ All files               |   99.74 |      100 |   96.51 |   99.73 |
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
  footprints/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- footprints/util        |   99.42 |      100 |   93.33 |   99.39 |                   
-  blueprint.js          |   99.42 |      100 |   93.33 |   99.39 | 88                
+ footprints/util        |     100 |      100 |   95.45 |     100 |                   
+  blueprint.js          |     100 |      100 |   95.45 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 ```
