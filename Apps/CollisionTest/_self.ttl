@@ -1,12 +1,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix foot: <http://www.w3.org/ns/shapetree#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "CollisionTest Directory";
     foot:installedIn _:b1.
 _:b1 foot:app <//store.example/gh>;
-    foot:blueprintRoot </cal/GoogleBlueprint#top>;
-    foot:blueprintInstancePath "collisionDir/collision-2/".
+    foot:shapeTreeRoot </cal/GoogleShapeTree#top>;
+    foot:shapeTreeInstancePath "collisionDir/collision-2/".
 <//store.example/gh> foot:name "CollisionTest".

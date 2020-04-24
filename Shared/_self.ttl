@@ -1,18 +1,18 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix foot: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "/Shared";
-    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-blueprint-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>.
-<NeverNotes/> foot:blueprintRoot <//localhost:12345/nevernote/NeverNoteBlueprint#root>.
-<Photos2020-01/> foot:blueprintRoot <//localhost:12345/photo/PhotoBlueprint#root>.
-<Albums2019/> foot:blueprintRoot <//localhost:12345/album/PhotoAlbumBlueprint#root>.
-<bad-nonexistent-shape/> foot:blueprintRoot <//localhost:12345/bad/BlueprintMissingSchema#root>.
-<bad-unGETtable-shape/> foot:blueprintRoot <//localhost:12345/bad/BlueprintMissingShape#root>.
-<bad-nonconformant-posts/> foot:blueprintRoot <//localhost:12345/bad/PhotoAlbumBlueprint#root>.
-<bad-malformed-blueprint-nested-two-names/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNestedTwoStaticNames#root>.
-<bad-missing-shape-property/> foot:blueprintRoot <//localhost:12345/bad/BlueprintNoShapeProperty#root>.
-<Calendar/> foot:blueprintRoot <//localhost:12345/cal/CalendarBlueprint#calendar>.
-<Google/> foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>.
-<Git/> foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>.
+    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>.
+<NeverNotes/> foot:shapeTreeRoot <//localhost:12345/nevernote/NeverNoteShapeTree#root>.
+<Photos2020-01/> foot:shapeTreeRoot <//localhost:12345/photo/PhotoShapeTree#root>.
+<Albums2019/> foot:shapeTreeRoot <//localhost:12345/album/PhotoAlbumShapeTree#root>.
+<bad-nonexistent-shape/> foot:shapeTreeRoot <//localhost:12345/bad/ShapeTreeMissingSchema#root>.
+<bad-unGETtable-shape/> foot:shapeTreeRoot <//localhost:12345/bad/ShapeTreeMissingShape#root>.
+<bad-nonconformant-posts/> foot:shapeTreeRoot <//localhost:12345/bad/PhotoAlbumShapeTree#root>.
+<bad-malformed-shapeTree-nested-two-names/> foot:shapeTreeRoot <//localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
+<bad-missing-shape-property/> foot:shapeTreeRoot <//localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
+<Calendar/> foot:shapeTreeRoot <//localhost:12345/cal/CalendarShapeTree#calendar>.
+<Google/> foot:shapeTreeRoot <//localhost:12345/cal/GoogleShapeTree#top>.
+<Git/> foot:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>.

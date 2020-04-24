@@ -1,9 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix foot: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource repos/ericprud/jsg/labels";
-    foot:blueprintRoot <//localhost:12345/gh/ghBlueprint#root>;
-    foot:blueprintInstancePath "repos/ericprud/jsg/labels";
-    foot:blueprintInstanceRoot <../../../../>.
+    foot:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    foot:shapeTreeInstancePath "repos/ericprud/jsg/labels";
+    foot:shapeTreeInstanceRoot <../../../../>.

@@ -4,7 +4,6 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource .";
-    foot:shapeTreeRoot <//localhost:12345/album/PhotoAlbumShapeTree#root>;
+    foot:shapeTreeRoot <//localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>;
     foot:shapeTreeInstancePath ".";
-    foot:shapeTreeInstanceRoot <>;
-    ldp:contains <ref-1.ttl>.
+    foot:shapeTreeInstanceRoot <>.

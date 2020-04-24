@@ -1,15 +1,15 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/blueprints#>.
+@prefix foot: <http://www.w3.org/ns/shapetree#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "MultiCalApp Directory";
     foot:installedIn _:b40, _:b42.
 _:b40 foot:app <//store.example/MultiCalApp>;
-    foot:blueprintRoot </cal/CalendarBlueprint#calendar>;
-    foot:blueprintInstancePath "Shared/Calendar/".
+    foot:shapeTreeRoot </cal/CalendarShapeTree#calendar>;
+    foot:shapeTreeInstancePath "Shared/Calendar/".
 <//store.example/MultiCalApp> foot:name "MultiCalApp".
 _:b42 foot:app <//store.example/MultiCalApp>;
-    foot:blueprintRoot </cal/GoogleBlueprint#top>;
-    foot:blueprintInstancePath "Shared/Google/".
+    foot:shapeTreeRoot </cal/GoogleShapeTree#top>;
+    foot:shapeTreeInstancePath "Shared/Google/".

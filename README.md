@@ -24,17 +24,29 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── _self.ttl
 ├── Cache
 │   ├── httplocalhost12345albumPhotoAlbumBlueprintroot
+│   ├── httplocalhost12345albumPhotoAlbumShapeTreeroot
 │   ├── httplocalhost12345badBlueprintMissingSchemaroot
 │   ├── httplocalhost12345badBlueprintMissingShaperoot
 │   ├── httplocalhost12345badBlueprintNestedTwoStaticNamesroot
 │   ├── httplocalhost12345badBlueprintNoShapePropertyroot
 │   ├── httplocalhost12345badBlueprintTwoStaticNamesroot
 │   ├── httplocalhost12345badPhotoAlbumBlueprintroot
+│   ├── httplocalhost12345badPhotoAlbumShapeTreeroot
+│   ├── httplocalhost12345badShapeTreeMissingSchemaroot
+│   ├── httplocalhost12345badShapeTreeMissingShaperoot
+│   ├── httplocalhost12345badShapeTreeNestedTwoStaticNamesroot
+│   ├── httplocalhost12345badShapeTreeNoShapePropertyroot
+│   ├── httplocalhost12345badShapeTreeTwoStaticNamesroot
 │   ├── httplocalhost12345calCalendarBlueprintcalendar
+│   ├── httplocalhost12345calCalendarShapeTreecalendar
 │   ├── httplocalhost12345calGoogleBlueprinttop
+│   ├── httplocalhost12345calGoogleShapeTreetop
 │   ├── httplocalhost12345ghghBlueprintroot
+│   ├── httplocalhost12345ghghShapeTreeroot
 │   ├── httplocalhost12345nevernoteNeverNoteBlueprintroot
+│   ├── httplocalhost12345nevernoteNeverNoteShapeTreeroot
 │   ├── httplocalhost12345photoPhotoBlueprintroot
+│   ├── httplocalhost12345photoPhotoShapeTreeroot
 │   └── _self.ttl
 ├── collisionDir
 │   └── _self.ttl
@@ -45,6 +57,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   ├── ref-1.ttl
 │   │   └── _self.ttl
 │   ├── bad-malformed-blueprint-nested-two-names
+│   │   └── _self.ttl
+│   ├── bad-malformed-shapeTree-nested-two-names
 │   │   └── _self.ttl
 │   ├── bad-missing-shape-property
 │   │   └── _self.ttl
@@ -191,7 +205,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-79 directories, 105 files
+80 directories, 118 files
 ```
 
 
@@ -199,11 +213,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 ```
 
-> blueprint-tests@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
+> shape-tree@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
 > npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
 
 
-> blueprint-tests@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
+> shape-tree@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
 > mkdir -p www && ls -d www/* | grep -v README.md | xargs rm -rf
 
 
@@ -212,23 +226,23 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     appStoreServer
       ✓ should return on empty path
       ✓ should resolve full path
-    Blueprint.local
+    ShapeTree.local
       ✓ should throw if not passed a URL
-    Blueprint.managedContainer
+    ShapeTree.managedContainer
       ✓ should throw if not passed a Container URL
       ✓ should throw if the Container URL doesn't end with '/'
       ✓ should throw if the Container URL ends with '//'
-      ✓ should throw if the blueprint parameter isn't a URL
+      ✓ should throw if the shapeTree parameter isn't a URL
       ✓ should remove a Container directory
-      ✓ should fail on an invalid blueprint graph
-    Blueprint.remote
+      ✓ should fail on an invalid shapeTree graph
+    ShapeTree.remote
       ✓ should throw if not passed a URL
       ✓ should throw on a GET failure
-    Blueprint.validate
-      ✓ should throw if blueprint step is missing a shape
+    ShapeTree.validate
+      ✓ should throw if shapeTree step is missing a shape
       ✓ should throw on malformed POST Turtle body
       ✓ should throw on malformed POST JSON-LD body
-    Blueprint misc
+    ShapeTree misc
       ✓ should construct all errors
       ✓ should render RDFJS nodes
     STOMP
@@ -337,20 +351,20 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Shared/bad-nonconformant-posts/
       ✓ should !GET /Shared/bad-nonconformant-posts/ref-valid-3.ttl
 
-  create /Shared/bad-malformed-blueprint-two-names/ hierarchy -- malformed blueprint: two static names
-    create /Shared/bad-malformed-blueprint-two-names/
-      ✓ should STOMP /Shared/bad-malformed-blueprint-two-names
-      ✓ should !GET /Shared/bad-malformed-blueprint-two-names/
+  create /Shared/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+    create /Shared/bad-malformed-shapeTree-two-names/
+      ✓ should STOMP /Shared/bad-malformed-shapeTree-two-names
+      ✓ should !GET /Shared/bad-malformed-shapeTree-two-names/
 
-  create /Shared/bad-malformed-blueprint-nested-two-names/ hierarchy -- malformed blueprint: two nested static names
-    create /Shared/bad-malformed-blueprint-nested-two-names/
-      ✓ should STOMP /Shared/bad-malformed-blueprint-nested-two-names
-      ✓ should GET /Shared/bad-malformed-blueprint-nested-two-names/
-    create /Shared/bad-malformed-blueprint-nested-two-names/ref-1
-      ✓ should POST /Shared/bad-malformed-blueprint-nested-two-names/
-      ✓ should !GET /Shared/bad-malformed-blueprint-nested-two-names/ref-1.ttl
+  create /Shared/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+    create /Shared/bad-malformed-shapeTree-nested-two-names/
+      ✓ should STOMP /Shared/bad-malformed-shapeTree-nested-two-names
+      ✓ should GET /Shared/bad-malformed-shapeTree-nested-two-names/
+    create /Shared/bad-malformed-shapeTree-nested-two-names/ref-1
+      ✓ should POST /Shared/bad-malformed-shapeTree-nested-two-names/
+      ✓ should !GET /Shared/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
 
-  create /Shared/bad-missing-shape-property/ hierarchy -- blueprint step has no shape property
+  create /Shared/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
     create /Shared/bad-missing-shape-property/
       ✓ should STOMP /Shared/bad-missing-shape-property
       ✓ should GET /Shared/bad-missing-shape-property/
@@ -490,7 +504,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  169 passing (5s)
+  169 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -504,7 +518,7 @@ All files               |     100 |      100 |   97.62 |     100 |
  footprints/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
  footprints/util        |     100 |      100 |   95.45 |     100 |                   
-  blueprint.js          |     100 |      100 |   95.45 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
+  shape-tree.js         |     100 |      100 |   95.45 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 ```
