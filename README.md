@@ -35,6 +35,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345ghghBlueprintroot
 │   ├── httplocalhost12345nevernoteNeverNoteBlueprintroot
 │   ├── httplocalhost12345photoPhotoBlueprintroot
+│   ├── httpsjaneirodigitalgithubioshapetreessolidAppsstaticRootnevernoteNeverNoteBlueprintttl
 │   └── _self.ttl
 ├── collisionDir
 │   ├── collision-2
@@ -195,7 +196,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-81 directories, 107 files
+81 directories, 108 files
 ```
 
 
@@ -239,7 +240,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
-      ✓ should create a novel directory (178ms)
+      ✓ should create a novel directory (183ms)
+      create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /collisionDir/collision-2/Events/
+        ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should delete a file
+        ✓ should delete the above novel directory
 
   initial state
     ✓ should GET /Shared/
@@ -291,6 +298,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
   initial state
     ✓ should GET /Shared/
     ✓ should !GET /Shared/bad-nonconformant-POST/
+    ✓ should fail to delete /
+    ✓ should fail to delete /doesnotexist
 
   STOMP
     should fail with bad Turtle
@@ -486,12 +495,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  162 passing (6s)
+  169 passing (5s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.59 |     100 |                   
+All files               |     100 |      100 |   97.65 |     100 |                   
  footprints             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   

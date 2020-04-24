@@ -3,6 +3,5 @@
 @prefix foot: <http://www.w3.org/ns/blueprints#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "/collisionDir";
-    ldp:contains <collision-2/>.
+    dcterms:title "/collisionDir".
 <collision-2/> foot:blueprintRoot <//localhost:12345/cal/GoogleBlueprint#top>.
