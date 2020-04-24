@@ -5,8 +5,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "NeverNoteApp Directory";
-    foot:installedIn _:b3.
-_:b3 foot:app <//store.example/NeverNoteApp>;
+    foot:installedIn _:b9.
+_:b9 foot:app <//store.example/NeverNoteApp>;
     foot:blueprintRoot </nevernote/NeverNoteBlueprint#root>;
     foot:blueprintInstancePath "Shared/NeverNotes/".
 <//store.example/NeverNoteApp> foot:name "NeverNoteApp".

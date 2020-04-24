@@ -35,13 +35,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345ghghBlueprintroot
 │   ├── httplocalhost12345nevernoteNeverNoteBlueprintroot
 │   ├── httplocalhost12345photoPhotoBlueprintroot
-│   ├── httpsjaneirodigitalgithubioshapetreessolidAppsstaticRootnevernoteNeverNoteBlueprintttl
 │   └── _self.ttl
 ├── collisionDir
-│   ├── collision-2
-│   │   ├── Events
-│   │   │   └── _self.ttl
-│   │   └── _self.ttl
 │   └── _self.ttl
 ├── README.md
 ├── _self.ttl
@@ -196,7 +191,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-81 directories, 108 files
+79 directories, 105 files
 ```
 
 
@@ -205,7 +200,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > blueprint-tests@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=80
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
 
 
 > blueprint-tests@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
@@ -240,7 +235,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
-      ✓ should create a novel directory (183ms)
+      ✓ should create a novel directory
       create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
         ✓ should POST /collisionDir/collision-2/Events/
         ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
@@ -500,7 +495,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.65 |     100 |                   
+All files               |     100 |      100 |   97.62 |     100 |                   
  footprints             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   

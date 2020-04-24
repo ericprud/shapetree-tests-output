@@ -5,8 +5,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "PhotoApp Directory";
-    foot:installedIn _:b10.
-_:b10 foot:app <//store.example/PhotoApp>;
+    foot:installedIn _:b16.
+_:b16 foot:app <//store.example/PhotoApp>;
     foot:blueprintRoot </photo/PhotoBlueprint#root>;
     foot:blueprintInstancePath "Shared/Photos2020-01/".
 <//store.example/PhotoApp> foot:name "PhotoApp".

@@ -5,26 +5,26 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "PhotoAlbumApp Directory";
-    foot:installedIn _:b12, _:b15, _:b18, _:b21, _:b26, _:b29, _:b31.
-_:b12 foot:app <//store.example/PhotoAlbumApp>;
+    foot:installedIn _:b18, _:b21, _:b24, _:b27, _:b32, _:b35, _:b37.
+_:b18 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </album/PhotoAlbumBlueprint#root>;
     foot:blueprintInstancePath "Shared/Albums2019/".
-_:b15 foot:app <//store.example/PhotoAlbumApp>;
+_:b21 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </bad/BlueprintMissingSchema#root>;
     foot:blueprintInstancePath "Shared/bad-nonexistent-shape/".
-_:b18 foot:app <//store.example/PhotoAlbumApp>;
+_:b24 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </bad/BlueprintMissingShape#root>;
     foot:blueprintInstancePath "Shared/bad-unGETtable-shape/".
-_:b21 foot:app <//store.example/PhotoAlbumApp>;
+_:b27 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </bad/PhotoAlbumBlueprint#root>;
     foot:blueprintInstancePath "Shared/bad-nonconformant-posts/".
-_:b26 foot:app <//store.example/PhotoAlbumApp>;
+_:b32 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </bad/BlueprintNestedTwoStaticNames#root>;
     foot:blueprintInstancePath "Shared/bad-malformed-blueprint-nested-two-names/".
-_:b29 foot:app <//store.example/PhotoAlbumApp>;
+_:b35 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </bad/BlueprintNoShapeProperty#root>;
     foot:blueprintInstancePath "Shared/bad-missing-shape-property/".
 <//store.example/PhotoAlbumApp> foot:name "PhotoAlbumApp".
-_:b31 foot:app <//store.example/PhotoAlbumApp>;
+_:b37 foot:app <//store.example/PhotoAlbumApp>;
     foot:blueprintRoot </album/PhotoAlbumBlueprint#root>;
     foot:blueprintInstancePath "some/deep/path/Albums2019/".
