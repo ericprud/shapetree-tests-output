@@ -1,6 +1,6 @@
 application/ld+json
 
-{ "@context": "../ns/footContext.jsonld",
+{ "@context": "../ns/shapeTreeContext.jsonld",
     "@id": "#root", "type":"ldp:BasicContainer",                                                     "contents":[
   { "@id":"#image", "type":"ldp:NonRDFSource"  , "uriTemplate":"{entryName}", "shape":"Photo#Photo" }
 ] }

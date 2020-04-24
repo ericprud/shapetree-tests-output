@@ -1,10 +1,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/shapetree#>.
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource Events";
-    foot:shapeTreeRoot <//localhost:12345/cal/GoogleShapeTree#top>;
-    foot:shapeTreeInstancePath "Events";
-    foot:shapeTreeInstanceRoot <../>;
+    tree:shapeTreeRoot <//localhost:12345/cal/GoogleShapeTree#top>;
+    tree:shapeTreeInstancePath "Events";
+    tree:shapeTreeInstanceRoot <../>;
     ldp:contains <09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl>, <19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl>.

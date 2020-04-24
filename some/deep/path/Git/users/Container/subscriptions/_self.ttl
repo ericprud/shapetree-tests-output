@@ -1,9 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix foot: <http://www.w3.org/ns/shapetree#>.
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource users/Container/subscriptions";
-    foot:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
-    foot:shapeTreeInstancePath "users/Container/subscriptions";
-    foot:shapeTreeInstanceRoot <../../../>.
+    tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeInstancePath "users/Container/subscriptions";
+    tree:shapeTreeInstanceRoot <../../../>.

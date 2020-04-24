@@ -23,29 +23,17 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   └── _self.ttl
 ├── Cache
-│   ├── httplocalhost12345albumPhotoAlbumBlueprintroot
 │   ├── httplocalhost12345albumPhotoAlbumShapeTreeroot
-│   ├── httplocalhost12345badBlueprintMissingSchemaroot
-│   ├── httplocalhost12345badBlueprintMissingShaperoot
-│   ├── httplocalhost12345badBlueprintNestedTwoStaticNamesroot
-│   ├── httplocalhost12345badBlueprintNoShapePropertyroot
-│   ├── httplocalhost12345badBlueprintTwoStaticNamesroot
-│   ├── httplocalhost12345badPhotoAlbumBlueprintroot
 │   ├── httplocalhost12345badPhotoAlbumShapeTreeroot
 │   ├── httplocalhost12345badShapeTreeMissingSchemaroot
 │   ├── httplocalhost12345badShapeTreeMissingShaperoot
 │   ├── httplocalhost12345badShapeTreeNestedTwoStaticNamesroot
 │   ├── httplocalhost12345badShapeTreeNoShapePropertyroot
 │   ├── httplocalhost12345badShapeTreeTwoStaticNamesroot
-│   ├── httplocalhost12345calCalendarBlueprintcalendar
 │   ├── httplocalhost12345calCalendarShapeTreecalendar
-│   ├── httplocalhost12345calGoogleBlueprinttop
 │   ├── httplocalhost12345calGoogleShapeTreetop
-│   ├── httplocalhost12345ghghBlueprintroot
 │   ├── httplocalhost12345ghghShapeTreeroot
-│   ├── httplocalhost12345nevernoteNeverNoteBlueprintroot
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTreeroot
-│   ├── httplocalhost12345photoPhotoBlueprintroot
 │   ├── httplocalhost12345photoPhotoShapeTreeroot
 │   └── _self.ttl
 ├── collisionDir
@@ -55,8 +43,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ├── Shared
 │   ├── Albums2019
 │   │   ├── ref-1.ttl
-│   │   └── _self.ttl
-│   ├── bad-malformed-blueprint-nested-two-names
 │   │   └── _self.ttl
 │   ├── bad-malformed-shapeTree-nested-two-names
 │   │   └── _self.ttl
@@ -205,7 +191,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-80 directories, 118 files
+79 directories, 105 files
 ```
 
 
@@ -504,7 +490,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  169 passing (6s)
+  169 passing (5s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
