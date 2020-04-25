@@ -490,12 +490,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  169 passing (5s)
+  169 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.62 |     100 |                   
+All files               |     100 |      100 |   97.65 |     100 |                   
  footprints             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
