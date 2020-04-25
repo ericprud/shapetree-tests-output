@@ -38,9 +38,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── _self.ttl
 ├── collisionDir
 │   └── _self.ttl
-├── README.md
-├── _self.ttl
-├── Shared
+├── Data
 │   ├── Albums2019
 │   │   ├── ref-1.ttl
 │   │   └── _self.ttl
@@ -127,6 +125,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
 │   └── _self.ttl
+├── README.md
+├── _self.ttl
 └── some
     ├── deep
     │   ├── path
@@ -244,119 +244,119 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should delete the above novel directory
 
   initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/NeverNotes/
+    ✓ should GET /Data/
+    ✓ should !GET /Data/NeverNotes/
 
-  create /Shared/NeverNotes/ hierarchy
-    create /Shared/NeverNotes/
-      ✓ should STOMP /Shared/NeverNotes
-      ✓ should GET /Shared/NeverNotes/
-    create /Shared/NeverNotes/note1/
-      ✓ should POST /Shared/NeverNotes/
-      ✓ should GET /Shared/NeverNotes/note1/
-      ✓ should !GET /Shared/NeverNotes/note2/
-      ✓ should !GET /Shared/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should !GET /Shared/NeverNotes/note1/inc-M33_IR.ttl
-    create /Shared/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should POST /Shared/NeverNotes/note1/
-      ✓ should GET /Shared/NeverNotes/note1/img-M33_IR.jpg
-    create /Shared/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should POST /Shared/NeverNotes/note1/
-      ✓ should GET /Shared/NeverNotes/note1/inc-M33_IR.ttl
-
-  initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/Photos2020-01/
-
-  create /Shared/Photos2020-01/ hierarchy
-    create /Shared/Photos2020-01/
-      ✓ should STOMP /Shared/Photos2020-01
-      ✓ should GET /Shared/Photos2020-01/
-    create /Shared/Photos2020-01/m33
-      ✓ should POST /Shared/Photos2020-01/
-      ✓ should GET /Shared/Photos2020-01/m33.jpeg
-      ✓ should !GET /Shared/Photos2020-01/m32.jpeg
+  create /Data/NeverNotes/ hierarchy
+    create /Data/NeverNotes/
+      ✓ should STOMP /Data/NeverNotes
+      ✓ should GET /Data/NeverNotes/
+    create /Data/NeverNotes/note1/
+      ✓ should POST /Data/NeverNotes/
+      ✓ should GET /Data/NeverNotes/note1/
+      ✓ should !GET /Data/NeverNotes/note2/
+      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+    create /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
+    create /Data/NeverNotes/note1/inc-M33_IR.ttl
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
 
   initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/Albums2019/
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Photos2020-01/
 
-  create /Shared/Albums2019/ hierarchy
-    create /Shared/Albums2019/
-      ✓ should STOMP /Shared/Albums2019
-      ✓ should GET /Shared/Albums2019/
-    create /Shared/Albums2019/ref-1
-      ✓ should POST /Shared/Albums2019/
-      ✓ should GET /Shared/Albums2019/ref-1.ttl
-      ✓ should !GET /Shared/Albums2019/ref-2.ttl
+  create /Data/Photos2020-01/ hierarchy
+    create /Data/Photos2020-01/
+      ✓ should STOMP /Data/Photos2020-01
+      ✓ should GET /Data/Photos2020-01/
+    create /Data/Photos2020-01/m33
+      ✓ should POST /Data/Photos2020-01/
+      ✓ should GET /Data/Photos2020-01/m33.jpeg
+      ✓ should !GET /Data/Photos2020-01/m32.jpeg
 
   initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/bad-nonconformant-POST/
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Albums2019/
+
+  create /Data/Albums2019/ hierarchy
+    create /Data/Albums2019/
+      ✓ should STOMP /Data/Albums2019
+      ✓ should GET /Data/Albums2019/
+    create /Data/Albums2019/ref-1
+      ✓ should POST /Data/Albums2019/
+      ✓ should GET /Data/Albums2019/ref-1.ttl
+      ✓ should !GET /Data/Albums2019/ref-2.ttl
+
+  initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/bad-nonconformant-POST/
     ✓ should fail to delete /
     ✓ should fail to delete /doesnotexist
 
   STOMP
     should fail with bad Turtle
-      ✓ should STOMP /Shared/ShouldNotExist
-      ✓ should !GET /Shared/ShouldNotExist/
+      ✓ should STOMP /Data/ShouldNotExist
+      ✓ should !GET /Data/ShouldNotExist/
     should fail with bad JSON
-      ✓ should STOMP /Shared/ShouldNotExist
-      ✓ should !GET /Shared/ShouldNotExist/
+      ✓ should STOMP /Data/ShouldNotExist
+      ✓ should !GET /Data/ShouldNotExist/
     should fail with bad JSONLD
-      ✓ should STOMP /Shared/ShouldNotExist
-      ✓ should !GET /Shared/ShouldNotExist/
+      ✓ should STOMP /Data/ShouldNotExist
+      ✓ should !GET /Data/ShouldNotExist/
 
-  create /Shared/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
-    create /Shared/bad-nonexistent-shape/
-      ✓ should STOMP /Shared/bad-nonexistent-shape
-      ✓ should GET /Shared/bad-nonexistent-shape/
-    create /Shared/bad-nonexistent-shape/ref-1
-      ✓ should POST /Shared/bad-nonexistent-shape/
-      ✓ should !GET /Shared/bad-nonexistent-shape/ref-1.ttl
+  create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
+    create /Data/bad-nonexistent-shape/
+      ✓ should STOMP /Data/bad-nonexistent-shape
+      ✓ should GET /Data/bad-nonexistent-shape/
+    create /Data/bad-nonexistent-shape/ref-1
+      ✓ should POST /Data/bad-nonexistent-shape/
+      ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
 
-  create /Shared/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
-    create /Shared/bad-unGETtable-shape/
-      ✓ should STOMP /Shared/bad-unGETtable-shape
-      ✓ should GET /Shared/bad-unGETtable-shape/
-    create /Shared/bad-unGETtable-shape/ref-1
-      ✓ should POST /Shared/bad-unGETtable-shape/
-      ✓ should !GET /Shared/bad-unGETtable-shape/ref-1.ttl
+  create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
+    create /Data/bad-unGETtable-shape/
+      ✓ should STOMP /Data/bad-unGETtable-shape
+      ✓ should GET /Data/bad-unGETtable-shape/
+    create /Data/bad-unGETtable-shape/ref-1
+      ✓ should POST /Data/bad-unGETtable-shape/
+      ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
 
-  create /Shared/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
-    create /Shared/bad-nonconformant-posts/
-      ✓ should STOMP /Shared/bad-nonconformant-posts
-      ✓ should GET /Shared/bad-nonconformant-posts/
-    create /Shared/bad-nonconformant-posts/malformed-ref-1
-      ✓ should POST /Shared/bad-nonconformant-posts/
-      ✓ should !GET /Shared/bad-nonconformant-posts/malformed-ref-1.ttl
-    create /Shared/bad-nonconformant-posts/ref-invalid-2
-      ✓ should POST /Shared/bad-nonconformant-posts/
-      ✓ should !GET /Shared/bad-nonconformant-posts/ref-invalid-2.ttl
-    create /Shared/bad-nonconformant-posts/ref-valid-3
-      ✓ should POST /Shared/bad-nonconformant-posts/
-      ✓ should !GET /Shared/bad-nonconformant-posts/ref-valid-3.ttl
+  create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
+    create /Data/bad-nonconformant-posts/
+      ✓ should STOMP /Data/bad-nonconformant-posts
+      ✓ should GET /Data/bad-nonconformant-posts/
+    create /Data/bad-nonconformant-posts/malformed-ref-1
+      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
+    create /Data/bad-nonconformant-posts/ref-invalid-2
+      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
+    create /Data/bad-nonconformant-posts/ref-valid-3
+      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
 
-  create /Shared/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-    create /Shared/bad-malformed-shapeTree-two-names/
-      ✓ should STOMP /Shared/bad-malformed-shapeTree-two-names
-      ✓ should !GET /Shared/bad-malformed-shapeTree-two-names/
+  create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+    create /Data/bad-malformed-shapeTree-two-names/
+      ✓ should STOMP /Data/bad-malformed-shapeTree-two-names
+      ✓ should !GET /Data/bad-malformed-shapeTree-two-names/
 
-  create /Shared/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-    create /Shared/bad-malformed-shapeTree-nested-two-names/
-      ✓ should STOMP /Shared/bad-malformed-shapeTree-nested-two-names
-      ✓ should GET /Shared/bad-malformed-shapeTree-nested-two-names/
-    create /Shared/bad-malformed-shapeTree-nested-two-names/ref-1
-      ✓ should POST /Shared/bad-malformed-shapeTree-nested-two-names/
-      ✓ should !GET /Shared/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
+  create /Data/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+    create /Data/bad-malformed-shapeTree-nested-two-names/
+      ✓ should STOMP /Data/bad-malformed-shapeTree-nested-two-names
+      ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
+    create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
+      ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/
+      ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
 
-  create /Shared/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-    create /Shared/bad-missing-shape-property/
-      ✓ should STOMP /Shared/bad-missing-shape-property
-      ✓ should GET /Shared/bad-missing-shape-property/
-    create /Shared/bad-missing-shape-property/ref-1
-      ✓ should POST /Shared/bad-missing-shape-property/
-      ✓ should !GET /Shared/bad-missing-shape-property/ref-1.ttl
+  create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+    create /Data/bad-missing-shape-property/
+      ✓ should STOMP /Data/bad-missing-shape-property
+      ✓ should GET /Data/bad-missing-shape-property/
+    create /Data/bad-missing-shape-property/ref-1
+      ✓ should POST /Data/bad-missing-shape-property/
+      ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
 
   initial state
     ✓ should GET /some/deep/path/
@@ -372,74 +372,74 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
   initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/Calendar/
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Calendar/
 
-  create /Shared/Calendar/ hierarchy
-    create /Shared/Calendar/
-      ✓ should STOMP /Shared/Calendar
-      ✓ should STOMP /Shared/Google
-      ✓ should GET /Shared/Calendar/
-    create /Shared/Calendar/event1
-      ✓ should POST /Shared/Calendar/
-      ✓ should GET /Shared/Calendar/event1.ttl
-      ✓ should !GET /Shared/Calendar/event2.ttl
-    create /Shared/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Shared/Google/Events/
-      ✓ should GET /Shared/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Shared/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Shared/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Shared/Google/Events/
-      ✓ should GET /Shared/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Shared/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+  create /Data/Calendar/ hierarchy
+    create /Data/Calendar/
+      ✓ should STOMP /Data/Calendar
+      ✓ should STOMP /Data/Google
+      ✓ should GET /Data/Calendar/
+    create /Data/Calendar/event1
+      ✓ should POST /Data/Calendar/
+      ✓ should GET /Data/Calendar/event1.ttl
+      ✓ should !GET /Data/Calendar/event2.ttl
+    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   initial state
-    ✓ should GET /Shared/
-    ✓ should !GET /Shared/Git/
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Git/
 
-  create /Shared/Git/
-    ✓ should STOMP /Shared/Git
-    ✓ should GET /Shared/Git/
+  create /Data/Git/
+    ✓ should STOMP /Data/Git
+    ✓ should GET /Data/Git/
 
-  re-create /Shared/Container/
-    ✓ should STOMP /Shared/-TBD-
+  re-create /Data/Container/
+    ✓ should STOMP /Data/-TBD-
 
-  create /Shared/Git/users/alice/
-    ✓ should POST /Shared/Git/users/
-    ✓ should GET /Shared/Git/users/alice/
-    ✓ should GET /Shared/Git/users/alice/subscriptions/
-    ✓ should !GET /Shared/Git/users/alice-1/
-    create /Shared/Git/users/alice/subscriptions/
-      ✓ should POST /Shared/Git/users/alice/subscriptions/
-      ✓ should GET /Shared/Git/users/alice/subscriptions/subscr1.ttl
+  create /Data/Git/users/alice/
+    ✓ should POST /Data/Git/users/
+    ✓ should GET /Data/Git/users/alice/
+    ✓ should GET /Data/Git/users/alice/subscriptions/
+    ✓ should !GET /Data/Git/users/alice-1/
+    create /Data/Git/users/alice/subscriptions/
+      ✓ should POST /Data/Git/users/alice/subscriptions/
+      ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
 
-  create /Shared/Git/users/alice-1/
-    ✓ should POST /Shared/Git/users/
-    ✓ should GET /Shared/Git/users/alice/
-    ✓ should GET /Shared/Git/users/alice-1/
+  create /Data/Git/users/alice-1/
+    ✓ should POST /Data/Git/users/
+    ✓ should GET /Data/Git/users/alice/
+    ✓ should GET /Data/Git/users/alice-1/
 
-  create /Shared/Git/users/Container/
-    ✓ should POST /Shared/Git/users/
-    ✓ should GET /Shared/Git/users/alice-1/
-    ✓ should GET /Shared/Git/users/Container/
+  create /Data/Git/users/Container/
+    ✓ should POST /Data/Git/users/
+    ✓ should GET /Data/Git/users/alice-1/
+    ✓ should GET /Data/Git/users/Container/
 
-  create /Shared/Git/repos/ericprud/ hiearchy
-    create /Shared/Git/repos/ericprud/
-      ✓ should POST /Shared/Git/repos/
-      ✓ should GET /Shared/Git/repos/ericprud/
-      ✓ should !GET /Shared/Git/repos/ericprud-1/
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/
-    create /Shared/Git/repos/ericprud/jsg/
-      ✓ should POST /Shared/Git/repos/ericprud/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/labels/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/milestones/
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
-    create /Shared/Git/repos/ericprud/jsg/issues/1
-      ✓ should POST /Shared/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Shared/Git/repos/ericprud/jsg/issues/1.ttl
-      ✓ should !GET /Shared/Git/repos/ericprud/jsg/issues/2.ttl
+  create /Data/Git/repos/ericprud/ hiearchy
+    create /Data/Git/repos/ericprud/
+      ✓ should POST /Data/Git/repos/
+      ✓ should GET /Data/Git/repos/ericprud/
+      ✓ should !GET /Data/Git/repos/ericprud-1/
+      ✓ should !GET /Data/Git/repos/ericprud/jsg/
+    create /Data/Git/repos/ericprud/jsg/
+      ✓ should POST /Data/Git/repos/ericprud/
+      ✓ should GET /Data/Git/repos/ericprud/jsg/
+      ✓ should GET /Data/Git/repos/ericprud/jsg/issues/
+      ✓ should GET /Data/Git/repos/ericprud/jsg/labels/
+      ✓ should GET /Data/Git/repos/ericprud/jsg/milestones/
+      ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+    create /Data/Git/repos/ericprud/jsg/issues/1
+      ✓ should POST /Data/Git/repos/ericprud/jsg/issues/
+      ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+      ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
   initial state
     ✓ should GET /some/deep/path/

@@ -8,8 +8,8 @@
     tree:installedIn _:b40, _:b42.
 _:b40 tree:app <//store.example/MultiCalApp>;
     tree:shapeTreeRoot </cal/CalendarShapeTree#calendar>;
-    tree:shapeTreeInstancePath "Shared/Calendar/".
+    tree:shapeTreeInstancePath "Data/Calendar/".
 <//store.example/MultiCalApp> tree:name "MultiCalApp".
 _:b42 tree:app <//store.example/MultiCalApp>;
     tree:shapeTreeRoot </cal/GoogleShapeTree#top>;
-    tree:shapeTreeInstancePath "Shared/Google/".
+    tree:shapeTreeInstancePath "Data/Google/".

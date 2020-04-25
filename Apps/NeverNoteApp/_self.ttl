@@ -8,5 +8,5 @@
     tree:installedIn _:b9.
 _:b9 tree:app <//store.example/NeverNoteApp>;
     tree:shapeTreeRoot </nevernote/NeverNoteShapeTree#root>;
-    tree:shapeTreeInstancePath "Shared/NeverNotes/".
+    tree:shapeTreeInstancePath "Data/NeverNotes/".
 <//store.example/NeverNoteApp> tree:name "NeverNoteApp".

@@ -8,7 +8,7 @@
     tree:installedIn _:b60, _:b67.
 _:b60 tree:app <//store.example/gh>;
     tree:shapeTreeRoot </gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath "Shared/Git/".
+    tree:shapeTreeInstancePath "Data/Git/".
 <//store.example/gh> tree:name "GhApp".
 _:b67 tree:app <//store.example/gh>;
     tree:shapeTreeRoot </gh/ghShapeTree#root>;

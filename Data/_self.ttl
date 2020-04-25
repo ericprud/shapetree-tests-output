@@ -3,7 +3,7 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "/Shared";
+    dcterms:title "/Data";
     ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>.
 <NeverNotes/> tree:shapeTreeRoot <//localhost:12345/nevernote/NeverNoteShapeTree#root>.
 <Photos2020-01/> tree:shapeTreeRoot <//localhost:12345/photo/PhotoShapeTree#root>.

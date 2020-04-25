@@ -5,11 +5,11 @@
 @prefix gdt: <http://github.example/dt#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource users/alice";
+    dcterms:title "index for nested resource users/alice-1";
     tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath "users/alice";
+    tree:shapeTreeInstancePath "users/alice-1";
     tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <orgs/>, <subscriptions/>, <repos/>.
+    ldp:contains <received_events/>, <followers/>, <subscriptions/>, <orgs/>, <repos/>.
 <#alice> gh:url <//github.example/user/alice>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "alice1234";
