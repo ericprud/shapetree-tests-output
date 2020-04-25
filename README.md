@@ -241,7 +241,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should delete a file
-        ✓ should delete the above novel directory
+        ✓ should delete the novel directory
+        ✓ should delete the parent directory
 
   initial state
     ✓ should GET /Data/
@@ -490,12 +491,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  169 passing (6s)
+  170 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.65 |     100 |                   
+All files               |     100 |      100 |    97.7 |     100 |                   
  footprints             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
@@ -503,8 +504,8 @@ All files               |     100 |      100 |   97.65 |     100 |
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
  footprints/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- footprints/util        |     100 |      100 |   95.45 |     100 |                   
+ footprints/util        |     100 |      100 |   95.24 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
-  shape-tree.js         |     100 |      100 |   95.45 |     100 |                   
+  shape-tree.js         |     100 |      100 |   95.24 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 ```
