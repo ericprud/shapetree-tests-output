@@ -2,5 +2,5 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "Apps Container";
+    dcterms:title "Applications Container";
     ldp:contains <CollisionTest>, <NeverNoteApp>, <PhotoApp>, <PhotoAlbumApp>, <MultiCalApp>, <GhApp>, <GhApp2>, <GhApp2>.
