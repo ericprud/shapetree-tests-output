@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource users";
-    tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users";
     tree:shapeTreeInstanceRoot <../>;
     ldp:contains <alice/>, <alice-1/>, <Container/>.

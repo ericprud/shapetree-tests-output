@@ -7,7 +7,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource ./note1";
-    tree:shapeTreeRoot <//localhost:12345/nevernote/NeverNoteShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
     tree:shapeTreeInstancePath "./note1";
     tree:shapeTreeInstanceRoot <../>;
     ldp:contains <img-M33_IR.jpg>, <inc-M33_IR.ttl>.
@@ -18,4 +18,4 @@
 _:b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag1";
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b13.
 _:b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag2";
-    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <//www.w3.org/1999/02/22-rdf-syntax-ns#nil>.
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.

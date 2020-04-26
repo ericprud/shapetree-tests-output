@@ -6,25 +6,25 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource users/alice-1";
-    tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users/alice-1";
     tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <subscriptions/>, <orgs/>, <repos/>.
-<#alice> gh:url <//github.example/user/alice>;
+    ldp:contains <followers/>, <subscriptions/>, <received_events/>, <orgs/>, <repos/>.
+<#alice> gh:url <http://github.example/user/alice>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "alice1234";
     gh:login "alice";
-    gh:avatar_url <//github.example/user/alice-avatar>;
+    gh:avatar_url <http://github.example/user/alice-avatar>;
     gh:gravatar_id "g-allice1234";
     gh:html_url "http://github.example/user/{user}"^^gdt:urlTemplate;
-    gh:followers_url <//github.example/user/alice/followers/>;
+    gh:followers_url <http://github.example/user/alice/followers/>;
     gh:following_url "http://github.example/user/alice/follower/{user}"^^gdt:urlTemplate;
     gh:gists_url "http://github.example/user/alice/{gist}"^^gdt:urlTemplate;
     gh:starred_url "http://github.example/user/{user}/starred"^^gdt:urlTemplate;
-    gh:subscriptions_url <//github.example/user/alice/subscriptions/>;
-    gh:organizations_url <//github.example/user/alice/organizations/>;
-    gh:repos_url <//github.example/user/alice/repose/>;
+    gh:subscriptions_url <http://github.example/user/alice/subscriptions/>;
+    gh:organizations_url <http://github.example/user/alice/organizations/>;
+    gh:repos_url <http://github.example/user/alice/repose/>;
     gh:events_url "http://github.example/user/{eventNo}"^^gdt:urlTemplate;
-    gh:received_events_url <//github.example/user/alice/events/>;
+    gh:received_events_url <http://github.example/user/alice/events/>;
     gh:type "migrant knowledge worker";
     gh:site_admin "false"^^<http://www.w3.org/2001/XMLSchema#boolean>.

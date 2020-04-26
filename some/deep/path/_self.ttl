@@ -5,5 +5,5 @@
 <> a ldp:BasicContainer;
     dcterms:title "/some/deep/path";
     ldp:contains <Albums2019/>, <Git/>.
-<Albums2019/> tree:shapeTreeRoot <//localhost:12345/album/PhotoAlbumShapeTree#root>.
-<Git/> tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>.
+<Albums2019/> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>.
+<Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.

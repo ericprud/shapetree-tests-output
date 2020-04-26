@@ -4,15 +4,15 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "/Data";
-    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>.
-<NeverNotes/> tree:shapeTreeRoot <//localhost:12345/nevernote/NeverNoteShapeTree#root>.
-<Photos2020-01/> tree:shapeTreeRoot <//localhost:12345/photo/PhotoShapeTree#root>.
-<Albums2019/> tree:shapeTreeRoot <//localhost:12345/album/PhotoAlbumShapeTree#root>.
-<bad-nonexistent-shape/> tree:shapeTreeRoot <//localhost:12345/bad/ShapeTreeMissingSchema#root>.
-<bad-unGETtable-shape/> tree:shapeTreeRoot <//localhost:12345/bad/ShapeTreeMissingShape#root>.
-<bad-nonconformant-posts/> tree:shapeTreeRoot <//localhost:12345/bad/PhotoAlbumShapeTree#root>.
-<bad-malformed-shapeTree-nested-two-names/> tree:shapeTreeRoot <//localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
-<bad-missing-shape-property/> tree:shapeTreeRoot <//localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
-<Calendar/> tree:shapeTreeRoot <//localhost:12345/cal/CalendarShapeTree#calendar>.
-<Google/> tree:shapeTreeRoot <//localhost:12345/cal/GoogleShapeTree#top>.
-<Git/> tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>.
+    ldp:contains <NeverNotes/>, <Photos2020-01/>, <Albums2019/>, <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Git/>, <Calendar/>, <Google/>.
+<NeverNotes/> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>.
+<Photos2020-01/> tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>.
+<Albums2019/> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>.
+<bad-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
+<bad-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
+<bad-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
+<bad-malformed-shapeTree-nested-two-names/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
+<bad-missing-shape-property/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
+<Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.
+<Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
+<Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.

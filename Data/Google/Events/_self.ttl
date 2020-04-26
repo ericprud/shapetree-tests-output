@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource Events";
-    tree:shapeTreeRoot <//localhost:12345/cal/GoogleShapeTree#top>;
+    tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
     tree:shapeTreeInstancePath "Events";
     tree:shapeTreeInstanceRoot <../>;
     ldp:contains <09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl>, <19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl>.

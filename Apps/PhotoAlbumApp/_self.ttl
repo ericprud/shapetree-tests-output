@@ -6,25 +6,25 @@
 <> a ldp:BasicContainer;
     dcterms:title "PhotoAlbumApp Directory";
     tree:installedIn _:b18, _:b21, _:b24, _:b27, _:b32, _:b35, _:b37.
-_:b18 tree:app <//store.example/PhotoAlbumApp>;
+_:b18 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </album/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath "Data/Albums2019/".
-_:b21 tree:app <//store.example/PhotoAlbumApp>;
+_:b21 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </bad/ShapeTreeMissingSchema#root>;
     tree:shapeTreeInstancePath "Data/bad-nonexistent-shape/".
-_:b24 tree:app <//store.example/PhotoAlbumApp>;
+_:b24 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </bad/ShapeTreeMissingShape#root>;
     tree:shapeTreeInstancePath "Data/bad-unGETtable-shape/".
-_:b27 tree:app <//store.example/PhotoAlbumApp>;
+_:b27 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </bad/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath "Data/bad-nonconformant-posts/".
-_:b32 tree:app <//store.example/PhotoAlbumApp>;
+_:b32 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </bad/ShapeTreeNestedTwoStaticNames#root>;
     tree:shapeTreeInstancePath "Data/bad-malformed-shapeTree-nested-two-names/".
-_:b35 tree:app <//store.example/PhotoAlbumApp>;
+_:b35 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </bad/ShapeTreeNoShapeProperty#root>;
     tree:shapeTreeInstancePath "Data/bad-missing-shape-property/".
-<//store.example/PhotoAlbumApp> tree:name "PhotoAlbumApp".
-_:b37 tree:app <//store.example/PhotoAlbumApp>;
+<http://store.example/PhotoAlbumApp> tree:name "PhotoAlbumApp".
+_:b37 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot </album/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath "some/deep/path/Albums2019/".

@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource repos/ericprud/jsg/issues";
-    tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "repos/ericprud/jsg/issues";
     tree:shapeTreeInstanceRoot </Data/Git/>;
     ldp:contains <1.ttl>.

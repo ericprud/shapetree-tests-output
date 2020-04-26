@@ -7,11 +7,11 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for nested resource repos/ericprud";
-    tree:shapeTreeRoot <//localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "repos/ericprud";
     tree:shapeTreeInstanceRoot <../../>;
     ldp:contains <jsg/>.
-<#ericprud> gh:url <//github.example/user/ericsRepos>;
+<#ericprud> gh:url <http://github.example/user/ericsRepos>;
     gh:id "573478"^^xsd:integer;
     gh:node_id "MDQ6VXNlcjU3MzQ3OA==";
     gh:avatar_url <https://avatars3.githubusercontent.com/u/573478?v=4>;
