@@ -373,6 +373,28 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
+    ✓ should !GET /Data/Calendar/
+
+  create /Data/Calendar/ hierarchy
+    create /Data/Calendar/
+      ✓ should STOMP /Data/Calendar
+      ✓ should STOMP /Data/Google
+      ✓ should GET /Data/Calendar/
+    create /Data/Calendar/event1
+      ✓ should POST /Data/Calendar/
+      ✓ should GET /Data/Calendar/event1.ttl
+      ✓ should !GET /Data/Calendar/event2.ttl
+    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+
+  initial state
+    ✓ should GET /Data/
     ✓ should !GET /Data/Git/
 
   create /Data/Git/
@@ -418,28 +440,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Git/repos/ericprud/jsg/issues/
       ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
       ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Calendar/
-
-  create /Data/Calendar/ hierarchy
-    create /Data/Calendar/
-      ✓ should STOMP /Data/Calendar
-      ✓ should STOMP /Data/Google
-      ✓ should GET /Data/Calendar/
-    create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/
-      ✓ should GET /Data/Calendar/event1.ttl
-      ✓ should !GET /Data/Calendar/event2.ttl
-    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   initial state
     ✓ should GET /some/deep/path/
@@ -490,7 +490,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
 
-  171 passing (6s)
+  171 passing (5s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
