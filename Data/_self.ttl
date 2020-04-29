@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "/Data";
-    ldp:contains <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <Albums2019/>, <Photos2020-01/>, <NeverNotes/>.
+    ldp:contains <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Albums2019/>, <Photos2020-01/>.
 <bad-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
 <bad-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
 <bad-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
@@ -13,6 +13,6 @@
 <Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
 <Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.
 <Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.
+<NeverNotes/> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>.
 <Albums2019/> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>.
 <Photos2020-01/> tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>.
-<NeverNotes/> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>.

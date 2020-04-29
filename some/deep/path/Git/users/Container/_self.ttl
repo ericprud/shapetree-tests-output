@@ -9,7 +9,7 @@
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users/Container";
     tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <repos/>, <subscriptions/>, <orgs/>.
+    ldp:contains <followers/>, <received_events/>, <subscriptions/>, <repos/>, <orgs/>.
 <#alice> gh:url <http://github.example/user/alice>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "alice1234";

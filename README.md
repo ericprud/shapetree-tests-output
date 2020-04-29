@@ -198,7 +198,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > shape-tree@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
+> npm run prepare-tests && PORT=12345 nyc mocha --sort --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
@@ -383,6 +383,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
+    ✓ should !GET /Data/NeverNotes/
+
+  create /Data/NeverNotes/ hierarchy
+    create /Data/NeverNotes/
+      ✓ should STOMP /Data/NeverNotes
+      ✓ should GET /Data/NeverNotes/
+    create /Data/NeverNotes/note1/
+      ✓ should POST /Data/NeverNotes/
+      ✓ should GET /Data/NeverNotes/note1/
+      ✓ should !GET /Data/NeverNotes/note2/
+      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+    create /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
+    create /Data/NeverNotes/note1/inc-M33_IR.ttl
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+
+  initial state
+    ✓ should GET /Data/
     ✓ should !GET /Data/Albums2019/
 
   create /Data/Albums2019/ hierarchy
@@ -406,27 +427,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Photos2020-01/
       ✓ should GET /Data/Photos2020-01/m33.jpeg
       ✓ should !GET /Data/Photos2020-01/m32.jpeg
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/NeverNotes/
-
-  create /Data/NeverNotes/ hierarchy
-    create /Data/NeverNotes/
-      ✓ should STOMP /Data/NeverNotes
-      ✓ should GET /Data/NeverNotes/
-    create /Data/NeverNotes/note1/
-      ✓ should POST /Data/NeverNotes/
-      ✓ should GET /Data/NeverNotes/note1/
-      ✓ should !GET /Data/NeverNotes/note2/
-      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-    create /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should POST /Data/NeverNotes/note1/
-      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
-    create /Data/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should POST /Data/NeverNotes/note1/
-      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
 
   initial state
     ✓ should GET /some/deep/path/
@@ -490,7 +490,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  171 passing (5s)
+  171 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 

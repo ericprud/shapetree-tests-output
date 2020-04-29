@@ -10,7 +10,7 @@
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "repos/ericprud/jsg";
     tree:shapeTreeInstanceRoot <../../../>;
-    ldp:contains <labels/>, <issues/>, <milestones/>.
+    ldp:contains <issues/>, <milestones/>, <labels/>.
 <#jsg> gh:id "46061512"^^xsd:integer;
     gh:node_id "MDEwOlJlcG9zaXRvcnk0NjA2MTUxMg==";
     gh:name "jsg";
