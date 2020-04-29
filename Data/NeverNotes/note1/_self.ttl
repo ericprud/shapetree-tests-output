@@ -14,8 +14,8 @@
 <#note1> :title "Note1";
     :content "Don't believe the hype!";
     :updated "2020-01-01T12:34:00Z"^^xsd:dateTime;
-    :tagNames _:b12.
-_:b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag1";
-    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b13.
-_:b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag2";
+    :tagNames _:b60.
+_:b60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag1";
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b61.
+_:b61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tag2";
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil>.

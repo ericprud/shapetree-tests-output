@@ -245,53 +245,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
-    ✓ should !GET /Data/NeverNotes/
-
-  create /Data/NeverNotes/ hierarchy
-    create /Data/NeverNotes/
-      ✓ should STOMP /Data/NeverNotes
-      ✓ should GET /Data/NeverNotes/
-    create /Data/NeverNotes/note1/
-      ✓ should POST /Data/NeverNotes/
-      ✓ should GET /Data/NeverNotes/note1/
-      ✓ should !GET /Data/NeverNotes/note2/
-      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-    create /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should POST /Data/NeverNotes/note1/
-      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
-    create /Data/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should POST /Data/NeverNotes/note1/
-      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Photos2020-01/
-
-  create /Data/Photos2020-01/ hierarchy
-    create /Data/Photos2020-01/
-      ✓ should STOMP /Data/Photos2020-01
-      ✓ should GET /Data/Photos2020-01/
-    create /Data/Photos2020-01/m33
-      ✓ should POST /Data/Photos2020-01/
-      ✓ should GET /Data/Photos2020-01/m33.jpeg
-      ✓ should !GET /Data/Photos2020-01/m32.jpeg
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Albums2019/
-
-  create /Data/Albums2019/ hierarchy
-    create /Data/Albums2019/
-      ✓ should STOMP /Data/Albums2019
-      ✓ should GET /Data/Albums2019/
-    create /Data/Albums2019/ref-1
-      ✓ should POST /Data/Albums2019/
-      ✓ should GET /Data/Albums2019/ref-1.ttl
-      ✓ should !GET /Data/Albums2019/ref-2.ttl
-
-  initial state
-    ✓ should GET /Data/
     ✓ should !GET /Data/bad-nonconformant-POST/
     ✓ should fail to delete /
     ✓ should fail to delete /doesnotexist
@@ -357,19 +310,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/bad-missing-shape-property/ref-1
       ✓ should POST /Data/bad-missing-shape-property/
       ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
-
-  initial state
-    ✓ should GET /some/deep/path/
-    ✓ should !GET /some/deep/path/Albums2019/
-
-  create /some/deep/path/Albums2019/ hierarchy
-    create /some/deep/path/Albums2019/
-      ✓ should STOMP /some/deep/path/Albums2019
-      ✓ should GET /some/deep/path/Albums2019/
-    create /some/deep/path/Albums2019/ref-1
-      ✓ should POST /some/deep/path/Albums2019/
-      ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
-      ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
   initial state
     ✓ should GET /Data/
@@ -442,6 +382,53 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
   initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Albums2019/
+
+  create /Data/Albums2019/ hierarchy
+    create /Data/Albums2019/
+      ✓ should STOMP /Data/Albums2019
+      ✓ should GET /Data/Albums2019/
+    create /Data/Albums2019/ref-1
+      ✓ should POST /Data/Albums2019/
+      ✓ should GET /Data/Albums2019/ref-1.ttl
+      ✓ should !GET /Data/Albums2019/ref-2.ttl
+
+  initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Photos2020-01/
+
+  create /Data/Photos2020-01/ hierarchy
+    create /Data/Photos2020-01/
+      ✓ should STOMP /Data/Photos2020-01
+      ✓ should GET /Data/Photos2020-01/
+    create /Data/Photos2020-01/m33
+      ✓ should POST /Data/Photos2020-01/
+      ✓ should GET /Data/Photos2020-01/m33.jpeg
+      ✓ should !GET /Data/Photos2020-01/m32.jpeg
+
+  initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/NeverNotes/
+
+  create /Data/NeverNotes/ hierarchy
+    create /Data/NeverNotes/
+      ✓ should STOMP /Data/NeverNotes
+      ✓ should GET /Data/NeverNotes/
+    create /Data/NeverNotes/note1/
+      ✓ should POST /Data/NeverNotes/
+      ✓ should GET /Data/NeverNotes/note1/
+      ✓ should !GET /Data/NeverNotes/note2/
+      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+    create /Data/NeverNotes/note1/img-M33_IR.jpg
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
+    create /Data/NeverNotes/note1/inc-M33_IR.ttl
+      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+
+  initial state
     ✓ should GET /some/deep/path/
     ✓ should !GET /some/deep/path/Git/
 
@@ -488,6 +475,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/
       ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
       ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
+
+  initial state
+    ✓ should GET /some/deep/path/
+    ✓ should !GET /some/deep/path/Albums2019/
+
+  create /some/deep/path/Albums2019/ hierarchy
+    create /some/deep/path/Albums2019/
+      ✓ should STOMP /some/deep/path/Albums2019
+      ✓ should GET /some/deep/path/Albums2019/
+    create /some/deep/path/Albums2019/ref-1
+      ✓ should POST /some/deep/path/Albums2019/
+      ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
+      ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
   171 passing (5s)
