@@ -206,6 +206,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 
 
+  ✓ LDP server should serve /
   ✓ AppStore server should serve /
   test/local.test.js
     appStoreServer
@@ -313,6 +314,28 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
+    ✓ should !GET /Data/Calendar/
+
+  create /Data/Calendar/ hierarchy
+    create /Data/Calendar/
+      ✓ should STOMP /Data/Calendar
+      ✓ should STOMP /Data/Google
+      ✓ should GET /Data/Calendar/
+    create /Data/Calendar/event1
+      ✓ should POST /Data/Calendar/
+      ✓ should GET /Data/Calendar/event1.ttl
+      ✓ should !GET /Data/Calendar/event2.ttl
+    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+
+  initial state
+    ✓ should GET /Data/
     ✓ should !GET /Data/Git/
 
   create /Data/Git/
@@ -358,28 +381,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Git/repos/ericprud/jsg/issues/
       ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
       ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Calendar/
-
-  create /Data/Calendar/ hierarchy
-    create /Data/Calendar/
-      ✓ should STOMP /Data/Calendar
-      ✓ should STOMP /Data/Google
-      ✓ should GET /Data/Calendar/
-    create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/
-      ✓ should GET /Data/Calendar/event1.ttl
-      ✓ should !GET /Data/Calendar/event2.ttl
-    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   initial state
     ✓ should GET /Data/
@@ -490,12 +491,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  171 passing (6s)
+  172 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |    97.7 |     100 |                   
+All files               |     100 |      100 |   97.75 |     100 |                   
  test-suite             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
@@ -503,8 +504,9 @@ All files               |     100 |      100 |    97.7 |     100 |
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
  test-suite/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- test-suite/util        |     100 |      100 |   95.24 |     100 |                   
+ test-suite/util        |     100 |      100 |   95.35 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
+  fetch-self-signed.js  |     100 |      100 |     100 |     100 |                   
   shape-tree.js         |     100 |      100 |   95.24 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 ```
