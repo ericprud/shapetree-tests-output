@@ -197,11 +197,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 ```
 
-> shape-tree@0.0.0 test:quiet /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
-> npm run prepare-tests && PORT=12345 nyc mocha --sort --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
+> shape-tree@0.0.0 test:quiet /home/eric/checkouts/shapetrees/test-suite
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
 
 
-> shape-tree@0.0.0 prepare-tests /home/eric/checkouts/janeirodigital/footprintlib.js/footprints
+> shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
 > mkdir -p www && ls -d www/* | grep -v README.md | xargs rm -rf
 
 
@@ -313,28 +313,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
-    ✓ should !GET /Data/Calendar/
-
-  create /Data/Calendar/ hierarchy
-    create /Data/Calendar/
-      ✓ should STOMP /Data/Calendar
-      ✓ should STOMP /Data/Google
-      ✓ should GET /Data/Calendar/
-    create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/
-      ✓ should GET /Data/Calendar/event1.ttl
-      ✓ should !GET /Data/Calendar/event2.ttl
-    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-
-  initial state
-    ✓ should GET /Data/
     ✓ should !GET /Data/Git/
 
   create /Data/Git/
@@ -383,6 +361,28 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
+    ✓ should !GET /Data/Calendar/
+
+  create /Data/Calendar/ hierarchy
+    create /Data/Calendar/
+      ✓ should STOMP /Data/Calendar
+      ✓ should STOMP /Data/Google
+      ✓ should GET /Data/Calendar/
+    create /Data/Calendar/event1
+      ✓ should POST /Data/Calendar/
+      ✓ should GET /Data/Calendar/event1.ttl
+      ✓ should !GET /Data/Calendar/event2.ttl
+    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+
+  initial state
+    ✓ should GET /Data/
     ✓ should !GET /Data/NeverNotes/
 
   create /Data/NeverNotes/ hierarchy
@@ -404,19 +404,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   initial state
     ✓ should GET /Data/
-    ✓ should !GET /Data/Albums2019/
-
-  create /Data/Albums2019/ hierarchy
-    create /Data/Albums2019/
-      ✓ should STOMP /Data/Albums2019
-      ✓ should GET /Data/Albums2019/
-    create /Data/Albums2019/ref-1
-      ✓ should POST /Data/Albums2019/
-      ✓ should GET /Data/Albums2019/ref-1.ttl
-      ✓ should !GET /Data/Albums2019/ref-2.ttl
-
-  initial state
-    ✓ should GET /Data/
     ✓ should !GET /Data/Photos2020-01/
 
   create /Data/Photos2020-01/ hierarchy
@@ -427,6 +414,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Photos2020-01/
       ✓ should GET /Data/Photos2020-01/m33.jpeg
       ✓ should !GET /Data/Photos2020-01/m32.jpeg
+
+  initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Albums2019/
+
+  create /Data/Albums2019/ hierarchy
+    create /Data/Albums2019/
+      ✓ should STOMP /Data/Albums2019
+      ✓ should GET /Data/Albums2019/
+    create /Data/Albums2019/ref-1
+      ✓ should POST /Data/Albums2019/
+      ✓ should GET /Data/Albums2019/ref-1.ttl
+      ✓ should !GET /Data/Albums2019/ref-2.ttl
 
   initial state
     ✓ should GET /some/deep/path/
@@ -496,14 +496,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
 All files               |     100 |      100 |    97.7 |     100 |                   
- footprints             |     100 |      100 |     100 |     100 |                   
+ test-suite             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
- footprints/ecosystems  |     100 |      100 |     100 |     100 |                   
+ test-suite/ecosystems  |     100 |      100 |     100 |     100 |                   
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
- footprints/filesystems |     100 |      100 |     100 |     100 |                   
+ test-suite/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- footprints/util        |     100 |      100 |   95.24 |     100 |                   
+ test-suite/util        |     100 |      100 |   95.24 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
   shape-tree.js         |     100 |      100 |   95.24 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
