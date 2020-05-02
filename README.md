@@ -94,18 +94,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │       │   ├── _self.ttl
 │   │       │   └── subscriptions
 │   │       │       └── _self.ttl
-│   │       ├── Container
-│   │       │   ├── followers
-│   │       │   │   └── _self.ttl
-│   │       │   ├── orgs
-│   │       │   │   └── _self.ttl
-│   │       │   ├── received_events
-│   │       │   │   └── _self.ttl
-│   │       │   ├── repos
-│   │       │   │   └── _self.ttl
-│   │       │   ├── _self.ttl
-│   │       │   └── subscriptions
-│   │       │       └── _self.ttl
 │   │       └── _self.ttl
 │   ├── Google
 │   │   ├── Events
@@ -122,6 +110,26 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Photos2020-01
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
+│   └── _self.ttl
+├── no-slug
+│   ├── Container
+│   │   ├── repos
+│   │   │   └── _self.ttl
+│   │   ├── _self.ttl
+│   │   └── users
+│   │       ├── Container
+│   │       │   ├── followers
+│   │       │   │   └── _self.ttl
+│   │       │   ├── orgs
+│   │       │   │   └── _self.ttl
+│   │       │   ├── received_events
+│   │       │   │   └── _self.ttl
+│   │       │   ├── repos
+│   │       │   │   └── _self.ttl
+│   │       │   ├── _self.ttl
+│   │       │   └── subscriptions
+│   │       │       └── _self.ttl
+│   │       └── _self.ttl
 │   └── _self.ttl
 ├── README.md
 ├── _self.ttl
@@ -172,24 +180,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   │   │       │   ├── _self.ttl
     │   │   │       │   └── subscriptions
     │   │   │       │       └── _self.ttl
-    │   │   │       ├── Container
-    │   │   │       │   ├── followers
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── orgs
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── received_events
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── repos
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── _self.ttl
-    │   │   │       │   └── subscriptions
-    │   │   │       │       └── _self.ttl
     │   │   │       └── _self.ttl
     │   │   └── _self.ttl
     │   └── _self.ttl
     └── _self.ttl
 
-78 directories, 104 files
+76 directories, 102 files
 ```
 
 
@@ -237,7 +233,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad JSONLD
       ✓ should create a novel directory
       create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-        ✓ should POST /collisionDir/collision-2/Events/
+        ✓ should POST /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should delete a file
@@ -266,7 +262,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/bad-nonexistent-shape
       ✓ should GET /Data/bad-nonexistent-shape/
     create /Data/bad-nonexistent-shape/ref-1
-      ✓ should POST /Data/bad-nonexistent-shape/
+      ✓ should POST /Data/bad-nonexistent-shape/ref-1.ttl
       ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
 
   create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
@@ -274,7 +270,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/bad-unGETtable-shape
       ✓ should GET /Data/bad-unGETtable-shape/
     create /Data/bad-unGETtable-shape/ref-1
-      ✓ should POST /Data/bad-unGETtable-shape/
+      ✓ should POST /Data/bad-unGETtable-shape/ref-1.ttl
       ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
 
   create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
@@ -282,13 +278,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/bad-nonconformant-posts
       ✓ should GET /Data/bad-nonconformant-posts/
     create /Data/bad-nonconformant-posts/malformed-ref-1
-      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
       ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
     create /Data/bad-nonconformant-posts/ref-invalid-2
-      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
       ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
     create /Data/bad-nonconformant-posts/ref-valid-3
-      ✓ should POST /Data/bad-nonconformant-posts/
+      ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
       ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
 
   create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
@@ -301,7 +297,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/bad-malformed-shapeTree-nested-two-names
       ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
     create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
-      ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/
+      ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
       ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
 
   create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
@@ -309,8 +305,57 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/bad-missing-shape-property
       ✓ should GET /Data/bad-missing-shape-property/
     create /Data/bad-missing-shape-property/ref-1
-      ✓ should POST /Data/bad-missing-shape-property/
+      ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
       ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
+
+  create /no-slug/Container/
+    ✓ should STOMP /no-slug/-TBD-
+    ✓ should GET /no-slug/Container/
+
+  re-create /no-slug/Container/
+    ✓ should STOMP /no-slug/999
+    ✓ should !GET /no-slug/999/
+
+  create /no-slug/Container/users/Container/
+    ✓ should POST /no-slug/Container/users/-TBD-
+    ✓ should GET /no-slug/Container/users/Container/
+
+  test/gh-deep.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Git/
+    create /Data/Git/
+      ✓ should STOMP /Data/Git
+      ✓ should GET /Data/Git/
+    create /Data/Git/users/alice/
+      ✓ should POST /Data/Git/users/alice
+      ✓ should GET /Data/Git/users/alice/
+      ✓ should GET /Data/Git/users/alice/subscriptions/
+      ✓ should !GET /Data/Git/users/alice-1/
+      create /Data/Git/users/alice/subscriptions/
+        ✓ should POST /Data/Git/users/alice/subscriptions/subscr1.ttl
+        ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
+    create /Data/Git/users/alice-1/
+      ✓ should POST /Data/Git/users/alice
+      ✓ should GET /Data/Git/users/alice/
+      ✓ should GET /Data/Git/users/alice-1/
+    create /Data/Git/repos/ericprud/ hiearchy
+      create /Data/Git/repos/ericprud/
+        ✓ should POST /Data/Git/repos/ericprud
+        ✓ should GET /Data/Git/repos/ericprud/
+        ✓ should !GET /Data/Git/repos/ericprud-1/
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/
+      create /Data/Git/repos/ericprud/jsg/
+        ✓ should POST /Data/Git/repos/ericprud/jsg
+        ✓ should GET /Data/Git/repos/ericprud/jsg/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/labels/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/milestones/
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+      create /Data/Git/repos/ericprud/jsg/issues/1
+        ✓ should POST /Data/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
   initial state
     ✓ should GET /Data/
@@ -322,65 +367,17 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/Google
       ✓ should GET /Data/Calendar/
     create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/
+      ✓ should POST /Data/Calendar/event1.ttl
       ✓ should GET /Data/Calendar/event1.ttl
       ✓ should !GET /Data/Calendar/event2.ttl
     create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
+      ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
       ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
       ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
     create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/
+      ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
       ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
       ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Git/
-
-  create /Data/Git/
-    ✓ should STOMP /Data/Git
-    ✓ should GET /Data/Git/
-
-  re-create /Data/Container/
-    ✓ should STOMP /Data/-TBD-
-
-  create /Data/Git/users/alice/
-    ✓ should POST /Data/Git/users/
-    ✓ should GET /Data/Git/users/alice/
-    ✓ should GET /Data/Git/users/alice/subscriptions/
-    ✓ should !GET /Data/Git/users/alice-1/
-    create /Data/Git/users/alice/subscriptions/
-      ✓ should POST /Data/Git/users/alice/subscriptions/
-      ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
-
-  create /Data/Git/users/alice-1/
-    ✓ should POST /Data/Git/users/
-    ✓ should GET /Data/Git/users/alice/
-    ✓ should GET /Data/Git/users/alice-1/
-
-  create /Data/Git/users/Container/
-    ✓ should POST /Data/Git/users/
-    ✓ should GET /Data/Git/users/alice-1/
-    ✓ should GET /Data/Git/users/Container/
-
-  create /Data/Git/repos/ericprud/ hiearchy
-    create /Data/Git/repos/ericprud/
-      ✓ should POST /Data/Git/repos/
-      ✓ should GET /Data/Git/repos/ericprud/
-      ✓ should !GET /Data/Git/repos/ericprud-1/
-      ✓ should !GET /Data/Git/repos/ericprud/jsg/
-    create /Data/Git/repos/ericprud/jsg/
-      ✓ should POST /Data/Git/repos/ericprud/
-      ✓ should GET /Data/Git/repos/ericprud/jsg/
-      ✓ should GET /Data/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Data/Git/repos/ericprud/jsg/labels/
-      ✓ should GET /Data/Git/repos/ericprud/jsg/milestones/
-      ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
-    create /Data/Git/repos/ericprud/jsg/issues/1
-      ✓ should POST /Data/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
-      ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
   initial state
     ✓ should GET /Data/
@@ -391,16 +388,16 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/NeverNotes
       ✓ should GET /Data/NeverNotes/
     create /Data/NeverNotes/note1/
-      ✓ should POST /Data/NeverNotes/
+      ✓ should POST /Data/NeverNotes/note1
       ✓ should GET /Data/NeverNotes/note1/
       ✓ should !GET /Data/NeverNotes/note2/
       ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
       ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
     create /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should POST /Data/NeverNotes/note1/img-M33_IR.jpg
       ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
     create /Data/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should POST /Data/NeverNotes/note1/
+      ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
       ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
 
   initial state
@@ -412,7 +409,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/Photos2020-01
       ✓ should GET /Data/Photos2020-01/
     create /Data/Photos2020-01/m33
-      ✓ should POST /Data/Photos2020-01/
+      ✓ should POST /Data/Photos2020-01/m33.jpeg
       ✓ should GET /Data/Photos2020-01/m33.jpeg
       ✓ should !GET /Data/Photos2020-01/m32.jpeg
 
@@ -425,57 +422,46 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /Data/Albums2019
       ✓ should GET /Data/Albums2019/
     create /Data/Albums2019/ref-1
-      ✓ should POST /Data/Albums2019/
+      ✓ should POST /Data/Albums2019/ref-1.ttl
       ✓ should GET /Data/Albums2019/ref-1.ttl
       ✓ should !GET /Data/Albums2019/ref-2.ttl
 
-  initial state
-    ✓ should GET /some/deep/path/
-    ✓ should !GET /some/deep/path/Git/
-
-  create /some/deep/path/Git/
-    ✓ should STOMP /some/deep/path/Git
-    ✓ should GET /some/deep/path/Git/
-
-  re-create /some/deep/path/Container/
-    ✓ should STOMP /some/deep/path/-TBD-
-
-  create /some/deep/path/Git/users/alice/
-    ✓ should POST /some/deep/path/Git/users/
-    ✓ should GET /some/deep/path/Git/users/alice/
-    ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
-    ✓ should !GET /some/deep/path/Git/users/alice-1/
-    create /some/deep/path/Git/users/alice/subscriptions/
-      ✓ should POST /some/deep/path/Git/users/alice/subscriptions/
-      ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
-
-  create /some/deep/path/Git/users/alice-1/
-    ✓ should POST /some/deep/path/Git/users/
-    ✓ should GET /some/deep/path/Git/users/alice/
-    ✓ should GET /some/deep/path/Git/users/alice-1/
-
-  create /some/deep/path/Git/users/Container/
-    ✓ should POST /some/deep/path/Git/users/
-    ✓ should GET /some/deep/path/Git/users/alice-1/
-    ✓ should GET /some/deep/path/Git/users/Container/
-
-  create /some/deep/path/Git/repos/ericprud/ hiearchy
-    create /some/deep/path/Git/repos/ericprud/
-      ✓ should POST /some/deep/path/Git/repos/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/
-      ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
-      ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
-    create /some/deep/path/Git/repos/ericprud/jsg/
-      ✓ should POST /some/deep/path/Git/repos/ericprud/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/milestones/
-      ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-    create /some/deep/path/Git/repos/ericprud/jsg/issues/1
-      ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/
-      ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-      ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
+  test/gh-deep.test.js installed in some/deep/path
+    initial state
+      ✓ should GET /some/deep/path/
+      ✓ should !GET /some/deep/path/Git/
+    create /some/deep/path/Git/
+      ✓ should STOMP /some/deep/path/Git
+      ✓ should GET /some/deep/path/Git/
+    create /some/deep/path/Git/users/alice/
+      ✓ should POST /some/deep/path/Git/users/alice
+      ✓ should GET /some/deep/path/Git/users/alice/
+      ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
+      ✓ should !GET /some/deep/path/Git/users/alice-1/
+      create /some/deep/path/Git/users/alice/subscriptions/
+        ✓ should POST /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
+        ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
+    create /some/deep/path/Git/users/alice-1/
+      ✓ should POST /some/deep/path/Git/users/alice
+      ✓ should GET /some/deep/path/Git/users/alice/
+      ✓ should GET /some/deep/path/Git/users/alice-1/
+    create /some/deep/path/Git/repos/ericprud/ hiearchy
+      create /some/deep/path/Git/repos/ericprud/
+        ✓ should POST /some/deep/path/Git/repos/ericprud
+        ✓ should GET /some/deep/path/Git/repos/ericprud/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
+      create /some/deep/path/Git/repos/ericprud/jsg/
+        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/milestones/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+      create /some/deep/path/Git/repos/ericprud/jsg/issues/1
+        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
   initial state
     ✓ should GET /some/deep/path/
@@ -486,12 +472,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should STOMP /some/deep/path/Albums2019
       ✓ should GET /some/deep/path/Albums2019/
     create /some/deep/path/Albums2019/ref-1
-      ✓ should POST /some/deep/path/Albums2019/
+      ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
       ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
       ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  172 passing (6s)
+  170 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 

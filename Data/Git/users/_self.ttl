@@ -7,4 +7,4 @@
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users";
     tree:shapeTreeInstanceRoot <../>;
-    ldp:contains <alice/>, <alice-1/>, <Container/>.
+    ldp:contains <alice/>, <alice-1/>.
