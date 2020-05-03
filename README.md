@@ -482,7 +482,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.75 |     100 |                   
+All files               |     100 |      100 |   97.83 |     100 |                   
  test-suite             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
