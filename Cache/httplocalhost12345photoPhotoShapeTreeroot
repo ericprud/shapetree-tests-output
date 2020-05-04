@@ -1,4 +1,15 @@
-application/ld+json
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 260
+content-type: application/ld+json
+date: Mon%2C%2004%20May%202020%2005%3A36%3A21%20GMT
+etag: W/%22104-171d610641e%22
+last-modified: Sat%2C%2002%20May%202020%2015%3A45%3A30%20GMT
+vary: Origin
+x-powered-by: Express
+x-timestamp: 1588570581442
 
 { "@context": "../ns/shapeTreeContext.jsonld",
     "@id": "#root", "expectedType":"ldp:BasicContainer",                                                     "contents":[

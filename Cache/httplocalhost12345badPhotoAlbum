@@ -1,0 +1,54 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 994
+content-type: application/octet-stream
+date: Mon%2C%2004%20May%202020%2005%3A36%3A18%20GMT
+etag: W/%223e2-1713a209624%22
+last-modified: Thu%2C%2002%20Apr%202020%2009%3A02%3A26%20GMT
+vary: Origin
+x-powered-by: Express
+x-timestamp: 1588570578764
+
+PREFIX : <http://photo.example/ns#>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX astro: <http://rdvocab.info/Elements/rightAscensionAndDeclination#>
+
+<#PhotoReference> {
+  :image IRI ;
+  :caption xsd:string ;
+  :tag xsd:string * ;
+  :location @<#LocationShape> ?
+}
+<#LocationShape> @<#GeoLocation> OR @<#AstroLocation>
+<#GeoLocation> {
+  geo:lat xsd:string ;
+  geo:long xsd:string
+}
+<#AstroLocation> {
+  astro:rightAscension astro:hms ;
+  astro:declination astro:dms
+}
+
+/** below is a nicer Album schema, currently unused */
+<#PhotoAlbum> {
+  a [ldp:Collection] ;
+  ldp:contains @<#PhotoAlbumEntry> *
+}
+<#PhotoAlbumEntry> {
+  :photoMetadata IRI ;
+  :title xsd:string ? ;
+  :comment @<#CommentShape> * ;
+  :location @<#LocationShape> ?
+}
+<#CommentShape> {
+  :svgArea xsd:string ? ;
+  (:text xsd:string | :entity IRI)
+}
+<#AlbumsShape> {
+  a [ldp:Collection] ;
+  ldp:contains @<#PhotoAlbum> *
+}

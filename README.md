@@ -23,16 +23,23 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   └── _self.ttl
 ├── Cache
+│   ├── httplocalhost12345albumPhotoAlbum
 │   ├── httplocalhost12345albumPhotoAlbumShapeTreeroot
+│   ├── httplocalhost12345badPhotoAlbum
 │   ├── httplocalhost12345badPhotoAlbumShapeTreeroot
 │   ├── httplocalhost12345badShapeTreeMissingSchemaroot
 │   ├── httplocalhost12345badShapeTreeMissingShaperoot
 │   ├── httplocalhost12345badShapeTreeNestedTwoStaticNamesroot
 │   ├── httplocalhost12345badShapeTreeNoShapePropertyroot
 │   ├── httplocalhost12345badShapeTreeTwoStaticNamesroot
+│   ├── httplocalhost12345calCalendar
 │   ├── httplocalhost12345calCalendarShapeTreecalendar
+│   ├── httplocalhost12345calGoogleCalendar
+│   ├── httplocalhost12345calGoogleShapeTree
 │   ├── httplocalhost12345calGoogleShapeTreetop
+│   ├── httplocalhost12345ghghSchema
 │   ├── httplocalhost12345ghghShapeTreeroot
+│   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTreeroot
 │   ├── httplocalhost12345photoPhotoShapeTreeroot
 │   └── _self.ttl
@@ -185,7 +192,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-76 directories, 102 files
+76 directories, 109 files
 ```
 
 
@@ -308,17 +315,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
       ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
 
-  create /no-slug/Container/
-    ✓ should STOMP /no-slug/-TBD-
-    ✓ should GET /no-slug/Container/
+  initial state
+    ✓ should GET /Data/
+    ✓ should !GET /Data/Calendar/
 
-  re-create /no-slug/Container/
-    ✓ should STOMP /no-slug/999
-    ✓ should !GET /no-slug/999/
-
-  create /no-slug/Container/users/Container/
-    ✓ should POST /no-slug/Container/users/-TBD-
-    ✓ should GET /no-slug/Container/users/Container/
+  create /Data/Calendar/ hierarchy
+    create /Data/Calendar/
+      ✓ should STOMP /Data/Calendar
+      ✓ should STOMP /Data/Google
+      ✓ should GET /Data/Calendar/
+    create /Data/Calendar/event1
+      ✓ should POST /Data/Calendar/event1.ttl
+      ✓ should GET /Data/Calendar/event1.ttl
+      ✓ should !GET /Data/Calendar/event2.ttl
+    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+      ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   test/gh-deep.test.js installed in Data
     initial state
@@ -356,28 +373,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Calendar/
-
-  create /Data/Calendar/ hierarchy
-    create /Data/Calendar/
-      ✓ should STOMP /Data/Calendar
-      ✓ should STOMP /Data/Google
-      ✓ should GET /Data/Calendar/
-    create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/event1.ttl
-      ✓ should GET /Data/Calendar/event1.ttl
-      ✓ should !GET /Data/Calendar/event2.ttl
-    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   initial state
     ✓ should GET /Data/
@@ -425,6 +420,18 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Albums2019/ref-1.ttl
       ✓ should GET /Data/Albums2019/ref-1.ttl
       ✓ should !GET /Data/Albums2019/ref-2.ttl
+
+  create /no-slug/Container/
+    ✓ should STOMP /no-slug/-TBD-
+    ✓ should GET /no-slug/Container/
+
+  re-create /no-slug/Container/
+    ✓ should STOMP /no-slug/999
+    ✓ should !GET /no-slug/999/
+
+  create /no-slug/Container/users/Container/
+    ✓ should POST /no-slug/Container/users/-TBD-
+    ✓ should GET /no-slug/Container/users/Container/
 
   test/gh-deep.test.js installed in some/deep/path
     initial state
@@ -477,12 +484,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  170 passing (6s)
+  170 passing (7s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   97.83 |     100 |                   
+All files               |   99.59 |    97.41 |   98.02 |   99.57 |                   
  test-suite             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
@@ -490,9 +497,9 @@ All files               |     100 |      100 |   97.83 |     100 |
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
  test-suite/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- test-suite/util        |     100 |      100 |   95.35 |     100 |                   
+ test-suite/util        |   98.75 |    94.23 |   95.35 |   98.69 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js  |     100 |      100 |     100 |     100 |                   
-  shape-tree.js         |     100 |      100 |   95.24 |     100 |                   
+  shape-tree.js         |   98.71 |    93.88 |   95.12 |   98.65 | 317,343           
 ------------------------|---------|----------|---------|---------|-------------------
 ```
