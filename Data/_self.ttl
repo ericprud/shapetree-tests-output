@@ -3,8 +3,8 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "/Data";
-    ldp:contains <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Albums2019/>, <Photos2020-01/>.
+    dcterms:title "Shared Data Container";
+    ldp:contains <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
 <bad-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
 <bad-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
 <bad-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.

@@ -211,131 +211,89 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   ✓ LDP server should serve /
   ✓ AppStore server should serve /
-  test/local.test.js
-    appStoreServer
-      ✓ should return on empty path
-      ✓ should resolve full path
-    ShapeTree.local
-      ✓ should throw if not passed a URL
-    ShapeTree.managedContainer
-      ✓ should throw if not passed a Container URL
-      ✓ should throw if the Container URL doesn't end with '/'
-      ✓ should throw if the Container URL ends with '//'
-      ✓ should throw if the shapeTree parameter isn't a URL
-      ✓ should remove a Container directory
-      ✓ should fail on an invalid shapeTree graph
-    ShapeTree.remote
-      ✓ should throw if not passed a URL
-      ✓ should throw on a GET failure
-    ShapeTree.validate
-      ✓ should throw if shapeTree step is missing a shape
-      ✓ should throw on malformed POST Turtle body
-      ✓ should throw on malformed POST JSON-LD body
-    ShapeTree misc
-      ✓ should construct all errors
-      ✓ should render RDFJS nodes
+  test/bad.test.js - installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/bad-nonconformant-POST/
+      ✓ should fail to delete /
+      ✓ should fail to delete /doesnotexist
     STOMP
-      ✓ should fail with bad Turtle
-      ✓ should fail with bad JSON
-      ✓ should fail with bad JSONLD
-      ✓ should create a novel directory
-      create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-        ✓ should POST /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should delete a file
-        ✓ should delete the novel directory
-        ✓ should delete the parent directory
+      should fail with bad Turtle
+        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+      should fail with bad JSON
+        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+      should fail with bad JSONLD
+        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+    create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /Data/bad-nonexistent-shape/
+        ✓ should STOMP /Data/bad-nonexistent-shape
+        ✓ should GET /Data/bad-nonexistent-shape/
+      create /Data/bad-nonexistent-shape/ref-1
+        ✓ should POST /Data/bad-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
+    create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /Data/bad-unGETtable-shape/
+        ✓ should STOMP /Data/bad-unGETtable-shape
+        ✓ should GET /Data/bad-unGETtable-shape/
+      create /Data/bad-unGETtable-shape/ref-1
+        ✓ should POST /Data/bad-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
+    create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /Data/bad-nonconformant-posts/
+        ✓ should STOMP /Data/bad-nonconformant-posts
+        ✓ should GET /Data/bad-nonconformant-posts/
+      create /Data/bad-nonconformant-posts/malformed-ref-1
+        ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
+      create /Data/bad-nonconformant-posts/ref-invalid-2
+        ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
+      create /Data/bad-nonconformant-posts/ref-valid-3
+        ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
+    create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /Data/bad-malformed-shapeTree-two-names/
+        ✓ should STOMP /Data/bad-malformed-shapeTree-two-names
+        ✓ should !GET /Data/bad-malformed-shapeTree-two-names/
+    create /Data/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /Data/bad-malformed-shapeTree-nested-two-names/
+        ✓ should STOMP /Data/bad-malformed-shapeTree-nested-two-names
+        ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
+      create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /Data/bad-missing-shape-property/
+        ✓ should STOMP /Data/bad-missing-shape-property
+        ✓ should GET /Data/bad-missing-shape-property/
+      create /Data/bad-missing-shape-property/ref-1
+        ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
+        ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
 
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/bad-nonconformant-POST/
-    ✓ should fail to delete /
-    ✓ should fail to delete /doesnotexist
-
-  STOMP
-    should fail with bad Turtle
-      ✓ should STOMP /Data/ShouldNotExist
-      ✓ should !GET /Data/ShouldNotExist/
-    should fail with bad JSON
-      ✓ should STOMP /Data/ShouldNotExist
-      ✓ should !GET /Data/ShouldNotExist/
-    should fail with bad JSONLD
-      ✓ should STOMP /Data/ShouldNotExist
-      ✓ should !GET /Data/ShouldNotExist/
-
-  create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
-    create /Data/bad-nonexistent-shape/
-      ✓ should STOMP /Data/bad-nonexistent-shape
-      ✓ should GET /Data/bad-nonexistent-shape/
-    create /Data/bad-nonexistent-shape/ref-1
-      ✓ should POST /Data/bad-nonexistent-shape/ref-1.ttl
-      ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
-
-  create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
-    create /Data/bad-unGETtable-shape/
-      ✓ should STOMP /Data/bad-unGETtable-shape
-      ✓ should GET /Data/bad-unGETtable-shape/
-    create /Data/bad-unGETtable-shape/ref-1
-      ✓ should POST /Data/bad-unGETtable-shape/ref-1.ttl
-      ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
-
-  create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
-    create /Data/bad-nonconformant-posts/
-      ✓ should STOMP /Data/bad-nonconformant-posts
-      ✓ should GET /Data/bad-nonconformant-posts/
-    create /Data/bad-nonconformant-posts/malformed-ref-1
-      ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-      ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-    create /Data/bad-nonconformant-posts/ref-invalid-2
-      ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-      ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-    create /Data/bad-nonconformant-posts/ref-valid-3
-      ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
-      ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
-
-  create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-    create /Data/bad-malformed-shapeTree-two-names/
-      ✓ should STOMP /Data/bad-malformed-shapeTree-two-names
-      ✓ should !GET /Data/bad-malformed-shapeTree-two-names/
-
-  create /Data/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-    create /Data/bad-malformed-shapeTree-nested-two-names/
-      ✓ should STOMP /Data/bad-malformed-shapeTree-nested-two-names
-      ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
-    create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
-      ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
-      ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
-
-  create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-    create /Data/bad-missing-shape-property/
-      ✓ should STOMP /Data/bad-missing-shape-property
-      ✓ should GET /Data/bad-missing-shape-property/
-    create /Data/bad-missing-shape-property/ref-1
-      ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
-      ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Calendar/
-
-  create /Data/Calendar/ hierarchy
-    create /Data/Calendar/
-      ✓ should STOMP /Data/Calendar
-      ✓ should STOMP /Data/Google
-      ✓ should GET /Data/Calendar/
-    create /Data/Calendar/event1
-      ✓ should POST /Data/Calendar/event1.ttl
-      ✓ should GET /Data/Calendar/event1.ttl
-      ✓ should !GET /Data/Calendar/event2.ttl
-    create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-    create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-      ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+  test/cal.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Calendar/
+    create /Data/Calendar/ hierarchy
+      create /Data/Calendar/
+        ✓ should STOMP /Data/Calendar
+        ✓ should STOMP /Data/Google
+        ✓ should GET /Data/Calendar/
+      create /Data/Calendar/event1
+        ✓ should POST /Data/Calendar/event1.ttl
+        ✓ should GET /Data/Calendar/event1.ttl
+        ✓ should !GET /Data/Calendar/event2.ttl
+      create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
   test/gh-deep.test.js installed in Data
     initial state
@@ -374,65 +332,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/NeverNotes/
-
-  create /Data/NeverNotes/ hierarchy
-    create /Data/NeverNotes/
-      ✓ should STOMP /Data/NeverNotes
-      ✓ should GET /Data/NeverNotes/
-    create /Data/NeverNotes/note1/
-      ✓ should POST /Data/NeverNotes/note1
-      ✓ should GET /Data/NeverNotes/note1/
-      ✓ should !GET /Data/NeverNotes/note2/
-      ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-    create /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should POST /Data/NeverNotes/note1/img-M33_IR.jpg
-      ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
-    create /Data/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
-      ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Photos2020-01/
-
-  create /Data/Photos2020-01/ hierarchy
-    create /Data/Photos2020-01/
-      ✓ should STOMP /Data/Photos2020-01
-      ✓ should GET /Data/Photos2020-01/
-    create /Data/Photos2020-01/m33
-      ✓ should POST /Data/Photos2020-01/m33.jpeg
-      ✓ should GET /Data/Photos2020-01/m33.jpeg
-      ✓ should !GET /Data/Photos2020-01/m32.jpeg
-
-  initial state
-    ✓ should GET /Data/
-    ✓ should !GET /Data/Albums2019/
-
-  create /Data/Albums2019/ hierarchy
-    create /Data/Albums2019/
-      ✓ should STOMP /Data/Albums2019
-      ✓ should GET /Data/Albums2019/
-    create /Data/Albums2019/ref-1
-      ✓ should POST /Data/Albums2019/ref-1.ttl
-      ✓ should GET /Data/Albums2019/ref-1.ttl
-      ✓ should !GET /Data/Albums2019/ref-2.ttl
-
-  create /no-slug/Container/
-    ✓ should STOMP /no-slug/-TBD-
-    ✓ should GET /no-slug/Container/
-
-  re-create /no-slug/Container/
-    ✓ should STOMP /no-slug/999
-    ✓ should !GET /no-slug/999/
-
-  create /no-slug/Container/users/Container/
-    ✓ should POST /no-slug/Container/users/-TBD-
-    ✓ should GET /no-slug/Container/users/Container/
-
   test/gh-deep.test.js installed in some/deep/path
     initial state
       ✓ should GET /some/deep/path/
@@ -470,21 +369,114 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
-  initial state
-    ✓ should GET /some/deep/path/
-    ✓ should !GET /some/deep/path/Albums2019/
+  test/local.test.js
+    appStoreServer
+      ✓ should return on empty path
+      ✓ should resolve full path
+    ShapeTree.local
+      ✓ should throw if not passed a URL
+    ShapeTree.managedContainer
+      ✓ should throw if not passed a Container URL
+      ✓ should throw if the Container URL doesn't end with '/'
+      ✓ should throw if the Container URL ends with '//'
+      ✓ should throw if the shapeTree parameter isn't a URL
+      ✓ should remove a Container directory
+      ✓ should fail on an invalid shapeTree graph
+    ShapeTree.remote
+      ✓ should throw if not passed a URL
+      ✓ should throw on a GET failure
+    ShapeTree.validate
+      ✓ should throw if shapeTree step is missing a shape
+      ✓ should throw on malformed POST Turtle body
+      ✓ should throw on malformed POST JSON-LD body
+    ShapeTree misc
+      ✓ should construct all errors
+      ✓ should render RDFJS nodes
+    STOMP
+      ✓ should fail with bad Turtle
+      ✓ should fail with bad JSON
+      ✓ should fail with bad JSONLD
+      ✓ should create a novel directory
+      create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should delete a file
+        ✓ should delete the novel directory
+        ✓ should delete the parent directory
+    handle PLANTs and POSTs with no Slug header
+      create /no-slug/Container/
+        ✓ should STOMP /no-slug/-TBD-
+        ✓ should GET /no-slug/Container/
+      re-create /no-slug/Container/
+        ✓ should STOMP /no-slug/999
+        ✓ should !GET /no-slug/999/
+      create /no-slug/Container/users/Container/
+        ✓ should POST /no-slug/Container/users/-TBD-
+        ✓ should GET /no-slug/Container/users/Container/
 
-  create /some/deep/path/Albums2019/ hierarchy
-    create /some/deep/path/Albums2019/
-      ✓ should STOMP /some/deep/path/Albums2019
-      ✓ should GET /some/deep/path/Albums2019/
-    create /some/deep/path/Albums2019/ref-1
-      ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
-      ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
-      ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
+  test/nevernote.test.js installid in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/NeverNotes/
+    create /Data/NeverNotes/ hierarchy
+      create /Data/NeverNotes/
+        ✓ should STOMP /Data/NeverNotes
+        ✓ should GET /Data/NeverNotes/
+      create /Data/NeverNotes/note1/
+        ✓ should POST /Data/NeverNotes/note1
+        ✓ should GET /Data/NeverNotes/note1/
+        ✓ should !GET /Data/NeverNotes/note2/
+        ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+      create /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should POST /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
+      create /Data/NeverNotes/note1/inc-M33_IR.ttl
+        ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
+        ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+
+  test/photo.test.js installid in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Photos2020-01/
+    create /Data/Photos2020-01/ hierarchy
+      create /Data/Photos2020-01/
+        ✓ should STOMP /Data/Photos2020-01
+        ✓ should GET /Data/Photos2020-01/
+      create /Data/Photos2020-01/m33
+        ✓ should POST /Data/Photos2020-01/m33.jpeg
+        ✓ should GET /Data/Photos2020-01/m33.jpeg
+        ✓ should !GET /Data/Photos2020-01/m32.jpeg
+
+  test/photoAlbum-shallow.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Albums2019/
+    create /Data/Albums2019/ hierarchy
+      create /Data/Albums2019/
+        ✓ should STOMP /Data/Albums2019
+        ✓ should GET /Data/Albums2019/
+      create /Data/Albums2019/ref-1
+        ✓ should POST /Data/Albums2019/ref-1.ttl
+        ✓ should GET /Data/Albums2019/ref-1.ttl
+        ✓ should !GET /Data/Albums2019/ref-2.ttl
+
+  test/photoAlbum-shallow.test.js installed in some/deep/path
+    initial state
+      ✓ should GET /some/deep/path/
+      ✓ should !GET /some/deep/path/Albums2019/
+    create /some/deep/path/Albums2019/ hierarchy
+      create /some/deep/path/Albums2019/
+        ✓ should STOMP /some/deep/path/Albums2019
+        ✓ should GET /some/deep/path/Albums2019/
+      create /some/deep/path/Albums2019/ref-1
+        ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
+        ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
+        ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  170 passing (7s)
+  170 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
