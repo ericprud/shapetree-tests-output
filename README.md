@@ -481,21 +481,21 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   172 passing (6s)
 
-------------------------|---------|----------|---------|---------|-------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------|---------|----------|---------|---------|-------------------
-All files               |     100 |      100 |   98.23 |     100 |                   
- test-suite             |     100 |      100 |     100 |     100 |                   
-  appStoreServer.js     |     100 |      100 |     100 |     100 |                   
-  ldpServer.js          |     100 |      100 |     100 |     100 |                   
- test-suite/ecosystems  |     100 |      100 |     100 |     100 |                   
-  simple-apps.js        |     100 |      100 |     100 |     100 |                   
- test-suite/filesystems |     100 |      100 |     100 |     100 |                   
-  fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- test-suite/util        |     100 |      100 |    96.3 |     100 |                   
-  constants.js          |     100 |      100 |     100 |     100 |                   
-  fetch-self-signed.js  |     100 |      100 |     100 |     100 |                   
-  rdf-errors.js         |     100 |      100 |     100 |     100 |                   
-  shape-tree.js         |     100 |      100 |   95.12 |     100 |                   
-------------------------|---------|----------|---------|---------|-------------------
+------------------------------------|---------|----------|---------|---------|-------------------
+File                                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------------|---------|----------|---------|---------|-------------------
+All files                           |     100 |      100 |   98.23 |     100 |                   
+ test-suite                         |     100 |      100 |     100 |     100 |                   
+  appStoreServer.js                 |     100 |      100 |     100 |     100 |                   
+  ldpServer.js                      |     100 |      100 |     100 |     100 |                   
+ test-suite/filesystems             |     100 |      100 |     100 |     100 |                   
+  fetch-self-signed.js              |     100 |      100 |     100 |     100 |                   
+  fs-promises-utf8.js               |     100 |      100 |     100 |     100 |                   
+ test-suite/shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
+  simple-apps.js                    |     100 |      100 |     100 |     100 |                   
+ test-suite/shapetree.js/lib        |     100 |      100 |   96.15 |     100 |                   
+  constants.js                      |     100 |      100 |     100 |     100 |                   
+  rdf-errors.js                     |     100 |      100 |     100 |     100 |                   
+  shape-tree.js                     |     100 |      100 |   95.12 |     100 |                   
+------------------------------------|---------|----------|---------|---------|-------------------
 ```
