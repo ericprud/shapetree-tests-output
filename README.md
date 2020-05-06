@@ -24,25 +24,25 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── _self.ttl
 ├── Cache
 │   ├── httplocalhost12345albumPhotoAlbum
-│   ├── httplocalhost12345albumPhotoAlbumShapeTreeroot
+│   ├── httplocalhost12345albumPhotoAlbumShapeTree
 │   ├── httplocalhost12345badPhotoAlbum
-│   ├── httplocalhost12345badPhotoAlbumShapeTreeroot
-│   ├── httplocalhost12345badShapeTreeMissingSchemaroot
-│   ├── httplocalhost12345badShapeTreeMissingShaperoot
-│   ├── httplocalhost12345badShapeTreeNestedTwoStaticNamesroot
-│   ├── httplocalhost12345badShapeTreeNoShapePropertyroot
-│   ├── httplocalhost12345badShapeTreeTwoStaticNamesroot
+│   ├── httplocalhost12345badPhotoAlbumShapeTree
+│   ├── httplocalhost12345badShapeTreeMissingSchema
+│   ├── httplocalhost12345badShapeTreeMissingShape
+│   ├── httplocalhost12345badShapeTreeNestedTwoStaticNames
+│   ├── httplocalhost12345badShapeTreeNoShapeProperty
+│   ├── httplocalhost12345badShapeTreeTwoStaticNames
 │   ├── httplocalhost12345calCalendar
-│   ├── httplocalhost12345calCalendarShapeTreecalendar
+│   ├── httplocalhost12345calCalendarShapeTree
 │   ├── httplocalhost12345calGoogleCalendar
 │   ├── httplocalhost12345calGoogleShapeTree
-│   ├── httplocalhost12345calGoogleShapeTreetop
 │   ├── httplocalhost12345ghghSchema
-│   ├── httplocalhost12345ghghShapeTreeroot
+│   ├── httplocalhost12345ghghShapeTree
+│   ├── httplocalhost12345ghghShapeTreettl
+│   ├── httplocalhost12345ghghShapeTreetxt
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
-│   ├── httplocalhost12345nevernoteNeverNoteShapeTreeroot
-│   ├── httplocalhost12345photoPhotoShapeTreeroot
+│   ├── httplocalhost12345photoPhotoShapeTree
 │   └── _self.ttl
 ├── Data
 │   ├── Albums2019
@@ -386,6 +386,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     ShapeTree.remote
       ✓ should throw if not passed a URL
       ✓ should throw on a GET failure
+      ✓ should parse turtle
+      ✓ should throw on bad media type
     ShapeTree.validate
       ✓ should throw if shapeTree step is missing a shape
       ✓ should throw on malformed POST Turtle body
@@ -477,12 +479,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  170 passing (6s)
+  172 passing (6s)
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   99.59 |    97.41 |   98.04 |   99.58 |                   
+All files               |     100 |      100 |   98.23 |     100 |                   
  test-suite             |     100 |      100 |     100 |     100 |                   
   appStoreServer.js     |     100 |      100 |     100 |     100 |                   
   ldpServer.js          |     100 |      100 |     100 |     100 |                   
@@ -490,9 +492,10 @@ All files               |   99.59 |    97.41 |   98.04 |   99.58 |
   simple-apps.js        |     100 |      100 |     100 |     100 |                   
  test-suite/filesystems |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js   |     100 |      100 |     100 |     100 |                   
- test-suite/util        |   98.75 |    94.23 |   95.35 |   98.69 |                   
+ test-suite/util        |     100 |      100 |    96.3 |     100 |                   
   constants.js          |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js  |     100 |      100 |     100 |     100 |                   
-  shape-tree.js         |   98.71 |    93.88 |   95.12 |   98.65 | 317,343           
+  rdf-errors.js         |     100 |      100 |     100 |     100 |                   
+  shape-tree.js         |     100 |      100 |   95.12 |     100 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 ```
