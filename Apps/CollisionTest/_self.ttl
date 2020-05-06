@@ -5,8 +5,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "CollisionTest Directory";
-    tree:installedIn _:b1.
-_:b1 tree:app <http://store.example/gh>;
+    tree:installedIn _:b44.
+_:b44 tree:app <http://store.example/gh>;
     tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
     tree:shapeTreeInstancePath </collisionDir/collision-2/>.
 <http://store.example/gh> tree:name "CollisionTest".

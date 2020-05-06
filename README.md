@@ -201,7 +201,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > shape-tree@0.0.0 test:quiet /home/eric/checkouts/shapetrees/test-suite
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=99
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 --sort test/*.test.js
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
