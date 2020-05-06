@@ -4,12 +4,10 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 1677
 content-type: application/octet-stream
-date: Mon%2C%2004%20May%202020%2005%3A36%3A21%20GMT
 etag: W/%2268d-171792d6cf9%22
 last-modified: Tue%2C%2014%20Apr%202020%2014%3A52%3A32%20GMT
 vary: Origin
 x-powered-by: Express
-x-timestamp: 1588570581225
 
 /*
 Extracted from https://dev.evernote.com/doc/reference/Types.html with NN.js,

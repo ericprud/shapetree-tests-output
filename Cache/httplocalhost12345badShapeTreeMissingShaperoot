@@ -4,12 +4,10 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 378
 content-type: application/ld+json
-date: Mon%2C%2004%20May%202020%2005%3A36%3A18%20GMT
 etag: W/%2217a-171ae54379f%22
 last-modified: Fri%2C%2024%20Apr%202020%2022%3A34%3A47%20GMT
 vary: Origin
 x-powered-by: Express
-x-timestamp: 1588570578614
 
 { "@context": "../ns/shapeTreeContext.jsonld",
     "@id":   "#root", "expectedType":"ldp:BasicContainer", "contents":[

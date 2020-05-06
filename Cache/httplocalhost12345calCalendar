@@ -4,12 +4,10 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 332
 content-type: application/octet-stream
-date: Mon%2C%2004%20May%202020%2005%3A36%3A19%20GMT
 etag: W/%2214c-1713a209624%22
 last-modified: Thu%2C%2002%20Apr%202020%2009%3A02%3A26%20GMT
 vary: Origin
 x-powered-by: Express
-x-timestamp: 1588570579955
 
 PREFIX cal: <http://med.example/ns/Calendar#>
 PREFIX ical: <http://www.w3.org/2002/12/cal/ical#>
