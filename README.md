@@ -371,7 +371,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
   test/local.test.js
-    appStoreServer
+    AppStore server
       ✓ should return on empty path
       ✓ should resolve full path
     ShapeTree.local
@@ -481,21 +481,21 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   172 passing (6s)
 
-------------------------------------|---------|----------|---------|---------|-------------------
-File                                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------------------|---------|----------|---------|---------|-------------------
-All files                           |     100 |      100 |   98.21 |     100 |                   
- test-suite                         |     100 |      100 |     100 |     100 |                   
-  appStoreServer.js                 |     100 |      100 |     100 |     100 |                   
-  ldpServer.js                      |     100 |      100 |     100 |     100 |                   
- test-suite/filesystems             |     100 |      100 |     100 |     100 |                   
-  fetch-self-signed.js              |     100 |      100 |     100 |     100 |                   
-  fs-promises-utf8.js               |     100 |      100 |     100 |     100 |                   
- test-suite/shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
-  simple-apps.js                    |     100 |      100 |     100 |     100 |                   
- test-suite/shapetree.js/lib        |     100 |      100 |   96.15 |     100 |                   
-  constants.js                      |     100 |      100 |     100 |     100 |                   
-  rdf-errors.js                     |     100 |      100 |     100 |     100 |                   
-  shape-tree.js                     |     100 |      100 |   95.12 |     100 |                   
-------------------------------------|---------|----------|---------|---------|-------------------
+-------------------------|---------|----------|---------|---------|-------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------|---------|----------|---------|---------|-------------------
+All files                |     100 |      100 |   98.21 |     100 |                   
+ filesystems             |     100 |      100 |     100 |     100 |                   
+  fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
+  fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
+ servers                 |     100 |      100 |     100 |     100 |                   
+  AppStore.js            |     100 |      100 |     100 |     100 |                   
+  LDP.js                 |     100 |      100 |     100 |     100 |                   
+ shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
+  simple-apps.js         |     100 |      100 |     100 |     100 |                   
+ shapetree.js/lib        |     100 |      100 |   96.15 |     100 |                   
+  constants.js           |     100 |      100 |     100 |     100 |                   
+  rdf-errors.js          |     100 |      100 |     100 |     100 |                   
+  shape-tree.js          |     100 |      100 |   95.12 |     100 |                   
+-------------------------|---------|----------|---------|---------|-------------------
 ```
