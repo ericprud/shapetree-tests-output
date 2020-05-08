@@ -118,7 +118,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Photos2020-01
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
-│   └── _self.ttl
+│   ├── _self.ttl
+│   └── Unmanaged
+│       ├── Alice
+│       │   └── _self.ttl
+│       ├── m33.jpeg
+│       └── _self.ttl
 ├── no-slug
 │   ├── Container
 │   │   ├── repos
@@ -193,7 +198,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-76 directories, 110 files
+78 directories, 113 files
 ```
 
 
@@ -371,6 +376,17 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
   test/local.test.js
+    LDP server
+      handle POSTs to unmanaged Containers
+        create /Data/Unmanaged/
+          ✓ should POST /Data/Unmanaged
+          ✓ should GET /Data/Unmanaged/
+        create /Data/Unmanaged/Alice/
+          ✓ should POST /Data/Unmanaged/Alice
+          ✓ should GET /Data/Unmanaged/Alice/
+        create /Data/Unmanaged/m33.jpeg
+          ✓ should POST /Data/Unmanaged/m33.jpeg
+          ✓ should GET /Data/Unmanaged/m33.jpeg
     AppStore server
       ✓ should return on empty path
       ✓ should resolve full path
@@ -395,7 +411,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     ShapeTree misc
       ✓ should construct all errors
       ✓ should render RDFJS nodes
-    STOMP
+    PLANT
       ✓ should fail with bad Turtle
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
@@ -479,12 +495,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  172 passing (5s)
+  178 passing (5s)
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |     100 |      100 |   98.32 |     100 |                   
+All files                |     100 |      100 |   98.35 |     100 |                   
  filesystems             |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
