@@ -420,9 +420,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should delete a file
-        ✓ should delete the novel directory
-        ✓ should delete the parent directory
+        PUT
+          ✓ should PUT /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        DELETE
+          ✓ should delete a file
+          ✓ should delete the novel directory
+          ✓ should delete the parent directory
     handle PLANTs and POSTs with no Slug header
       create /no-slug/Container/
         ✓ should STOMP /no-slug/-TBD-
@@ -495,18 +499,18 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  178 passing (5s)
+  180 passing (5s)
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |     100 |      100 |   98.35 |     100 |                   
+All files                |   99.48 |    97.12 |   98.35 |   99.46 |                   
  filesystems             |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
- servers                 |     100 |      100 |     100 |     100 |                   
+ servers                 |   98.67 |    93.55 |     100 |   98.64 |                   
   AppStore.js            |     100 |      100 |     100 |     100 |                   
-  LDP.js                 |     100 |      100 |     100 |     100 |                   
+  LDP.js                 |   98.24 |       92 |     100 |    98.2 | 160-162           
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
   simple-apps.js         |     100 |      100 |     100 |     100 |                   
  shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                   

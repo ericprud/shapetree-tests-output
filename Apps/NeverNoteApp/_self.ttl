@@ -5,8 +5,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "NeverNoteApp Directory";
-    tree:installedIn _:b56.
-_:b56 tree:app <http://store.example/NeverNoteApp>;
+    tree:installedIn _:b62.
+_:b62 tree:app <http://store.example/NeverNoteApp>;
     tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
     tree:shapeTreeInstancePath </Data/NeverNotes/>.
 <http://store.example/NeverNoteApp> tree:name "NeverNoteApp".
