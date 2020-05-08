@@ -479,12 +479,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  172 passing (6s)
+  172 passing (5s)
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |     100 |      100 |   98.21 |     100 |                   
+All files                |     100 |      100 |   98.32 |     100 |                   
  filesystems             |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
@@ -493,9 +493,9 @@ All files                |     100 |      100 |   98.21 |     100 |
   LDP.js                 |     100 |      100 |     100 |     100 |                   
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
   simple-apps.js         |     100 |      100 |     100 |     100 |                   
- shapetree.js/lib        |     100 |      100 |   96.15 |     100 |                   
+ shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                   
   constants.js           |     100 |      100 |     100 |     100 |                   
   rdf-errors.js          |     100 |      100 |     100 |     100 |                   
-  shape-tree.js          |     100 |      100 |   95.12 |     100 |                   
+  shape-tree.js          |     100 |      100 |   95.83 |     100 |                   
 -------------------------|---------|----------|---------|---------|-------------------
 ```
