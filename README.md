@@ -376,7 +376,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should resolve full path
     ShapeTree.local
       ✓ should throw if not passed a URL
-    ShapeTree.managedContainer
+    ShapeTree.ManagedContainer
       ✓ should throw if not passed a Container URL
       ✓ should throw if the Container URL doesn't end with '/'
       ✓ should throw if the Container URL ends with '//'
@@ -494,7 +494,7 @@ All files                |     100 |      100 |   98.32 |     100 |
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
   simple-apps.js         |     100 |      100 |     100 |     100 |                   
  shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                   
-  constants.js           |     100 |      100 |     100 |     100 |                   
+  prefixes.js            |     100 |      100 |     100 |     100 |                   
   rdf-errors.js          |     100 |      100 |     100 |     100 |                   
   shape-tree.js          |     100 |      100 |   95.83 |     100 |                   
 -------------------------|---------|----------|---------|---------|-------------------
