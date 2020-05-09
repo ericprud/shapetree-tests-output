@@ -207,7 +207,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > shape-tree@0.0.0 test:quiet /home/eric/checkouts/shapetrees/test-suite
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 --sort test/*.test.js
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 --sort test/*.test.js test/examples/*.test.js
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
@@ -394,59 +394,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
-  test/local.test.js
-    LDP server
-      handle POSTs to unmanaged Containers
-        create /Data/Unmanaged/
-          ✓ should POST /Data/Unmanaged
-          ✓ should GET /Data/Unmanaged/
-        create /Data/Unmanaged/Alice/
-          ✓ should POST /Data/Unmanaged/Alice
-          ✓ should GET /Data/Unmanaged/Alice/
-        create /Data/Unmanaged/m33.jpeg
-          ✓ should POST /Data/Unmanaged/m33.jpeg
-          ✓ should GET /Data/Unmanaged/m33.jpeg
-    AppStore server
-      ✓ should return on empty path
-      ✓ should resolve full path
-    ShapeTree.local
-      ✓ should throw if not passed a URL
-    ShapeTree.ManagedContainer
-      ✓ should throw if not passed a Container URL
-      ✓ should throw if the Container URL doesn't end with '/'
-      ✓ should throw if the Container URL ends with '//'
-      ✓ should throw if the shapeTree parameter isn't a URL
-      ✓ should remove a Container directory
-      ✓ should fail on an invalid shapeTree graph
-    ShapeTree.remote
-      ✓ should throw if not passed a URL
-      ✓ should throw on a GET failure
-      ✓ should parse turtle
-      ✓ should throw on bad media type
-    ShapeTree.validate
-      ✓ should throw if shapeTree step is missing a shape
-      ✓ should throw on malformed POST Turtle body
-      ✓ should throw on malformed POST JSON-LD body
-    ShapeTree misc
-      ✓ should construct all errors
-      ✓ should render RDFJS nodes
-    PLANT
-      ✓ should fail with bad Turtle
-      ✓ should fail with bad JSON
-      ✓ should fail with bad JSONLD
-      ✓ should create a novel directory
-      ✓ should delete the parent directory
-    handle PLANTs and POSTs with no Slug header
-      create /no-slug/Container/
-        ✓ should PLANT /no-slug/-TBD-
-        ✓ should GET /no-slug/Container/
-      re-create /no-slug/Container/
-        ✓ should PLANT /no-slug/999
-        ✓ should !GET /no-slug/999/
-      create /no-slug/Container/users/Container/
-        ✓ should POST /no-slug/Container/users/-TBD-
-        ✓ should GET /no-slug/Container/users/Container/
-
   test/nevernote.test.js installid in Data
     initial state
       ✓ should GET /Data/
@@ -506,6 +453,59 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
         ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
+
+  test/local.test.js
+    LDP server
+      handle POSTs to unmanaged Containers
+        create /Data/Unmanaged/
+          ✓ should POST /Data/Unmanaged
+          ✓ should GET /Data/Unmanaged/
+        create /Data/Unmanaged/Alice/
+          ✓ should POST /Data/Unmanaged/Alice
+          ✓ should GET /Data/Unmanaged/Alice/
+        create /Data/Unmanaged/m33.jpeg
+          ✓ should POST /Data/Unmanaged/m33.jpeg
+          ✓ should GET /Data/Unmanaged/m33.jpeg
+    AppStore server
+      ✓ should return on empty path
+      ✓ should resolve full path
+    ShapeTree.local
+      ✓ should throw if not passed a URL
+    ShapeTree.ManagedContainer
+      ✓ should throw if not passed a Container URL
+      ✓ should throw if the Container URL doesn't end with '/'
+      ✓ should throw if the Container URL ends with '//'
+      ✓ should throw if the shapeTree parameter isn't a URL
+      ✓ should remove a Container directory
+      ✓ should fail on an invalid shapeTree graph
+    ShapeTree.remote
+      ✓ should throw if not passed a URL
+      ✓ should throw on a GET failure
+      ✓ should parse turtle
+      ✓ should throw on bad media type
+    ShapeTree.validate
+      ✓ should throw if shapeTree step is missing a shape
+      ✓ should throw on malformed POST Turtle body
+      ✓ should throw on malformed POST JSON-LD body
+    ShapeTree misc
+      ✓ should construct all errors
+      ✓ should render RDFJS nodes
+    PLANT
+      ✓ should fail with bad Turtle
+      ✓ should fail with bad JSON
+      ✓ should fail with bad JSONLD
+      ✓ should create a novel directory
+      ✓ should delete the parent directory
+    handle PLANTs and POSTs with no Slug header
+      create /no-slug/Container/
+        ✓ should PLANT /no-slug/-TBD-
+        ✓ should GET /no-slug/Container/
+      re-create /no-slug/Container/
+        ✓ should PLANT /no-slug/999
+        ✓ should !GET /no-slug/999/
+      create /no-slug/Container/users/Container/
+        ✓ should POST /no-slug/Container/users/-TBD-
+        ✓ should GET /no-slug/Container/users/Container/
 
 
   184 passing (5s)

@@ -5,7 +5,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "PhotoAlbumApp Directory";
-    tree:installedIn _:b21, _:b24, _:b27, _:b31, _:b34, _:b77, _:b80.
+    tree:installedIn _:b21, _:b24, _:b27, _:b31, _:b34, _:b71, _:b74.
 _:b21 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>;
     tree:shapeTreeInstancePath </Data/bad-nonexistent-shape/>.
@@ -21,10 +21,10 @@ _:b31 tree:app <http://store.example/PhotoAlbumApp>;
 _:b34 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>;
     tree:shapeTreeInstancePath </Data/bad-missing-shape-property/>.
-_:b77 tree:app <http://store.example/PhotoAlbumApp>;
+_:b71 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath </Data/Albums2019/>.
 <http://store.example/PhotoAlbumApp> tree:name "PhotoAlbumApp".
-_:b80 tree:app <http://store.example/PhotoAlbumApp>;
+_:b74 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath </some/deep/path/Albums2019/>.
