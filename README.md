@@ -80,18 +80,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │       │   └── subscriptions
 │   │       │       ├── _self.ttl
 │   │       │       └── subscr1.ttl
-│   │       ├── ericprud-1
-│   │       │   ├── followers
-│   │       │   │   └── _self.ttl
-│   │       │   ├── orgs
-│   │       │   │   └── _self.ttl
-│   │       │   ├── received_events
-│   │       │   │   └── _self.ttl
-│   │       │   ├── repos
-│   │       │   │   └── _self.ttl
-│   │       │   ├── _self.ttl
-│   │       │   └── subscriptions
-│   │       │       └── _self.ttl
 │   │       └── _self.ttl
 │   ├── Google
 │   │   ├── Events
@@ -166,7 +154,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-63 directories, 96 files
+57 directories, 90 files
 ```
 
 
@@ -254,22 +242,49 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       should fail with bad JSONLD
         ✓ should PLANT /Data/ShouldNotExist
         ✓ should !GET /Data/ShouldNotExist/
-      create /Data/ShapeMaps-PUT-tests/
-        ✓ should PLANT /Data/ShapeMaps-PUT-tests
-        ✓ should GET /Data/ShapeMaps-PUT-tests/
-        create /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-          ✓ should POST /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should !GET /Data/ShapeMaps-PUT-tests/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      PUT tests
+        create /Data/ShapeMaps-PUT-tests/
+          ✓ should PLANT /Data/ShapeMaps-PUT-tests
+          ✓ should GET /Data/ShapeMaps-PUT-tests/
+        create /Data/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /Data/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to replace managed LDPC
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          create /Data/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -335,22 +350,49 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       should fail with bad JSONLD
         ✓ should PLANT /some/deep/path/ShouldNotExist
         ✓ should !GET /some/deep/path/ShouldNotExist/
-      create /some/deep/path/ShapeMaps-PUT-tests/
-        ✓ should PLANT /some/deep/path/ShapeMaps-PUT-tests
-        ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/
-        create /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      PUT tests
+        create /some/deep/path/ShapeMaps-PUT-tests/
+          ✓ should PLANT /some/deep/path/ShapeMaps-PUT-tests
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/
+        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to replace managed LDPC
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -433,14 +475,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should POST /Data/Git/users/ericprud
       ✓ should GET /Data/Git/users/ericprud/
       ✓ should GET /Data/Git/users/ericprud/subscriptions/
+      ✓ should !GET /Data/Git/users/ericprud/subscriptions/subscr1.ttl
       ✓ should !GET /Data/Git/users/ericprud-1/
       create /Data/Git/users/ericprud/subscriptions/
         ✓ should POST /Data/Git/users/ericprud/subscriptions/subscr1.ttl
         ✓ should GET /Data/Git/users/ericprud/subscriptions/subscr1.ttl
-    create /Data/Git/users/ericprud-1/
-      ✓ should POST /Data/Git/users/ericprud
-      ✓ should GET /Data/Git/users/ericprud/
-      ✓ should GET /Data/Git/users/ericprud-1/
     create /Data/Git/repos/ericprud/ hiearchy
       create /Data/Git/repos/ericprud/
         ✓ should POST /Data/Git/repos/ericprud
@@ -520,7 +559,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  205 passing (6s)
+  243 passing (7s)
   6 pending
 
 -------------------------|---------|----------|---------|---------|-------------------
