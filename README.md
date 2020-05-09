@@ -48,16 +48,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Albums2019
 │   │   ├── ref-1.ttl
 │   │   └── _self.ttl
-│   ├── bad-malformed-shapeTree-nested-two-names
-│   │   └── _self.ttl
-│   ├── bad-missing-shape-property
-│   │   └── _self.ttl
-│   ├── bad-nonconformant-posts
-│   │   └── _self.ttl
-│   ├── bad-nonexistent-shape
-│   │   └── _self.ttl
-│   ├── bad-unGETtable-shape
-│   │   └── _self.ttl
 │   ├── Calendar
 │   │   ├── event1.ttl
 │   │   └── _self.ttl
@@ -119,6 +109,16 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
 │   ├── _self.ttl
+│   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+│   │   └── _self.ttl
+│   ├── ShapeMaps-missing-shape-property
+│   │   └── _self.ttl
+│   ├── ShapeMaps-nonconformant-posts
+│   │   └── _self.ttl
+│   ├── ShapeMaps-nonexistent-shape
+│   │   └── _self.ttl
+│   ├── ShapeMaps-unGETtable-shape
+│   │   └── _self.ttl
 │   └── Unmanaged
 │       ├── Alice
 │       │   └── _self.ttl
@@ -207,7 +207,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > shape-tree@0.0.0 test:quiet /home/eric/checkouts/shapetrees/test-suite
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 200 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 --sort test/*.test.js test/examples/*.test.js
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 300 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 test/*.test.js test/examples/*.test.js
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
@@ -217,243 +217,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   ✓ LDP server should serve /
   ✓ AppStore server should serve /
-  test/bad.test.js - installed in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/bad-nonconformant-POST/
-      ✓ should fail to delete /
-      ✓ should fail to delete /doesnotexist
-    PLANT
-      should fail with bad Turtle
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
-      should fail with bad JSON
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
-      should fail with bad JSONLD
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
-      create /Data/bad-PUT-tests/
-        ✓ should PLANT /Data/bad-PUT-tests
-        ✓ should GET /Data/bad-PUT-tests/
-        create /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-          ✓ should POST /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should GET /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should !GET /Data/bad-PUT-tests/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          - successful PUT to replace managed LDPC
-          - successful PUT to create managed LDPC
-          - successful PUT to replace instance root LDPC
-          successful PUT to replace LDPR
-            ✓ should PUT /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-            ✓ should GET /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          successful PUT to create LDPR
-            ✓ should PUT /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
-            ✓ should GET /Data/bad-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
-          successful DELETE of LDPR
-            ✓ should delete a file
-            ✓ successful DELETE of instance root LDPC
-    create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
-      create /Data/bad-nonexistent-shape/
-        ✓ should PLANT /Data/bad-nonexistent-shape
-        ✓ should GET /Data/bad-nonexistent-shape/
-      create /Data/bad-nonexistent-shape/ref-1
-        ✓ should POST /Data/bad-nonexistent-shape/ref-1.ttl
-        ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
-    create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
-      create /Data/bad-unGETtable-shape/
-        ✓ should PLANT /Data/bad-unGETtable-shape
-        ✓ should GET /Data/bad-unGETtable-shape/
-      create /Data/bad-unGETtable-shape/ref-1
-        ✓ should POST /Data/bad-unGETtable-shape/ref-1.ttl
-        ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
-    create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
-      create /Data/bad-nonconformant-posts/
-        ✓ should PLANT /Data/bad-nonconformant-posts
-        ✓ should GET /Data/bad-nonconformant-posts/
-      create /Data/bad-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-        ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-      create /Data/bad-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-        ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-      create /Data/bad-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
-        ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
-    create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-      create /Data/bad-malformed-shapeTree-two-names/
-        ✓ should PLANT /Data/bad-malformed-shapeTree-two-names
-        ✓ should !GET /Data/bad-malformed-shapeTree-two-names/
-    create /Data/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-      create /Data/bad-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /Data/bad-malformed-shapeTree-nested-two-names
-        ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
-      create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
-    create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-      create /Data/bad-missing-shape-property/
-        ✓ should PLANT /Data/bad-missing-shape-property
-        ✓ should GET /Data/bad-missing-shape-property/
-      create /Data/bad-missing-shape-property/ref-1
-        ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
-        ✓ should !GET /Data/bad-missing-shape-property/ref-1.ttl
-
-  test/cal.test.js installed in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/Calendar/
-    create /Data/Calendar/ hierarchy
-      create /Data/Calendar/
-        ✓ should PLANT /Data/Calendar
-        ✓ should PLANT /Data/Google
-        ✓ should GET /Data/Calendar/
-      create /Data/Calendar/event1
-        ✓ should POST /Data/Calendar/event1.ttl
-        ✓ should GET /Data/Calendar/event1.ttl
-        ✓ should !GET /Data/Calendar/event2.ttl
-      create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-        ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-      create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
-        ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-
-  test/gh-deep.test.js installed in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/Git/
-    create /Data/Git/
-      ✓ should PLANT /Data/Git
-      ✓ should GET /Data/Git/
-    create /Data/Git/users/alice/
-      ✓ should POST /Data/Git/users/alice
-      ✓ should GET /Data/Git/users/alice/
-      ✓ should GET /Data/Git/users/alice/subscriptions/
-      ✓ should !GET /Data/Git/users/alice-1/
-      create /Data/Git/users/alice/subscriptions/
-        ✓ should POST /Data/Git/users/alice/subscriptions/subscr1.ttl
-        ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
-    create /Data/Git/users/alice-1/
-      ✓ should POST /Data/Git/users/alice
-      ✓ should GET /Data/Git/users/alice/
-      ✓ should GET /Data/Git/users/alice-1/
-    create /Data/Git/repos/ericprud/ hiearchy
-      create /Data/Git/repos/ericprud/
-        ✓ should POST /Data/Git/repos/ericprud
-        ✓ should GET /Data/Git/repos/ericprud/
-        ✓ should !GET /Data/Git/repos/ericprud-1/
-        ✓ should !GET /Data/Git/repos/ericprud/jsg/
-      create /Data/Git/repos/ericprud/jsg/
-        ✓ should POST /Data/Git/repos/ericprud/jsg
-        ✓ should GET /Data/Git/repos/ericprud/jsg/
-        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/
-        ✓ should GET /Data/Git/repos/ericprud/jsg/labels/
-        ✓ should GET /Data/Git/repos/ericprud/jsg/milestones/
-        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
-      create /Data/Git/repos/ericprud/jsg/issues/1
-        ✓ should POST /Data/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
-
-  test/gh-deep.test.js installed in some/deep/path
-    initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/Git/
-    create /some/deep/path/Git/
-      ✓ should PLANT /some/deep/path/Git
-      ✓ should GET /some/deep/path/Git/
-    create /some/deep/path/Git/users/alice/
-      ✓ should POST /some/deep/path/Git/users/alice
-      ✓ should GET /some/deep/path/Git/users/alice/
-      ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
-      ✓ should !GET /some/deep/path/Git/users/alice-1/
-      create /some/deep/path/Git/users/alice/subscriptions/
-        ✓ should POST /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
-        ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
-    create /some/deep/path/Git/users/alice-1/
-      ✓ should POST /some/deep/path/Git/users/alice
-      ✓ should GET /some/deep/path/Git/users/alice/
-      ✓ should GET /some/deep/path/Git/users/alice-1/
-    create /some/deep/path/Git/repos/ericprud/ hiearchy
-      create /some/deep/path/Git/repos/ericprud/
-        ✓ should POST /some/deep/path/Git/repos/ericprud
-        ✓ should GET /some/deep/path/Git/repos/ericprud/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
-      create /some/deep/path/Git/repos/ericprud/jsg/
-        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/milestones/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-      create /some/deep/path/Git/repos/ericprud/jsg/issues/1
-        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
-
-  test/nevernote.test.js installid in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/NeverNotes/
-    create /Data/NeverNotes/ hierarchy
-      create /Data/NeverNotes/
-        ✓ should PLANT /Data/NeverNotes
-        ✓ should GET /Data/NeverNotes/
-      create /Data/NeverNotes/note1/
-        ✓ should POST /Data/NeverNotes/note1
-        ✓ should GET /Data/NeverNotes/note1/
-        ✓ should !GET /Data/NeverNotes/note2/
-        ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
-        ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-      create /Data/NeverNotes/note1/img-M33_IR.jpg
-        ✓ should POST /Data/NeverNotes/note1/img-M33_IR.jpg
-        ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
-      create /Data/NeverNotes/note1/inc-M33_IR.ttl
-        ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
-        ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
-
-  test/photo.test.js installid in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/Photos2020-01/
-    create /Data/Photos2020-01/ hierarchy
-      create /Data/Photos2020-01/
-        ✓ should PLANT /Data/Photos2020-01
-        ✓ should GET /Data/Photos2020-01/
-      create /Data/Photos2020-01/m33
-        ✓ should POST /Data/Photos2020-01/m33.jpeg
-        ✓ should GET /Data/Photos2020-01/m33.jpeg
-        ✓ should !GET /Data/Photos2020-01/m32.jpeg
-
-  test/photoAlbum-shallow.test.js installed in Data
-    initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/Albums2019/
-    create /Data/Albums2019/ hierarchy
-      create /Data/Albums2019/
-        ✓ should PLANT /Data/Albums2019
-        ✓ should GET /Data/Albums2019/
-      create /Data/Albums2019/ref-1
-        ✓ should POST /Data/Albums2019/ref-1.ttl
-        ✓ should GET /Data/Albums2019/ref-1.ttl
-        ✓ should !GET /Data/Albums2019/ref-2.ttl
-
-  test/photoAlbum-shallow.test.js installed in some/deep/path
-    initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/Albums2019/
-    create /some/deep/path/Albums2019/ hierarchy
-      create /some/deep/path/Albums2019/
-        ✓ should PLANT /some/deep/path/Albums2019
-        ✓ should GET /some/deep/path/Albums2019/
-      create /some/deep/path/Albums2019/ref-1
-        ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
-        ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
-        ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
-
   test/local.test.js
     LDP server
       handle POSTs to unmanaged Containers
@@ -506,6 +269,243 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       create /no-slug/Container/users/Container/
         ✓ should POST /no-slug/Container/users/-TBD-
         ✓ should GET /no-slug/Container/users/Container/
+
+  test/shape-trees.test.js - installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/ShapeMaps-nonconformant-POST/
+      ✓ should fail to delete /
+      ✓ should fail to delete /doesnotexist
+    PLANT
+      should fail with bad Turtle
+        ✓ should PLANT /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+      should fail with bad JSON
+        ✓ should PLANT /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+      should fail with bad JSONLD
+        ✓ should PLANT /Data/ShouldNotExist
+        ✓ should !GET /Data/ShouldNotExist/
+      create /Data/ShapeMaps-PUT-tests/
+        ✓ should PLANT /Data/ShapeMaps-PUT-tests
+        ✓ should GET /Data/ShapeMaps-PUT-tests/
+        create /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+          ✓ should POST /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should !GET /Data/ShapeMaps-PUT-tests/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          - successful PUT to replace managed LDPC
+          - successful PUT to create managed LDPC
+          - successful PUT to replace instance root LDPC
+          successful PUT to replace LDPR
+            ✓ should PUT /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          successful PUT to create LDPR
+            ✓ should PUT /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+            ✓ should GET /Data/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+          successful DELETE of LDPR
+            ✓ should delete a file
+            ✓ successful DELETE of instance root LDPC
+    create /Data/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /Data/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /Data/ShapeMaps-nonexistent-shape
+        ✓ should GET /Data/ShapeMaps-nonexistent-shape/
+      create /Data/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /Data/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /Data/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /Data/ShapeMaps-unGETtable-shape
+        ✓ should GET /Data/ShapeMaps-unGETtable-shape/
+      create /Data/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /Data/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /Data/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /Data/ShapeMaps-nonconformant-posts
+        ✓ should GET /Data/ShapeMaps-nonconformant-posts/
+      create /Data/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /Data/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /Data/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /Data/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /Data/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-two-names/
+    create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /Data/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /Data/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /Data/ShapeMaps-missing-shape-property
+        ✓ should GET /Data/ShapeMaps-missing-shape-property/
+      create /Data/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /Data/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /Data/ShapeMaps-missing-shape-property/ref-1.ttl
+
+  test/example/cal.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Calendar/
+    create /Data/Calendar/ hierarchy
+      create /Data/Calendar/
+        ✓ should PLANT /Data/Calendar
+        ✓ should PLANT /Data/Google
+        ✓ should GET /Data/Calendar/
+      create /Data/Calendar/event1
+        ✓ should POST /Data/Calendar/event1.ttl
+        ✓ should GET /Data/Calendar/event1.ttl
+        ✓ should !GET /Data/Calendar/event2.ttl
+      create /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should !GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+      create /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z
+        ✓ should POST /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+        ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+
+  test/example/gh-deep.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Git/
+    create /Data/Git/
+      ✓ should PLANT /Data/Git
+      ✓ should GET /Data/Git/
+    create /Data/Git/users/alice/
+      ✓ should POST /Data/Git/users/alice
+      ✓ should GET /Data/Git/users/alice/
+      ✓ should GET /Data/Git/users/alice/subscriptions/
+      ✓ should !GET /Data/Git/users/alice-1/
+      create /Data/Git/users/alice/subscriptions/
+        ✓ should POST /Data/Git/users/alice/subscriptions/subscr1.ttl
+        ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
+    create /Data/Git/users/alice-1/
+      ✓ should POST /Data/Git/users/alice
+      ✓ should GET /Data/Git/users/alice/
+      ✓ should GET /Data/Git/users/alice-1/
+    create /Data/Git/repos/ericprud/ hiearchy
+      create /Data/Git/repos/ericprud/
+        ✓ should POST /Data/Git/repos/ericprud
+        ✓ should GET /Data/Git/repos/ericprud/
+        ✓ should !GET /Data/Git/repos/ericprud-1/
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/
+      create /Data/Git/repos/ericprud/jsg/
+        ✓ should POST /Data/Git/repos/ericprud/jsg
+        ✓ should GET /Data/Git/repos/ericprud/jsg/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/labels/
+        ✓ should GET /Data/Git/repos/ericprud/jsg/milestones/
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+      create /Data/Git/repos/ericprud/jsg/issues/1
+        ✓ should POST /Data/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
+
+  test/example/gh-deep.test.js installed in some/deep/path
+    initial state
+      ✓ should GET /some/deep/path/
+      ✓ should !GET /some/deep/path/Git/
+    create /some/deep/path/Git/
+      ✓ should PLANT /some/deep/path/Git
+      ✓ should GET /some/deep/path/Git/
+    create /some/deep/path/Git/users/alice/
+      ✓ should POST /some/deep/path/Git/users/alice
+      ✓ should GET /some/deep/path/Git/users/alice/
+      ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
+      ✓ should !GET /some/deep/path/Git/users/alice-1/
+      create /some/deep/path/Git/users/alice/subscriptions/
+        ✓ should POST /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
+        ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
+    create /some/deep/path/Git/users/alice-1/
+      ✓ should POST /some/deep/path/Git/users/alice
+      ✓ should GET /some/deep/path/Git/users/alice/
+      ✓ should GET /some/deep/path/Git/users/alice-1/
+    create /some/deep/path/Git/repos/ericprud/ hiearchy
+      create /some/deep/path/Git/repos/ericprud/
+        ✓ should POST /some/deep/path/Git/repos/ericprud
+        ✓ should GET /some/deep/path/Git/repos/ericprud/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
+      create /some/deep/path/Git/repos/ericprud/jsg/
+        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/milestones/
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+      create /some/deep/path/Git/repos/ericprud/jsg/issues/1
+        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
+        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
+
+  test/example/nevernote.test.js installid in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/NeverNotes/
+    create /Data/NeverNotes/ hierarchy
+      create /Data/NeverNotes/
+        ✓ should PLANT /Data/NeverNotes
+        ✓ should GET /Data/NeverNotes/
+      create /Data/NeverNotes/note1/
+        ✓ should POST /Data/NeverNotes/note1
+        ✓ should GET /Data/NeverNotes/note1/
+        ✓ should !GET /Data/NeverNotes/note2/
+        ✓ should !GET /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should !GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+      create /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should POST /Data/NeverNotes/note1/img-M33_IR.jpg
+        ✓ should GET /Data/NeverNotes/note1/img-M33_IR.jpg
+      create /Data/NeverNotes/note1/inc-M33_IR.ttl
+        ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
+        ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
+
+  test/example/photo.test.js installid in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Photos2020-01/
+    create /Data/Photos2020-01/ hierarchy
+      create /Data/Photos2020-01/
+        ✓ should PLANT /Data/Photos2020-01
+        ✓ should GET /Data/Photos2020-01/
+      create /Data/Photos2020-01/m33
+        ✓ should POST /Data/Photos2020-01/m33.jpeg
+        ✓ should GET /Data/Photos2020-01/m33.jpeg
+        ✓ should !GET /Data/Photos2020-01/m32.jpeg
+
+  test/example/photoAlbum-shallow.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/Albums2019/
+    create /Data/Albums2019/ hierarchy
+      create /Data/Albums2019/
+        ✓ should PLANT /Data/Albums2019
+        ✓ should GET /Data/Albums2019/
+      create /Data/Albums2019/ref-1
+        ✓ should POST /Data/Albums2019/ref-1.ttl
+        ✓ should GET /Data/Albums2019/ref-1.ttl
+        ✓ should !GET /Data/Albums2019/ref-2.ttl
+
+  test/example/photoAlbum-shallow.test.js installed in some/deep/path
+    initial state
+      ✓ should GET /some/deep/path/
+      ✓ should !GET /some/deep/path/Albums2019/
+    create /some/deep/path/Albums2019/ hierarchy
+      create /some/deep/path/Albums2019/
+        ✓ should PLANT /some/deep/path/Albums2019
+        ✓ should GET /some/deep/path/Albums2019/
+      create /some/deep/path/Albums2019/ref-1
+        ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
+        ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
+        ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
   184 passing (5s)

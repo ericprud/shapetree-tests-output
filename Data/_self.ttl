@@ -4,12 +4,12 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "Shared Data Container";
-    ldp:contains <bad-nonexistent-shape/>, <bad-unGETtable-shape/>, <bad-nonconformant-posts/>, <bad-malformed-shapeTree-nested-two-names/>, <bad-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
-<bad-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
-<bad-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
-<bad-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
-<bad-malformed-shapeTree-nested-two-names/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
-<bad-missing-shape-property/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
+    ldp:contains <Unmanaged/>, <ShapeMaps-nonexistent-shape/>, <ShapeMaps-unGETtable-shape/>, <ShapeMaps-nonconformant-posts/>, <ShapeMaps-malformed-shapeTree-nested-two-names/>, <ShapeMaps-missing-shape-property/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
+<ShapeMaps-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
+<ShapeMaps-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
+<ShapeMaps-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
+<ShapeMaps-malformed-shapeTree-nested-two-names/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
+<ShapeMaps-missing-shape-property/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
 <Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
 <Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.
 <Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.

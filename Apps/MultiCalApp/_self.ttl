@@ -5,14 +5,14 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "MultiCalApp Directory";
-    tree:installedIn _:b1, _:b36, _:b38.
-_:b1 tree:app <http://store.example/MultiCalApp>;
+    tree:installedIn _:b7, _:b42, _:b44.
+_:b7 tree:app <http://store.example/MultiCalApp>;
     tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
-    tree:shapeTreeInstancePath </Data/bad-PUT-tests/>.
-_:b36 tree:app <http://store.example/MultiCalApp>;
+    tree:shapeTreeInstancePath </Data/ShapeMaps-PUT-tests/>.
+_:b42 tree:app <http://store.example/MultiCalApp>;
     tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>;
     tree:shapeTreeInstancePath </Data/Calendar/>.
 <http://store.example/MultiCalApp> tree:name "MultiCalApp".
-_:b38 tree:app <http://store.example/MultiCalApp>;
+_:b44 tree:app <http://store.example/MultiCalApp>;
     tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
     tree:shapeTreeInstancePath </Data/Google/>.
