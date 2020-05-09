@@ -223,57 +223,57 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/bad-nonconformant-POST/
       ✓ should fail to delete /
       ✓ should fail to delete /doesnotexist
-    STOMP
+    PLANT
       should fail with bad Turtle
-        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should PLANT /Data/ShouldNotExist
         ✓ should !GET /Data/ShouldNotExist/
       should fail with bad JSON
-        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should PLANT /Data/ShouldNotExist
         ✓ should !GET /Data/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should STOMP /Data/ShouldNotExist
+        ✓ should PLANT /Data/ShouldNotExist
         ✓ should !GET /Data/ShouldNotExist/
     create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
       create /Data/bad-nonexistent-shape/
-        ✓ should STOMP /Data/bad-nonexistent-shape
+        ✓ should PLANT /Data/bad-nonexistent-shape
         ✓ should GET /Data/bad-nonexistent-shape/
       create /Data/bad-nonexistent-shape/ref-1
         ✓ should POST /Data/bad-nonexistent-shape/ref-1.ttl
         ✓ should !GET /Data/bad-nonexistent-shape/ref-1.ttl
     create /Data/bad-unGETtable-shape/ hierarchy -- can't GET referenced shape
       create /Data/bad-unGETtable-shape/
-        ✓ should STOMP /Data/bad-unGETtable-shape
+        ✓ should PLANT /Data/bad-unGETtable-shape
         ✓ should GET /Data/bad-unGETtable-shape/
       create /Data/bad-unGETtable-shape/ref-1
         ✓ should POST /Data/bad-unGETtable-shape/ref-1.ttl
         ✓ should !GET /Data/bad-unGETtable-shape/ref-1.ttl
     create /Data/bad-nonconformant-posts/ hierarchy -- POSTed data does not validate
       create /Data/bad-nonconformant-posts/
-        ✓ should STOMP /Data/bad-nonconformant-posts
+        ✓ should PLANT /Data/bad-nonconformant-posts
         ✓ should GET /Data/bad-nonconformant-posts/
-      create /Data/bad-nonconformant-posts/malformed-ref-1
+      create /Data/bad-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
         ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-      create /Data/bad-nonconformant-posts/ref-invalid-2
+      create /Data/bad-nonconformant-posts/ref-invalid-2 -- Does not conform to schema
         ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-      create /Data/bad-nonconformant-posts/ref-valid-3
+      create /Data/bad-nonconformant-posts/ref-valid-3 -- Does not conform to schema
         ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
     create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       create /Data/bad-malformed-shapeTree-two-names/
-        ✓ should STOMP /Data/bad-malformed-shapeTree-two-names
+        ✓ should PLANT /Data/bad-malformed-shapeTree-two-names
         ✓ should !GET /Data/bad-malformed-shapeTree-two-names/
     create /Data/bad-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       create /Data/bad-malformed-shapeTree-nested-two-names/
-        ✓ should STOMP /Data/bad-malformed-shapeTree-nested-two-names
+        ✓ should PLANT /Data/bad-malformed-shapeTree-nested-two-names
         ✓ should GET /Data/bad-malformed-shapeTree-nested-two-names/
       create /Data/bad-malformed-shapeTree-nested-two-names/ref-1
         ✓ should POST /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
         ✓ should !GET /Data/bad-malformed-shapeTree-nested-two-names/ref-1.ttl
     create /Data/bad-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       create /Data/bad-missing-shape-property/
-        ✓ should STOMP /Data/bad-missing-shape-property
+        ✓ should PLANT /Data/bad-missing-shape-property
         ✓ should GET /Data/bad-missing-shape-property/
       create /Data/bad-missing-shape-property/ref-1
         ✓ should POST /Data/bad-missing-shape-property/ref-1.ttl
@@ -285,8 +285,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/Calendar/
     create /Data/Calendar/ hierarchy
       create /Data/Calendar/
-        ✓ should STOMP /Data/Calendar
-        ✓ should STOMP /Data/Google
+        ✓ should PLANT /Data/Calendar
+        ✓ should PLANT /Data/Google
         ✓ should GET /Data/Calendar/
       create /Data/Calendar/event1
         ✓ should POST /Data/Calendar/event1.ttl
@@ -306,7 +306,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should GET /Data/
       ✓ should !GET /Data/Git/
     create /Data/Git/
-      ✓ should STOMP /Data/Git
+      ✓ should PLANT /Data/Git
       ✓ should GET /Data/Git/
     create /Data/Git/users/alice/
       ✓ should POST /Data/Git/users/alice
@@ -343,7 +343,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should GET /some/deep/path/
       ✓ should !GET /some/deep/path/Git/
     create /some/deep/path/Git/
-      ✓ should STOMP /some/deep/path/Git
+      ✓ should PLANT /some/deep/path/Git
       ✓ should GET /some/deep/path/Git/
     create /some/deep/path/Git/users/alice/
       ✓ should POST /some/deep/path/Git/users/alice
@@ -429,10 +429,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should delete the parent directory
     handle PLANTs and POSTs with no Slug header
       create /no-slug/Container/
-        ✓ should STOMP /no-slug/-TBD-
+        ✓ should PLANT /no-slug/-TBD-
         ✓ should GET /no-slug/Container/
       re-create /no-slug/Container/
-        ✓ should STOMP /no-slug/999
+        ✓ should PLANT /no-slug/999
         ✓ should !GET /no-slug/999/
       create /no-slug/Container/users/Container/
         ✓ should POST /no-slug/Container/users/-TBD-
@@ -444,7 +444,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/NeverNotes/
     create /Data/NeverNotes/ hierarchy
       create /Data/NeverNotes/
-        ✓ should STOMP /Data/NeverNotes
+        ✓ should PLANT /Data/NeverNotes
         ✓ should GET /Data/NeverNotes/
       create /Data/NeverNotes/note1/
         ✓ should POST /Data/NeverNotes/note1
@@ -465,7 +465,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/Photos2020-01/
     create /Data/Photos2020-01/ hierarchy
       create /Data/Photos2020-01/
-        ✓ should STOMP /Data/Photos2020-01
+        ✓ should PLANT /Data/Photos2020-01
         ✓ should GET /Data/Photos2020-01/
       create /Data/Photos2020-01/m33
         ✓ should POST /Data/Photos2020-01/m33.jpeg
@@ -478,7 +478,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /Data/Albums2019/
     create /Data/Albums2019/ hierarchy
       create /Data/Albums2019/
-        ✓ should STOMP /Data/Albums2019
+        ✓ should PLANT /Data/Albums2019
         ✓ should GET /Data/Albums2019/
       create /Data/Albums2019/ref-1
         ✓ should POST /Data/Albums2019/ref-1.ttl
@@ -491,7 +491,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should !GET /some/deep/path/Albums2019/
     create /some/deep/path/Albums2019/ hierarchy
       create /some/deep/path/Albums2019/
-        ✓ should STOMP /some/deep/path/Albums2019
+        ✓ should PLANT /some/deep/path/Albums2019
         ✓ should GET /some/deep/path/Albums2019/
       create /some/deep/path/Albums2019/ref-1
         ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
