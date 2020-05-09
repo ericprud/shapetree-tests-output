@@ -207,7 +207,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ```
 
 > shape-tree@0.0.0 test:quiet /home/eric/checkouts/shapetrees/test-suite
-> npm run prepare-tests && PORT=12345 nyc mocha --slow 300 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 test/*.test.js test/examples/*.test.js
+> npm run prepare-tests && PORT=12345 nyc mocha --slow 300 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 test/*.test.js test/apps/*.test.js
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
@@ -351,7 +351,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /Data/ShapeMaps-missing-shape-property/ref-1.ttl
 
-  test/example/cal.test.js installed in Data
+  test/apps/cal.test.js installed in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/Calendar/
@@ -373,7 +373,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Google/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
         ✓ should GET /Data/Google/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
 
-  test/example/gh-deep.test.js installed in Data
+  test/apps/gh-deep.test.js installed in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/Git/
@@ -410,7 +410,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
-  test/example/gh-deep.test.js installed in some/deep/path
+  test/apps/gh-deep.test.js installed in some/deep/path
     initial state
       ✓ should GET /some/deep/path/
       ✓ should !GET /some/deep/path/Git/
@@ -447,7 +447,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
-  test/example/nevernote.test.js installid in Data
+  test/apps/nevernote.test.js installid in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/NeverNotes/
@@ -468,7 +468,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
         ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
 
-  test/example/photo.test.js installid in Data
+  test/apps/photo.test.js installid in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/Photos2020-01/
@@ -481,7 +481,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Photos2020-01/m33.jpeg
         ✓ should !GET /Data/Photos2020-01/m32.jpeg
 
-  test/example/photoAlbum-shallow.test.js installed in Data
+  test/apps/photoAlbum-shallow.test.js installed in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/Albums2019/
@@ -494,7 +494,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Albums2019/ref-1.ttl
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
-  test/example/photoAlbum-shallow.test.js installed in some/deep/path
+  test/apps/photoAlbum-shallow.test.js installed in some/deep/path
     initial state
       ✓ should GET /some/deep/path/
       ✓ should !GET /some/deep/path/Albums2019/
