@@ -254,10 +254,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       create /Data/bad-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
         ✓ should POST /Data/bad-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/malformed-ref-1.ttl
-      create /Data/bad-nonconformant-posts/ref-invalid-2 -- Does not conform to schema
+      create /Data/bad-nonconformant-posts/ref-invalid-2 -- misspelled caption property
         ✓ should POST /Data/bad-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/ref-invalid-2.ttl
-      create /Data/bad-nonconformant-posts/ref-valid-3 -- Does not conform to schema
+      create /Data/bad-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
         ✓ should POST /Data/bad-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /Data/bad-nonconformant-posts/ref-valid-3.ttl
     create /Data/bad-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
