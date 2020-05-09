@@ -233,6 +233,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       should fail with bad JSONLD
         ✓ should PLANT /Data/ShouldNotExist
         ✓ should !GET /Data/ShouldNotExist/
+      create /Data/bad-PUT-failures/
+        ✓ should PLANT /Data/bad-PUT-failures
+        ✓ should GET /Data/bad-PUT-failures/
+        create /Data/bad-PUT-failures/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+          ✓ should POST /Data/bad-PUT-failures/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should GET /Data/bad-PUT-failures/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should !GET /Data/bad-PUT-failures/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          successful PUT to replace
+            ✓ should PUT /Data/bad-PUT-failures/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+            ✓ should GET /Data/bad-PUT-failures/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          DELETE
+            ✓ should delete a file
+            ✓ should delete the novel directory
     create /Data/bad-nonexistent-shape/ hierarchy -- schema does not contain shape
       create /Data/bad-nonexistent-shape/
         ✓ should PLANT /Data/bad-nonexistent-shape
@@ -416,17 +429,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail with bad JSON
       ✓ should fail with bad JSONLD
       ✓ should create a novel directory
-      create /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
-        ✓ should POST /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        ✓ should !GET /collisionDir/collision-2/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        PUT
-          ✓ should PUT /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-          ✓ should GET /collisionDir/collision-2/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
-        DELETE
-          ✓ should delete a file
-          ✓ should delete the novel directory
-          ✓ should delete the parent directory
+      ✓ should delete the parent directory
     handle PLANTs and POSTs with no Slug header
       create /no-slug/Container/
         ✓ should PLANT /no-slug/-TBD-
@@ -499,7 +502,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  180 passing (5s)
+  182 passing (5s)
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
