@@ -3,4 +3,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "index for unmanaged Container /Data/Unmanaged/";
-    ldp:contains <Alice/>, <m33.jpeg>.
+    ldp:contains <Ericprud/>, <m33.jpeg>.

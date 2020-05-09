@@ -67,7 +67,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   │   └── _self.ttl
 │   │   ├── _self.ttl
 │   │   └── users
-│   │       ├── alice
+│   │       ├── ericprud
 │   │       │   ├── followers
 │   │       │   │   └── _self.ttl
 │   │       │   ├── orgs
@@ -80,7 +80,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │       │   └── subscriptions
 │   │       │       ├── _self.ttl
 │   │       │       └── subscr1.ttl
-│   │       ├── alice-1
+│   │       ├── ericprud-1
 │   │       │   ├── followers
 │   │       │   │   └── _self.ttl
 │   │       │   ├── orgs
@@ -120,7 +120,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── ShapeMaps-unGETtable-shape
 │   │   └── _self.ttl
 │   └── Unmanaged
-│       ├── Alice
+│       ├── Ericprud
 │       │   └── _self.ttl
 │       ├── m33.jpeg
 │       └── _self.ttl
@@ -168,7 +168,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   │   │   │   └── _self.ttl
     │   │   │   ├── _self.ttl
     │   │   │   └── users
-    │   │   │       ├── alice
+    │   │   │       ├── ericprud
     │   │   │       │   ├── followers
     │   │   │       │   │   └── _self.ttl
     │   │   │       │   ├── orgs
@@ -181,7 +181,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   │   │       │   └── subscriptions
     │   │   │       │       ├── _self.ttl
     │   │   │       │       └── subscr1.ttl
-    │   │   │       ├── alice-1
+    │   │   │       ├── ericprud-1
     │   │   │       │   ├── followers
     │   │   │       │   │   └── _self.ttl
     │   │   │       │   ├── orgs
@@ -223,9 +223,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /Data/Unmanaged/
           ✓ should POST /Data/Unmanaged
           ✓ should GET /Data/Unmanaged/
-        create /Data/Unmanaged/Alice/
-          ✓ should POST /Data/Unmanaged/Alice
-          ✓ should GET /Data/Unmanaged/Alice/
+        create /Data/Unmanaged/Ericprud/
+          ✓ should POST /Data/Unmanaged/Ericprud
+          ✓ should GET /Data/Unmanaged/Ericprud/
         create /Data/Unmanaged/m33.jpeg
           ✓ should POST /Data/Unmanaged/m33.jpeg
           ✓ should GET /Data/Unmanaged/m33.jpeg
@@ -380,18 +380,18 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/Git/
       ✓ should PLANT /Data/Git
       ✓ should GET /Data/Git/
-    create /Data/Git/users/alice/
-      ✓ should POST /Data/Git/users/alice
-      ✓ should GET /Data/Git/users/alice/
-      ✓ should GET /Data/Git/users/alice/subscriptions/
-      ✓ should !GET /Data/Git/users/alice-1/
-      create /Data/Git/users/alice/subscriptions/
-        ✓ should POST /Data/Git/users/alice/subscriptions/subscr1.ttl
-        ✓ should GET /Data/Git/users/alice/subscriptions/subscr1.ttl
-    create /Data/Git/users/alice-1/
-      ✓ should POST /Data/Git/users/alice
-      ✓ should GET /Data/Git/users/alice/
-      ✓ should GET /Data/Git/users/alice-1/
+    create /Data/Git/users/ericprud/
+      ✓ should POST /Data/Git/users/ericprud
+      ✓ should GET /Data/Git/users/ericprud/
+      ✓ should GET /Data/Git/users/ericprud/subscriptions/
+      ✓ should !GET /Data/Git/users/ericprud-1/
+      create /Data/Git/users/ericprud/subscriptions/
+        ✓ should POST /Data/Git/users/ericprud/subscriptions/subscr1.ttl
+        ✓ should GET /Data/Git/users/ericprud/subscriptions/subscr1.ttl
+    create /Data/Git/users/ericprud-1/
+      ✓ should POST /Data/Git/users/ericprud
+      ✓ should GET /Data/Git/users/ericprud/
+      ✓ should GET /Data/Git/users/ericprud-1/
     create /Data/Git/repos/ericprud/ hiearchy
       create /Data/Git/repos/ericprud/
         ✓ should POST /Data/Git/repos/ericprud
@@ -417,18 +417,18 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /some/deep/path/Git/
       ✓ should PLANT /some/deep/path/Git
       ✓ should GET /some/deep/path/Git/
-    create /some/deep/path/Git/users/alice/
-      ✓ should POST /some/deep/path/Git/users/alice
-      ✓ should GET /some/deep/path/Git/users/alice/
-      ✓ should GET /some/deep/path/Git/users/alice/subscriptions/
-      ✓ should !GET /some/deep/path/Git/users/alice-1/
-      create /some/deep/path/Git/users/alice/subscriptions/
-        ✓ should POST /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
-        ✓ should GET /some/deep/path/Git/users/alice/subscriptions/subscr1.ttl
-    create /some/deep/path/Git/users/alice-1/
-      ✓ should POST /some/deep/path/Git/users/alice
-      ✓ should GET /some/deep/path/Git/users/alice/
-      ✓ should GET /some/deep/path/Git/users/alice-1/
+    create /some/deep/path/Git/users/ericprud/
+      ✓ should POST /some/deep/path/Git/users/ericprud
+      ✓ should GET /some/deep/path/Git/users/ericprud/
+      ✓ should GET /some/deep/path/Git/users/ericprud/subscriptions/
+      ✓ should !GET /some/deep/path/Git/users/ericprud-1/
+      create /some/deep/path/Git/users/ericprud/subscriptions/
+        ✓ should POST /some/deep/path/Git/users/ericprud/subscriptions/subscr1.ttl
+        ✓ should GET /some/deep/path/Git/users/ericprud/subscriptions/subscr1.ttl
+    create /some/deep/path/Git/users/ericprud-1/
+      ✓ should POST /some/deep/path/Git/users/ericprud
+      ✓ should GET /some/deep/path/Git/users/ericprud/
+      ✓ should GET /some/deep/path/Git/users/ericprud-1/
     create /some/deep/path/Git/repos/ericprud/ hiearchy
       create /some/deep/path/Git/repos/ericprud/
         ✓ should POST /some/deep/path/Git/repos/ericprud

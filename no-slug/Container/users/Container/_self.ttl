@@ -8,21 +8,21 @@
     tree:shapeTreeInstancePath "users/Container";
     tree:shapeTreeInstanceRoot <../../>;
     ldp:contains <followers/>, <received_events/>, <orgs/>, <subscriptions/>, <repos/>.
-<#alice> <http://github.example/ns#avatar_url> <http://github.example/user/alice-avatar>;
+<#ericprud> <http://github.example/ns#avatar_url> <http://github.example/user/ericprud-avatar>;
     <http://github.example/ns#events_url> "http://github.example/user/{eventNo}"^^<http://github.example/dt#urlTemplate>;
-    <http://github.example/ns#followers_url> <http://github.example/user/alice/followers/>;
-    <http://github.example/ns#following_url> "http://github.example/user/alice/follower/{user}"^^<http://github.example/dt#urlTemplate>;
-    <http://github.example/ns#gists_url> "http://github.example/user/alice/{gist}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#followers_url> <http://github.example/user/ericprud/followers/>;
+    <http://github.example/ns#following_url> "http://github.example/user/ericprud/follower/{user}"^^<http://github.example/dt#urlTemplate>;
+    <http://github.example/ns#gists_url> "http://github.example/user/ericprud/{gist}"^^<http://github.example/dt#urlTemplate>;
     <http://github.example/ns#gravatar_id> "g-allice1234";
     <http://github.example/ns#html_url> "http://github.example/user/{user}"^^<http://github.example/dt#urlTemplate>;
     <http://github.example/ns#id> "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
-    <http://github.example/ns#login> "alice";
-    <http://github.example/ns#node_id> "alice1234";
-    <http://github.example/ns#organizations_url> <http://github.example/user/alice/organizations/>;
-    <http://github.example/ns#received_events_url> <http://github.example/user/alice/events/>;
-    <http://github.example/ns#repos_url> <http://github.example/user/alice/repose/>;
+    <http://github.example/ns#login> "ericprud";
+    <http://github.example/ns#node_id> "ericprud1234";
+    <http://github.example/ns#organizations_url> <http://github.example/user/ericprud/organizations/>;
+    <http://github.example/ns#received_events_url> <http://github.example/user/ericprud/events/>;
+    <http://github.example/ns#repos_url> <http://github.example/user/ericprud/repose/>;
     <http://github.example/ns#site_admin> "false"^^<http://www.w3.org/2001/XMLSchema#boolean>;
     <http://github.example/ns#starred_url> "http://github.example/user/{user}/starred"^^<http://github.example/dt#urlTemplate>;
-    <http://github.example/ns#subscriptions_url> <http://github.example/user/alice/subscriptions/>;
+    <http://github.example/ns#subscriptions_url> <http://github.example/user/ericprud/subscriptions/>;
     <http://github.example/ns#type> "migrant knowledge worker";
-    <http://github.example/ns#url> <http://github.example/user/alice>.
+    <http://github.example/ns#url> <http://github.example/user/ericprud>.
