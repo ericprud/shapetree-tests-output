@@ -152,53 +152,21 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   │   ├── Albums2019
     │   │   │   ├── ref-1.ttl
     │   │   │   └── _self.ttl
-    │   │   ├── Git
-    │   │   │   ├── repos
-    │   │   │   │   ├── ericprud
-    │   │   │   │   │   ├── jsg
-    │   │   │   │   │   │   ├── issues
-    │   │   │   │   │   │   │   ├── 1.ttl
-    │   │   │   │   │   │   │   └── _self.ttl
-    │   │   │   │   │   │   ├── labels
-    │   │   │   │   │   │   │   └── _self.ttl
-    │   │   │   │   │   │   ├── milestones
-    │   │   │   │   │   │   │   └── _self.ttl
-    │   │   │   │   │   │   └── _self.ttl
-    │   │   │   │   │   └── _self.ttl
-    │   │   │   │   └── _self.ttl
-    │   │   │   ├── _self.ttl
-    │   │   │   └── users
-    │   │   │       ├── ericprud
-    │   │   │       │   ├── followers
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── orgs
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── received_events
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── repos
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── _self.ttl
-    │   │   │       │   └── subscriptions
-    │   │   │       │       ├── _self.ttl
-    │   │   │       │       └── subscr1.ttl
-    │   │   │       ├── ericprud-1
-    │   │   │       │   ├── followers
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── orgs
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── received_events
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── repos
-    │   │   │       │   │   └── _self.ttl
-    │   │   │       │   ├── _self.ttl
-    │   │   │       │   └── subscriptions
-    │   │   │       │       └── _self.ttl
-    │   │   │       └── _self.ttl
-    │   │   └── _self.ttl
+    │   │   ├── _self.ttl
+    │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+    │   │   │   └── _self.ttl
+    │   │   ├── ShapeMaps-missing-shape-property
+    │   │   │   └── _self.ttl
+    │   │   ├── ShapeMaps-nonconformant-posts
+    │   │   │   └── _self.ttl
+    │   │   ├── ShapeMaps-nonexistent-shape
+    │   │   │   └── _self.ttl
+    │   │   └── ShapeMaps-unGETtable-shape
+    │   │       └── _self.ttl
     │   └── _self.ttl
     └── _self.ttl
 
-78 directories, 113 files
+63 directories, 96 files
 ```
 
 
@@ -351,6 +319,87 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /Data/ShapeMaps-missing-shape-property/ref-1.ttl
 
+  test/shape-trees.test.js - installed in some/deep/path
+    initial state
+      ✓ should GET /some/deep/path/
+      ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-POST/
+      ✓ should fail to delete /
+      ✓ should fail to delete /doesnotexist
+    PLANT
+      should fail with bad Turtle
+        ✓ should PLANT /some/deep/path/ShouldNotExist
+        ✓ should !GET /some/deep/path/ShouldNotExist/
+      should fail with bad JSON
+        ✓ should PLANT /some/deep/path/ShouldNotExist
+        ✓ should !GET /some/deep/path/ShouldNotExist/
+      should fail with bad JSONLD
+        ✓ should PLANT /some/deep/path/ShouldNotExist
+        ✓ should !GET /some/deep/path/ShouldNotExist/
+      create /some/deep/path/ShapeMaps-PUT-tests/
+        ✓ should PLANT /some/deep/path/ShapeMaps-PUT-tests
+        ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/
+        create /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z
+          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          - successful PUT to replace managed LDPC
+          - successful PUT to create managed LDPC
+          - successful PUT to replace instance root LDPC
+          successful PUT to replace LDPR
+            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+          successful PUT to create LDPR
+            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/Events/09abcdefghijklmnopqrstuvwx_20200107T140000Z-new.ttl
+          successful DELETE of LDPR
+            ✓ should delete a file
+            ✓ successful DELETE of instance root LDPC
+    create /some/deep/path/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /some/deep/path/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /some/deep/path/ShapeMaps-nonexistent-shape
+        ✓ should GET /some/deep/path/ShapeMaps-nonexistent-shape/
+      create /some/deep/path/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /some/deep/path/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /some/deep/path/ShapeMaps-unGETtable-shape
+        ✓ should GET /some/deep/path/ShapeMaps-unGETtable-shape/
+      create /some/deep/path/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /some/deep/path/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /some/deep/path/ShapeMaps-nonconformant-posts
+        ✓ should GET /some/deep/path/ShapeMaps-nonconformant-posts/
+      create /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+    create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /some/deep/path/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /some/deep/path/ShapeMaps-missing-shape-property
+        ✓ should GET /some/deep/path/ShapeMaps-missing-shape-property/
+      create /some/deep/path/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+
   test/apps/cal.test.js installed in Data
     initial state
       ✓ should GET /Data/
@@ -409,43 +458,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
-
-  test/apps/gh-deep.test.js installed in some/deep/path
-    initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/Git/
-    create /some/deep/path/Git/
-      ✓ should PLANT /some/deep/path/Git
-      ✓ should GET /some/deep/path/Git/
-    create /some/deep/path/Git/users/ericprud/
-      ✓ should POST /some/deep/path/Git/users/ericprud
-      ✓ should GET /some/deep/path/Git/users/ericprud/
-      ✓ should GET /some/deep/path/Git/users/ericprud/subscriptions/
-      ✓ should !GET /some/deep/path/Git/users/ericprud-1/
-      create /some/deep/path/Git/users/ericprud/subscriptions/
-        ✓ should POST /some/deep/path/Git/users/ericprud/subscriptions/subscr1.ttl
-        ✓ should GET /some/deep/path/Git/users/ericprud/subscriptions/subscr1.ttl
-    create /some/deep/path/Git/users/ericprud-1/
-      ✓ should POST /some/deep/path/Git/users/ericprud
-      ✓ should GET /some/deep/path/Git/users/ericprud/
-      ✓ should GET /some/deep/path/Git/users/ericprud-1/
-    create /some/deep/path/Git/repos/ericprud/ hiearchy
-      create /some/deep/path/Git/repos/ericprud/
-        ✓ should POST /some/deep/path/Git/repos/ericprud
-        ✓ should GET /some/deep/path/Git/repos/ericprud/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud-1/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/
-      create /some/deep/path/Git/repos/ericprud/jsg/
-        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/labels/
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/milestones/
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-      create /some/deep/path/Git/repos/ericprud/jsg/issues/1
-        ✓ should POST /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should GET /some/deep/path/Git/repos/ericprud/jsg/issues/1.ttl
-        ✓ should !GET /some/deep/path/Git/repos/ericprud/jsg/issues/2.ttl
 
   test/apps/nevernote.test.js installid in Data
     initial state
@@ -508,8 +520,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  184 passing (5s)
-  3 pending
+  205 passing (6s)
+  6 pending
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
