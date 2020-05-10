@@ -110,6 +110,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── Unmanaged
 │       ├── Ericprud
 │       │   └── _self.ttl
+│       ├── issues
+│       │   ├── 1.ttl
+│       │   └── _self.ttl
 │       ├── m33.jpeg
 │       └── _self.ttl
 ├── no-slug
@@ -154,7 +157,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     └── _self.ttl
 
-57 directories, 90 files
+58 directories, 92 files
 ```
 
 
@@ -185,6 +188,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /Data/Unmanaged/m33.jpeg
           ✓ should POST /Data/Unmanaged/m33.jpeg
           ✓ should GET /Data/Unmanaged/m33.jpeg
+      handle PUTs to unmanaged Containers
+        successful PUT to create LDPC
+          ✓ should PUT /Data/Unmanaged/issues/
+          ✓ should GET /Data/Unmanaged/issues/
+        successful PUT to replace LDPC
+          ✓ should PUT /Data/Unmanaged/issues/
+          ✓ should GET /Data/Unmanaged/issues/
+        successful PUT to create LDPR
+          ✓ should PUT /Data/Unmanaged/issues/1.ttl
+          ✓ should GET /Data/Unmanaged/issues/1.ttl
+        successful PUT to replace LDPR
+          ✓ should PUT /Data/Unmanaged/issues/1.ttl
+          ✓ should GET /Data/Unmanaged/issues/1.ttl
     AppStore server
       ✓ should return on empty path
       ✓ should resolve full path
@@ -260,7 +276,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
         create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to replace managed LDPC
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           create /Data/ShapeMaps-PUT-tests/repos/ericprud/
@@ -285,6 +300,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to create LDPR
             ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+          successful PUT to replace managed LDPC
+            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -368,7 +386,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
         create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to replace managed LDPC
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
@@ -393,6 +410,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to create LDPR
             ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+          successful PUT to replace managed LDPC
+            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -559,19 +579,19 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
 
-  243 passing (7s)
-  6 pending
+  255 passing (7s)
+  4 pending
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |   99.49 |    97.16 |   98.36 |   99.47 |                   
+All files                |     100 |      100 |   98.36 |     100 |                   
  filesystems             |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
- servers                 |   98.73 |    93.75 |     100 |   98.71 |                   
+ servers                 |     100 |      100 |     100 |     100 |                   
   AppStore.js            |     100 |      100 |     100 |     100 |                   
-  LDP.js                 |   98.34 |    92.31 |     100 |   98.31 | 167-169           
+  LDP.js                 |     100 |      100 |     100 |     100 |                   
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
   simple-apps.js         |     100 |      100 |     100 |     100 |                   
  shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                   
