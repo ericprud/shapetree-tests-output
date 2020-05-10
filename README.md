@@ -565,13 +565,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |   99.48 |    97.12 |   98.36 |   99.47 |                   
+All files                |   99.49 |    97.16 |   98.36 |   99.47 |                   
  filesystems             |     100 |      100 |     100 |     100 |                   
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                   
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                   
- servers                 |    98.7 |    93.55 |     100 |   98.67 |                   
+ servers                 |   98.73 |    93.75 |     100 |   98.71 |                   
   AppStore.js            |     100 |      100 |     100 |     100 |                   
-  LDP.js                 |   98.29 |       92 |     100 |   98.26 | 158-160           
+  LDP.js                 |   98.34 |    92.31 |     100 |   98.31 | 167-169           
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                   
   simple-apps.js         |     100 |      100 |     100 |     100 |                   
  shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                   
