@@ -8,10 +8,10 @@
     tree:installedIn _:b7, _:b26, _:b65.
 _:b7 tree:app <http://store.example/gh>;
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath </Data/ShapeMaps-PUT-tests/>.
+    tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-PUT-tests/>.
 _:b26 tree:app <http://store.example/gh>;
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath </some/deep/path/ShapeMaps-PUT-tests/>.
+    tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/>.
 <http://store.example/gh> tree:name "GhApp".
 _:b65 tree:app <http://store.example/gh>;
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;

@@ -7,7 +7,7 @@
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users/Container";
     tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <orgs/>, <subscriptions/>, <repos/>.
+    ldp:contains <followers/>, <orgs/>, <received_events/>, <subscriptions/>, <repos/>.
 <#ericprud> <http://github.example/ns#avatar_url> <http://github.example/user/ericprud-avatar>;
     <http://github.example/ns#events_url> "http://github.example/user/{eventNo}"^^<http://github.example/dt#urlTemplate>;
     <http://github.example/ns#followers_url> <http://github.example/user/ericprud/followers/>;

@@ -97,16 +97,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
 │   ├── _self.ttl
-│   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-│   │   └── _self.ttl
-│   ├── ShapeMaps-missing-shape-property
-│   │   └── _self.ttl
-│   ├── ShapeMaps-nonconformant-posts
-│   │   └── _self.ttl
-│   ├── ShapeMaps-nonexistent-shape
-│   │   └── _self.ttl
-│   ├── ShapeMaps-unGETtable-shape
-│   │   └── _self.ttl
 │   └── Unmanaged
 │       ├── Ericprud
 │       │   └── _self.ttl
@@ -137,27 +127,45 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── _self.ttl
 ├── README.md
 ├── _self.ttl
+├── shape-trees.test
+│   ├── _self.ttl
+│   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+│   │   └── _self.ttl
+│   ├── ShapeMaps-missing-shape-property
+│   │   └── _self.ttl
+│   ├── ShapeMaps-nonconformant-posts
+│   │   └── _self.ttl
+│   ├── ShapeMaps-nonexistent-shape
+│   │   └── _self.ttl
+│   ├── ShapeMaps-unGETtable-shape
+│   │   └── _self.ttl
+│   └── some
+│       ├── deep
+│       │   ├── path
+│       │   │   ├── _self.ttl
+│       │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+│       │   │   │   └── _self.ttl
+│       │   │   ├── ShapeMaps-missing-shape-property
+│       │   │   │   └── _self.ttl
+│       │   │   ├── ShapeMaps-nonconformant-posts
+│       │   │   │   └── _self.ttl
+│       │   │   ├── ShapeMaps-nonexistent-shape
+│       │   │   │   └── _self.ttl
+│       │   │   └── ShapeMaps-unGETtable-shape
+│       │   │       └── _self.ttl
+│       │   └── _self.ttl
+│       └── _self.ttl
 └── some
     ├── deep
     │   ├── path
     │   │   ├── Albums2019
     │   │   │   ├── ref-1.ttl
     │   │   │   └── _self.ttl
-    │   │   ├── _self.ttl
-    │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-    │   │   │   └── _self.ttl
-    │   │   ├── ShapeMaps-missing-shape-property
-    │   │   │   └── _self.ttl
-    │   │   ├── ShapeMaps-nonconformant-posts
-    │   │   │   └── _self.ttl
-    │   │   ├── ShapeMaps-nonexistent-shape
-    │   │   │   └── _self.ttl
-    │   │   └── ShapeMaps-unGETtable-shape
-    │   │       └── _self.ttl
+    │   │   └── _self.ttl
     │   └── _self.ttl
     └── _self.ttl
 
-58 directories, 92 files
+62 directories, 96 files
 ```
 
 
@@ -178,233 +186,233 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 
 
-  test/shape-trees.test.js - installed in Data
+  test/shape-trees.test.js - installed in shape-trees.test
     initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/ShapeMaps-nonconformant-POST/
+      ✓ should GET /shape-trees.test/
+      ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-POST/
       ✓ should fail to delete /
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       PUT tests
-        create /Data/ShapeMaps-PUT-tests/
-          ✓ should PLANT /Data/ShapeMaps-PUT-tests
-          ✓ should GET /Data/ShapeMaps-PUT-tests/
-        create /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-          create /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-        create /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-        create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
+        create /shape-trees.test/ShapeMaps-PUT-tests/
+          ✓ should PLANT /shape-trees.test/ShapeMaps-PUT-tests
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/
+        create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           - successful PUT to replace unmanaged LDPR
           - successful PUT to create unmanaged LDPR
           - successful PUT to replace unmanaged LDPC
           - successful PUT to create unmanaged LDPC
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud-1/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace managed LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create managed LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
-    create /Data/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
-      create /Data/ShapeMaps-nonexistent-shape/
-        ✓ should PLANT /Data/ShapeMaps-nonexistent-shape
-        ✓ should GET /Data/ShapeMaps-nonexistent-shape/
-      create /Data/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
-    create /Data/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
-      create /Data/ShapeMaps-unGETtable-shape/
-        ✓ should PLANT /Data/ShapeMaps-unGETtable-shape
-        ✓ should GET /Data/ShapeMaps-unGETtable-shape/
-      create /Data/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
-    create /Data/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
-      create /Data/ShapeMaps-nonconformant-posts/
-        ✓ should PLANT /Data/ShapeMaps-nonconformant-posts
-        ✓ should GET /Data/ShapeMaps-nonconformant-posts/
-      create /Data/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-      create /Data/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-      create /Data/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-    create /Data/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-      create /Data/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-two-names
-        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-two-names/
-    create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
-      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-    create /Data/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-      create /Data/ShapeMaps-missing-shape-property/
-        ✓ should PLANT /Data/ShapeMaps-missing-shape-property
-        ✓ should GET /Data/ShapeMaps-missing-shape-property/
-      create /Data/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /Data/ShapeMaps-missing-shape-property/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-missing-shape-property/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /shape-trees.test/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-nonexistent-shape
+        ✓ should GET /shape-trees.test/ShapeMaps-nonexistent-shape/
+      create /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /shape-trees.test/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-unGETtable-shape
+        ✓ should GET /shape-trees.test/ShapeMaps-unGETtable-shape/
+      create /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-nonconformant-posts
+        ✓ should GET /shape-trees.test/ShapeMaps-nonconformant-posts/
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
+    create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /shape-trees.test/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
+        ✓ should GET /shape-trees.test/ShapeMaps-missing-shape-property/
+      create /shape-trees.test/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
 
-  test/shape-trees.test.js - installed in some/deep/path
+  test/shape-trees.test.js - installed in shape-trees.test/some/deep/path
     initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-POST/
+      ✓ should GET /shape-trees.test/some/deep/path/
+      ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-POST/
       ✓ should fail to delete /
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       PUT tests
-        create /some/deep/path/ShapeMaps-PUT-tests/
-          ✓ should PLANT /some/deep/path/ShapeMaps-PUT-tests
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/
-        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-          create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-        create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
+          ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           - successful PUT to replace unmanaged LDPR
           - successful PUT to create unmanaged LDPR
           - successful PUT to replace unmanaged LDPC
           - successful PUT to create unmanaged LDPC
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud-1/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace managed LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create managed LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
-    create /some/deep/path/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
-      create /some/deep/path/ShapeMaps-nonexistent-shape/
-        ✓ should PLANT /some/deep/path/ShapeMaps-nonexistent-shape
-        ✓ should GET /some/deep/path/ShapeMaps-nonexistent-shape/
-      create /some/deep/path/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
-    create /some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
-      create /some/deep/path/ShapeMaps-unGETtable-shape/
-        ✓ should PLANT /some/deep/path/ShapeMaps-unGETtable-shape
-        ✓ should GET /some/deep/path/ShapeMaps-unGETtable-shape/
-      create /some/deep/path/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
-    create /some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
-      create /some/deep/path/ShapeMaps-nonconformant-posts/
-        ✓ should PLANT /some/deep/path/ShapeMaps-nonconformant-posts
-        ✓ should GET /some/deep/path/ShapeMaps-nonconformant-posts/
-      create /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-    create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-two-names
-        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-    create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-    create /some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-      create /some/deep/path/ShapeMaps-missing-shape-property/
-        ✓ should PLANT /some/deep/path/ShapeMaps-missing-shape-property
-        ✓ should GET /some/deep/path/ShapeMaps-missing-shape-property/
-      create /some/deep/path/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
+      create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+    create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
+      create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
   138 passing (19s)
@@ -488,233 +496,233 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /no-slug/Container/users/-TBD-
         ✓ should GET /no-slug/Container/users/Container/
 
-  test/shape-trees.test.js - installed in Data
+  test/shape-trees.test.js - installed in shape-trees.test
     initial state
-      ✓ should GET /Data/
-      ✓ should !GET /Data/ShapeMaps-nonconformant-POST/
+      ✓ should GET /shape-trees.test/
+      ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-POST/
       ✓ should fail to delete /
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /Data/ShouldNotExist
-        ✓ should !GET /Data/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !GET /shape-trees.test/ShouldNotExist/
       PUT tests
-        create /Data/ShapeMaps-PUT-tests/
-          ✓ should PLANT /Data/ShapeMaps-PUT-tests
-          ✓ should GET /Data/ShapeMaps-PUT-tests/
-        create /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-          ✓ should !GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-          create /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-        create /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-          ✓ should POST /Data/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /Data/ShapeMaps-PUT-tests/users/ericprud-1/
-        create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
+        create /shape-trees.test/ShapeMaps-PUT-tests/
+          ✓ should PLANT /shape-trees.test/ShapeMaps-PUT-tests
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/
+        create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           - successful PUT to replace unmanaged LDPR
           - successful PUT to create unmanaged LDPR
           - successful PUT to replace unmanaged LDPC
           - successful PUT to create unmanaged LDPC
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud-1/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          create /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace managed LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create managed LDPR
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
-            ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
-    create /Data/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
-      create /Data/ShapeMaps-nonexistent-shape/
-        ✓ should PLANT /Data/ShapeMaps-nonexistent-shape
-        ✓ should GET /Data/ShapeMaps-nonexistent-shape/
-      create /Data/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-nonexistent-shape/ref-1.ttl
-    create /Data/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
-      create /Data/ShapeMaps-unGETtable-shape/
-        ✓ should PLANT /Data/ShapeMaps-unGETtable-shape
-        ✓ should GET /Data/ShapeMaps-unGETtable-shape/
-      create /Data/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-unGETtable-shape/ref-1.ttl
-    create /Data/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
-      create /Data/ShapeMaps-nonconformant-posts/
-        ✓ should PLANT /Data/ShapeMaps-nonconformant-posts
-        ✓ should GET /Data/ShapeMaps-nonconformant-posts/
-      create /Data/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-      create /Data/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-      create /Data/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-        ✓ should !GET /Data/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-    create /Data/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-      create /Data/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-two-names
-        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-two-names/
-    create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /Data/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/
-      create /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-    create /Data/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-      create /Data/ShapeMaps-missing-shape-property/
-        ✓ should PLANT /Data/ShapeMaps-missing-shape-property
-        ✓ should GET /Data/ShapeMaps-missing-shape-property/
-      create /Data/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /Data/ShapeMaps-missing-shape-property/ref-1.ttl
-        ✓ should !GET /Data/ShapeMaps-missing-shape-property/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /shape-trees.test/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-nonexistent-shape
+        ✓ should GET /shape-trees.test/ShapeMaps-nonexistent-shape/
+      create /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /shape-trees.test/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-unGETtable-shape
+        ✓ should GET /shape-trees.test/ShapeMaps-unGETtable-shape/
+      create /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-nonconformant-posts
+        ✓ should GET /shape-trees.test/ShapeMaps-nonconformant-posts/
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
+    create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /shape-trees.test/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
+        ✓ should GET /shape-trees.test/ShapeMaps-missing-shape-property/
+      create /shape-trees.test/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
 
-  test/shape-trees.test.js - installed in some/deep/path
+  test/shape-trees.test.js - installed in shape-trees.test/some/deep/path
     initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-POST/
+      ✓ should GET /shape-trees.test/some/deep/path/
+      ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-POST/
       ✓ should fail to delete /
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /some/deep/path/ShouldNotExist
-        ✓ should !GET /some/deep/path/ShouldNotExist/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       PUT tests
-        create /some/deep/path/ShapeMaps-PUT-tests/
-          ✓ should PLANT /some/deep/path/ShapeMaps-PUT-tests
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/
-        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-          ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-          create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
-        create /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-          ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/users/ericprud
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
-          ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
-        create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
+          ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+          ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+          ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/subscriptions/subscr1.ttl
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+          ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
+          ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
+        create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
           - successful PUT to replace unmanaged LDPR
           - successful PUT to create unmanaged LDPR
           - successful PUT to replace unmanaged LDPC
           - successful PUT to create unmanaged LDPC
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud-1/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud-1/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/labels/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/milestones/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+          create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
           successful PUT to replace managed LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
           successful PUT to create managed LDPR
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
-            ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
-            ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
-    create /some/deep/path/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
-      create /some/deep/path/ShapeMaps-nonexistent-shape/
-        ✓ should PLANT /some/deep/path/ShapeMaps-nonexistent-shape
-        ✓ should GET /some/deep/path/ShapeMaps-nonexistent-shape/
-      create /some/deep/path/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
-    create /some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
-      create /some/deep/path/ShapeMaps-unGETtable-shape/
-        ✓ should PLANT /some/deep/path/ShapeMaps-unGETtable-shape
-        ✓ should GET /some/deep/path/ShapeMaps-unGETtable-shape/
-      create /some/deep/path/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
-    create /some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
-      create /some/deep/path/ShapeMaps-nonconformant-posts/
-        ✓ should PLANT /some/deep/path/ShapeMaps-nonconformant-posts
-        ✓ should GET /some/deep/path/ShapeMaps-nonconformant-posts/
-      create /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
-      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
-      create /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
-    create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-two-names
-        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-    create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-      create /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-    create /some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
-      create /some/deep/path/ShapeMaps-missing-shape-property/
-        ✓ should PLANT /some/deep/path/ShapeMaps-missing-shape-property
-        ✓ should GET /some/deep/path/ShapeMaps-missing-shape-property/
-      create /some/deep/path/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
-        ✓ should !GET /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ hierarchy -- schema does not contain shape
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
+      create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
+      create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+      create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
+    create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
+      create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+    create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
+      create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
+        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
+        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
+      create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1
+        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
   test/apps/cal.test.js installed in Data
     initial state

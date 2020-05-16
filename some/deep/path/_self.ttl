@@ -4,10 +4,5 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "/some/deep/path";
-    ldp:contains <ShapeMaps-nonexistent-shape/>, <ShapeMaps-unGETtable-shape/>, <ShapeMaps-nonconformant-posts/>, <ShapeMaps-malformed-shapeTree-nested-two-names/>, <ShapeMaps-missing-shape-property/>, <Albums2019/>.
-<ShapeMaps-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
-<ShapeMaps-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
-<ShapeMaps-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
-<ShapeMaps-malformed-shapeTree-nested-two-names/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>.
-<ShapeMaps-missing-shape-property/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>.
+    ldp:contains <Albums2019/>.
 <Albums2019/> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>.
