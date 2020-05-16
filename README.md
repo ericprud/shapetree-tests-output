@@ -127,45 +127,36 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   └── _self.ttl
 ├── README.md
 ├── _self.ttl
-├── shape-trees.test
-│   ├── _self.ttl
-│   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-│   │   └── _self.ttl
-│   ├── ShapeMaps-missing-shape-property
-│   │   └── _self.ttl
-│   ├── ShapeMaps-nonconformant-posts
-│   │   └── _self.ttl
-│   ├── ShapeMaps-nonexistent-shape
-│   │   └── _self.ttl
-│   ├── ShapeMaps-unGETtable-shape
-│   │   └── _self.ttl
-│   └── some
-│       ├── deep
-│       │   ├── path
-│       │   │   ├── _self.ttl
-│       │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-│       │   │   │   └── _self.ttl
-│       │   │   ├── ShapeMaps-missing-shape-property
-│       │   │   │   └── _self.ttl
-│       │   │   ├── ShapeMaps-nonconformant-posts
-│       │   │   │   └── _self.ttl
-│       │   │   ├── ShapeMaps-nonexistent-shape
-│       │   │   │   └── _self.ttl
-│       │   │   └── ShapeMaps-unGETtable-shape
-│       │   │       └── _self.ttl
-│       │   └── _self.ttl
-│       └── _self.ttl
-└── some
-    ├── deep
-    │   ├── path
-    │   │   ├── Albums2019
-    │   │   │   ├── ref-1.ttl
-    │   │   │   └── _self.ttl
-    │   │   └── _self.ttl
+└── shape-trees.test
+    ├── _self.ttl
+    ├── ShapeMaps-malformed-shapeTree-nested-two-names
     │   └── _self.ttl
-    └── _self.ttl
+    ├── ShapeMaps-missing-shape-property
+    │   └── _self.ttl
+    ├── ShapeMaps-nonconformant-posts
+    │   └── _self.ttl
+    ├── ShapeMaps-nonexistent-shape
+    │   └── _self.ttl
+    ├── ShapeMaps-unGETtable-shape
+    │   └── _self.ttl
+    └── some
+        ├── deep
+        │   ├── path
+        │   │   ├── _self.ttl
+        │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+        │   │   │   └── _self.ttl
+        │   │   ├── ShapeMaps-missing-shape-property
+        │   │   │   └── _self.ttl
+        │   │   ├── ShapeMaps-nonconformant-posts
+        │   │   │   └── _self.ttl
+        │   │   ├── ShapeMaps-nonexistent-shape
+        │   │   │   └── _self.ttl
+        │   │   └── ShapeMaps-unGETtable-shape
+        │   │       └── _self.ttl
+        │   └── _self.ttl
+        └── _self.ttl
 
-62 directories, 96 files
+58 directories, 91 files
 ```
 
 
@@ -827,21 +818,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Albums2019/ref-1.ttl
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
-  test/apps/photoAlbum-shallow.test.js installed in some/deep/path
-    initial state
-      ✓ should GET /some/deep/path/
-      ✓ should !GET /some/deep/path/Albums2019/
-    create /some/deep/path/Albums2019/ hierarchy
-      create /some/deep/path/Albums2019/
-        ✓ should PLANT /some/deep/path/Albums2019
-        ✓ should GET /some/deep/path/Albums2019/
-      create /some/deep/path/Albums2019/ref-1
-        ✓ should POST /some/deep/path/Albums2019/ref-1.ttl
-        ✓ should GET /some/deep/path/Albums2019/ref-1.ttl
-        ✓ should !GET /some/deep/path/Albums2019/ref-2.ttl
 
-
-  255 passing (7s)
+  248 passing (7s)
   12 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
