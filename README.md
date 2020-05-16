@@ -174,7 +174,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 
 > shape-tree@0.0.0 test:client-silent /home/eric/checkouts/shapetrees/test-suite
-> SHAPETREE=client PORT=12345 nyc --silent mocha --slow 300 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 test/shape-trees.test.js
+> SHAPETREE=fetch PORT=12345 nyc --silent mocha --slow 1000 --reporter mocha-slow-options --reporter-options useReporter=spec,mediumPercent=100 test/shape-trees.test.js
 
 
 
@@ -214,6 +214,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          - successful PUT to replace unmanaged LDPR
+          - successful PUT to create unmanaged LDPR
+          - successful PUT to replace unmanaged LDPC
+          - successful PUT to create unmanaged LDPC
           create /Data/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/
@@ -230,10 +234,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
             ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
-          successful PUT to replace LDPR
+          successful PUT to replace managed LDPR
             ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          successful PUT to create LDPR
+          successful PUT to create managed LDPR
             ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
@@ -324,6 +328,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          - successful PUT to replace unmanaged LDPR
+          - successful PUT to create unmanaged LDPR
+          - successful PUT to replace unmanaged LDPC
+          - successful PUT to create unmanaged LDPC
           create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
@@ -340,10 +348,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
             ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
-          successful PUT to replace LDPR
+          successful PUT to replace managed LDPR
             ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          successful PUT to create LDPR
+          successful PUT to create managed LDPR
             ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
@@ -399,8 +407,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  138 passing (4s)
-  4 pending
+  138 passing (19s)
+  12 pending
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
@@ -516,6 +524,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /Data/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          - successful PUT to replace unmanaged LDPR
+          - successful PUT to create unmanaged LDPR
+          - successful PUT to replace unmanaged LDPC
+          - successful PUT to create unmanaged LDPC
           create /Data/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/
@@ -532,10 +544,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
             ✓ should POST /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should !GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
-          successful PUT to replace LDPR
+          successful PUT to replace managed LDPR
             ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          successful PUT to create LDPR
+          successful PUT to create managed LDPR
             ✓ should PUT /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /Data/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
@@ -626,6 +638,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
           - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
+          - successful PUT to replace unmanaged LDPR
+          - successful PUT to create unmanaged LDPR
+          - successful PUT to replace unmanaged LDPC
+          - successful PUT to create unmanaged LDPC
           create /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
@@ -642,10 +658,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
             ✓ should POST /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should !GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/2.ttl
-          successful PUT to replace LDPR
+          successful PUT to replace managed LDPR
             ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1.ttl
-          successful PUT to create LDPR
+          successful PUT to create managed LDPR
             ✓ should PUT /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
             ✓ should GET /some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/issues/1-new.ttl
           successful PUT to replace managed LDPC
@@ -818,23 +834,25 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
 
   255 passing (7s)
-  4 pending
+  12 pending
 
--------------------------|---------|----------|---------|---------|--------------------
-File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
--------------------------|---------|----------|---------|---------|--------------------
-All files                |     100 |    96.73 |   98.36 |     100 |                    
- filesystems             |     100 |      100 |     100 |     100 |                    
-  fetch-self-signed.js   |     100 |      100 |     100 |     100 |                    
-  fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                    
- servers                 |     100 |    93.42 |     100 |     100 |                    
-  AppStore.js            |     100 |      100 |     100 |     100 |                    
-  LDP.js                 |     100 |    92.19 |     100 |     100 | 77,145,148,198,203 
- shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                    
-  simple-apps.js         |     100 |      100 |     100 |     100 |                    
- shapetree.js/lib        |     100 |      100 |   96.61 |     100 |                    
-  prefixes.js            |     100 |      100 |     100 |     100 |                    
-  rdf-errors.js          |     100 |      100 |     100 |     100 |                    
-  shape-tree.js          |     100 |      100 |   95.83 |     100 |                    
--------------------------|---------|----------|---------|---------|--------------------
+-------------------------|---------|----------|---------|---------|---------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
+-------------------------|---------|----------|---------|---------|---------------------------------
+All files                |   97.62 |    93.61 |    96.1 |   98.06 |                                 
+ filesystems             |   94.44 |    93.75 |   91.18 |   95.15 |                                 
+  fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
+  fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                                 
+  ldp-proxy.js           |   88.46 |     87.5 |      80 |    89.8 | 14,60,123,125,126               
+ servers                 |     100 |    98.68 |     100 |     100 |                                 
+  AppStore.js            |     100 |      100 |     100 |     100 |                                 
+  LDP.js                 |     100 |    98.44 |     100 |     100 | 77                              
+ shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
+  simple-apps.js         |     100 |      100 |     100 |     100 |                                 
+ shapetree.js/lib        |   96.56 |    90.08 |   96.05 |   97.26 |                                 
+  prefixes.js            |     100 |      100 |     100 |     100 |                                 
+  rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
+  shape-tree-fetch.js    |   91.82 |    79.31 |   94.12 |   93.51 | ...,184,185,206-208,217,218,303 
+  shape-tree.js          |     100 |      100 |   95.83 |     100 |                                 
+-------------------------|---------|----------|---------|---------|---------------------------------
 ```
