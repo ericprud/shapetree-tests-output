@@ -96,15 +96,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Photos2020-01
 │   │   ├── m33.jpeg
 │   │   └── _self.ttl
-│   ├── _self.ttl
-│   └── Unmanaged
-│       ├── Ericprud
-│       │   └── _self.ttl
-│       ├── issues
-│       │   ├── 1.ttl
-│       │   └── _self.ttl
-│       ├── m33.jpeg
-│       └── _self.ttl
+│   └── _self.ttl
 ├── no-slug
 │   ├── Container
 │   │   ├── repos
@@ -139,24 +131,40 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   └── _self.ttl
     ├── ShapeMaps-unGETtable-shape
     │   └── _self.ttl
-    └── some
-        ├── deep
-        │   ├── path
-        │   │   ├── _self.ttl
-        │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-        │   │   │   └── _self.ttl
-        │   │   ├── ShapeMaps-missing-shape-property
-        │   │   │   └── _self.ttl
-        │   │   ├── ShapeMaps-nonconformant-posts
-        │   │   │   └── _self.ttl
-        │   │   ├── ShapeMaps-nonexistent-shape
-        │   │   │   └── _self.ttl
-        │   │   └── ShapeMaps-unGETtable-shape
-        │   │       └── _self.ttl
+    ├── some
+    │   ├── deep
+    │   │   ├── path
+    │   │   │   ├── _self.ttl
+    │   │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
+    │   │   │   │   └── _self.ttl
+    │   │   │   ├── ShapeMaps-missing-shape-property
+    │   │   │   │   └── _self.ttl
+    │   │   │   ├── ShapeMaps-nonconformant-posts
+    │   │   │   │   └── _self.ttl
+    │   │   │   ├── ShapeMaps-nonexistent-shape
+    │   │   │   │   └── _self.ttl
+    │   │   │   ├── ShapeMaps-unGETtable-shape
+    │   │   │   │   └── _self.ttl
+    │   │   │   └── Unmanaged
+    │   │   │       ├── Ericprud
+    │   │   │       │   └── _self.ttl
+    │   │   │       ├── issues
+    │   │   │       │   ├── 1.ttl
+    │   │   │       │   └── _self.ttl
+    │   │   │       ├── m33.jpeg
+    │   │   │       └── _self.ttl
+    │   │   └── _self.ttl
+    │   └── _self.ttl
+    └── Unmanaged
+        ├── Ericprud
         │   └── _self.ttl
+        ├── issues
+        │   ├── 1.ttl
+        │   └── _self.ttl
+        ├── m33.jpeg
         └── _self.ttl
 
-58 directories, 91 files
+61 directories, 96 files
 ```
 
 
@@ -211,12 +219,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
         create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
-          - successful PUT to replace unmanaged LDPR
-          - successful PUT to create unmanaged LDPR
-          - successful PUT to replace unmanaged LDPC
-          - successful PUT to create unmanaged LDPC
           create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
@@ -242,6 +245,36 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to replace managed LDPC
             ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
             ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          successful PUT to create managed LDPC
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/labels/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/milestones/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/1.ttl
+          handle POSTs to unmanaged Containers
+            create /shape-trees.test/Unmanaged/
+              ✓ should POST /shape-trees.test/Unmanaged
+              ✓ should GET /shape-trees.test/Unmanaged/
+            create /shape-trees.test/Unmanaged/Ericprud/
+              ✓ should POST /shape-trees.test/Unmanaged/Ericprud
+              ✓ should GET /shape-trees.test/Unmanaged/Ericprud/
+            create /shape-trees.test/Unmanaged/m33.jpeg
+              ✓ should POST /shape-trees.test/Unmanaged/m33.jpeg
+              ✓ should GET /shape-trees.test/Unmanaged/m33.jpeg
+          handle PUTs to unmanaged Containers
+            successful PUT to create unmanaged LDPC
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/Unmanaged/issues/
+            successful PUT to replace unmanaged LDPC
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/Unmanaged/issues/
+            successful PUT to create unmanaged LDPR
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/Unmanaged/issues/1.ttl
+            successful PUT to replace unmanaged LDPR
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/Unmanaged/issues/1.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -325,12 +358,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
         create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
-          - successful PUT to replace unmanaged LDPR
-          - successful PUT to create unmanaged LDPR
-          - successful PUT to replace unmanaged LDPC
-          - successful PUT to create unmanaged LDPC
           create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
@@ -356,6 +384,36 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to replace managed LDPC
             ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
             ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          successful PUT to create managed LDPC
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/labels/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/milestones/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/1.ttl
+          handle POSTs to unmanaged Containers
+            create /shape-trees.test/some/deep/path/Unmanaged/
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/
+            create /shape-trees.test/some/deep/path/Unmanaged/Ericprud/
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged/Ericprud
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/Ericprud/
+            create /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+          handle PUTs to unmanaged Containers
+            successful PUT to create unmanaged LDPC
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/
+            successful PUT to replace unmanaged LDPC
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/
+            successful PUT to create unmanaged LDPR
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+            successful PUT to replace unmanaged LDPR
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -406,8 +464,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  138 passing (19s)
-  12 pending
+  178 passing (22s)
+  2 pending
 
 
 > shape-tree@0.0.0 prepare-tests /home/eric/checkouts/shapetrees/test-suite
@@ -423,29 +481,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
   ✓ AppStore server should serve /
   test/local.test.js
     LDP server
-      handle POSTs to unmanaged Containers
-        create /Data/Unmanaged/
-          ✓ should POST /Data/Unmanaged
-          ✓ should GET /Data/Unmanaged/
-        create /Data/Unmanaged/Ericprud/
-          ✓ should POST /Data/Unmanaged/Ericprud
-          ✓ should GET /Data/Unmanaged/Ericprud/
-        create /Data/Unmanaged/m33.jpeg
-          ✓ should POST /Data/Unmanaged/m33.jpeg
-          ✓ should GET /Data/Unmanaged/m33.jpeg
-      handle PUTs to unmanaged Containers
-        successful PUT to create LDPC
-          ✓ should PUT /Data/Unmanaged/issues/
-          ✓ should GET /Data/Unmanaged/issues/
-        successful PUT to replace LDPC
-          ✓ should PUT /Data/Unmanaged/issues/
-          ✓ should GET /Data/Unmanaged/issues/
-        successful PUT to create LDPR
-          ✓ should PUT /Data/Unmanaged/issues/1.ttl
-          ✓ should GET /Data/Unmanaged/issues/1.ttl
-        successful PUT to replace LDPR
-          ✓ should PUT /Data/Unmanaged/issues/1.ttl
-          ✓ should GET /Data/Unmanaged/issues/1.ttl
+      ✓ should return on empty path
     AppStore server
       ✓ should return on empty path
       ✓ should resolve full path
@@ -521,12 +557,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/users/ericprud-1/
         create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
-          - successful PUT to replace unmanaged LDPR
-          - successful PUT to create unmanaged LDPR
-          - successful PUT to replace unmanaged LDPC
-          - successful PUT to create unmanaged LDPC
           create /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/
@@ -552,6 +583,36 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to replace managed LDPC
             ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
             ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          successful PUT to create managed LDPC
+            ✓ should PUT /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/labels/
+            ✓ should GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/milestones/
+            ✓ should !GET /shape-trees.test/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/1.ttl
+          handle POSTs to unmanaged Containers
+            create /shape-trees.test/Unmanaged/
+              ✓ should POST /shape-trees.test/Unmanaged
+              ✓ should GET /shape-trees.test/Unmanaged/
+            create /shape-trees.test/Unmanaged/Ericprud/
+              ✓ should POST /shape-trees.test/Unmanaged/Ericprud
+              ✓ should GET /shape-trees.test/Unmanaged/Ericprud/
+            create /shape-trees.test/Unmanaged/m33.jpeg
+              ✓ should POST /shape-trees.test/Unmanaged/m33.jpeg
+              ✓ should GET /shape-trees.test/Unmanaged/m33.jpeg
+          handle PUTs to unmanaged Containers
+            successful PUT to create unmanaged LDPC
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/Unmanaged/issues/
+            successful PUT to replace unmanaged LDPC
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/Unmanaged/issues/
+            successful PUT to create unmanaged LDPR
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/Unmanaged/issues/1.ttl
+            successful PUT to replace unmanaged LDPR
+              ✓ should PUT /shape-trees.test/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/Unmanaged/issues/1.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -635,12 +696,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud/
           ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/users/ericprud-1/
         create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/ hiearchy
-          - successful PUT to create managed LDPC
           - successful PUT to replace instance root LDPC
-          - successful PUT to replace unmanaged LDPR
-          - successful PUT to create unmanaged LDPR
-          - successful PUT to replace unmanaged LDPC
-          - successful PUT to create unmanaged LDPC
           create /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
             ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud
             ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/
@@ -666,6 +722,36 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           successful PUT to replace managed LDPC
             ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
             ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg/
+          successful PUT to create managed LDPC
+            ✓ should PUT /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/labels/
+            ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/milestones/
+            ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/repos/ericprud/jsg-put/issues/1.ttl
+          handle POSTs to unmanaged Containers
+            create /shape-trees.test/some/deep/path/Unmanaged/
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/
+            create /shape-trees.test/some/deep/path/Unmanaged/Ericprud/
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged/Ericprud
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/Ericprud/
+            create /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+              ✓ should POST /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/m33.jpeg
+          handle PUTs to unmanaged Containers
+            successful PUT to create unmanaged LDPC
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/
+            successful PUT to replace unmanaged LDPC
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/
+            successful PUT to create unmanaged LDPR
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+            successful PUT to replace unmanaged LDPR
+              ✓ should PUT /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
+              ✓ should GET /shape-trees.test/some/deep/path/Unmanaged/issues/1.ttl
           successful DELETE of LDPR
             ✓ should delete a file
             ✓ successful DELETE of instance root LDPC
@@ -819,26 +905,26 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  248 passing (7s)
-  12 pending
+  275 passing (8s)
+  2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   97.62 |    93.61 |    96.1 |   98.06 |                                 
+All files                |   97.87 |    95.39 |    96.1 |   98.07 |                                 
  filesystems             |   94.44 |    93.75 |   91.18 |   95.15 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                                 
   ldp-proxy.js           |   88.46 |     87.5 |      80 |    89.8 | 14,60,123,125,126               
- servers                 |     100 |    98.68 |     100 |     100 |                                 
+ servers                 |     100 |      100 |     100 |     100 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
-  LDP.js                 |     100 |    98.44 |     100 |     100 | 77                              
+  LDP.js                 |     100 |      100 |     100 |     100 |                                 
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   96.56 |    90.08 |   96.05 |   97.26 |                                 
+ shapetree.js/lib        |    97.1 |    92.44 |   96.05 |   97.28 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
-  shape-tree-fetch.js    |   91.82 |    79.31 |   94.12 |   93.51 | ...,184,185,206-208,217,218,303 
+  shape-tree-fetch.js    |   93.13 |    83.93 |   94.12 |   93.63 | ...,187,188,209-211,220,221,306 
   shape-tree.js          |     100 |      100 |   95.83 |     100 |                                 
 -------------------------|---------|----------|---------|---------|---------------------------------
 ```

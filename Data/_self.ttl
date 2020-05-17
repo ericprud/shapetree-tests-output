@@ -4,7 +4,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "Shared Data Container";
-    ldp:contains <Unmanaged/>, <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
+    ldp:contains <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
 <Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
 <Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.
 <Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.

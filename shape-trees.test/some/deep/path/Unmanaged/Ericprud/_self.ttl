@@ -1,15 +1,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix tree: <http://www.w3.org/ns/shapetree#>.
 @prefix gh: <http://github.example/ns#>.
 @prefix gdt: <http://github.example/dt#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource users/ericprud";
-    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath "users/ericprud";
-    tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <orgs/>, <subscriptions/>, <repos/>.
+    dcterms:title "index for unmanaged Container /shape-trees.test/some/deep/path/Unmanaged/Ericprud/".
 <#ericprud> gh:url <http://github.example/user/ericprud>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "ericprud1234";
