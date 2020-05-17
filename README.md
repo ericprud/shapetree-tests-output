@@ -464,7 +464,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  178 passing (22s)
+  178 passing (18s)
   2 pending
 
 
@@ -905,26 +905,26 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  275 passing (8s)
+  275 passing (7s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   97.87 |    95.39 |    96.1 |   98.07 |                                 
- filesystems             |   94.44 |    93.75 |   91.18 |   95.15 |                                 
+All files                |   97.76 |    95.54 |   95.48 |   97.95 |                                 
+ filesystems             |   93.52 |    93.75 |   88.24 |   94.17 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises-utf8.js    |     100 |      100 |     100 |     100 |                                 
-  ldp-proxy.js           |   88.46 |     87.5 |      80 |    89.8 | 14,60,123,125,126               
+  ldp-proxy.js           |   86.54 |     87.5 |   73.33 |   87.76 | 14,60,68,123,125,126            
  servers                 |     100 |      100 |     100 |     100 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |     100 |      100 |     100 |     100 |                                 
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |    97.1 |    92.44 |   96.05 |   97.28 |                                 
+ shapetree.js/lib        |   97.13 |    92.86 |    96.1 |   97.31 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
-  shape-tree-fetch.js    |   93.13 |    83.93 |   94.12 |   93.63 | ...,187,188,209-211,220,221,306 
+  shape-tree-fetch.js    |   93.13 |    83.93 |   94.44 |   93.63 | ...,181,182,203-205,214,215,300 
   shape-tree.js          |     100 |      100 |   95.83 |     100 |                                 
 -------------------------|---------|----------|---------|---------|---------------------------------
 ```
