@@ -3,11 +3,11 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource users/Container";
+    dcterms:title "index for nested resource users/Container/";
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath "users/Container";
+    tree:shapeTreeInstancePath "users/Container/";
     tree:shapeTreeInstanceRoot <../../>;
-    ldp:contains <followers/>, <received_events/>, <subscriptions/>, <orgs/>, <repos/>.
+    ldp:contains <followers/>, <received_events/>, <subscriptions/>, <repos/>, <orgs/>.
 <#ericprud> <http://github.example/ns#avatar_url> <http://github.example/user/ericprud-avatar>;
     <http://github.example/ns#events_url> "http://github.example/user/{eventNo}"^^<http://github.example/dt#urlTemplate>;
     <http://github.example/ns#followers_url> <http://github.example/user/ericprud/followers/>;

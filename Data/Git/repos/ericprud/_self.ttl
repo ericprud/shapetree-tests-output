@@ -6,9 +6,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource repos/ericprud";
+    dcterms:title "index for nested resource repos/ericprud/";
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
-    tree:shapeTreeInstancePath "repos/ericprud";
+    tree:shapeTreeInstancePath "repos/ericprud/";
     tree:shapeTreeInstanceRoot <../../>;
     ldp:contains <jsg/>.
 <#ericprud> gh:url <http://github.example/user/ericsRepos>;

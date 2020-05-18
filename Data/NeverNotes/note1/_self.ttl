@@ -6,9 +6,9 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource note1";
+    dcterms:title "index for nested resource note1/";
     tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
-    tree:shapeTreeInstancePath "note1";
+    tree:shapeTreeInstancePath "note1/";
     tree:shapeTreeInstanceRoot <../>;
     ldp:contains <img-M33_IR.jpg>, <inc-M33_IR.ttl>.
 <#note1> :title "Note1";
