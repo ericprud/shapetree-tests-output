@@ -283,27 +283,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/ShapeMaps-nonexistent-shape
         ✓ should GET /shape-trees.test/ShapeMaps-nonexistent-shape/
       post /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
     create /shape-trees.test/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
       plant /shape-trees.test/ShapeMaps-unGETtable-shape/
         ✓ should PLANT /shape-trees.test/ShapeMaps-unGETtable-shape
         ✓ should GET /shape-trees.test/ShapeMaps-unGETtable-shape/
       post /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
     create /shape-trees.test/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
       plant /shape-trees.test/ShapeMaps-nonconformant-posts/
         ✓ should PLANT /shape-trees.test/ShapeMaps-nonconformant-posts
         ✓ should GET /shape-trees.test/ShapeMaps-nonconformant-posts/
       post /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
       post /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
       post /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
@@ -314,14 +314,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
         ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
       post /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
     create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
         ✓ should GET /shape-trees.test/ShapeMaps-missing-shape-property/
       post /shape-trees.test/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
 
   test/shape-trees.test.js - installed in shape-trees.test/some/deep/path
@@ -422,27 +422,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
       post /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
       plant /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
       post /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
       plant /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
@@ -453,14 +453,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
       post /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
       post /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
@@ -621,27 +621,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/ShapeMaps-nonexistent-shape
         ✓ should GET /shape-trees.test/ShapeMaps-nonexistent-shape/
       post /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonexistent-shape/ref-1.ttl
     create /shape-trees.test/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
       plant /shape-trees.test/ShapeMaps-unGETtable-shape/
         ✓ should PLANT /shape-trees.test/ShapeMaps-unGETtable-shape
         ✓ should GET /shape-trees.test/ShapeMaps-unGETtable-shape/
       post /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-unGETtable-shape/ref-1.ttl
     create /shape-trees.test/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
       plant /shape-trees.test/ShapeMaps-nonconformant-posts/
         ✓ should PLANT /shape-trees.test/ShapeMaps-nonconformant-posts
         ✓ should GET /shape-trees.test/ShapeMaps-nonconformant-posts/
       post /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
       post /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
       post /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
@@ -652,14 +652,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
         ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
       post /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
     create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
         ✓ should GET /shape-trees.test/ShapeMaps-missing-shape-property/
       post /shape-trees.test/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !POST /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /shape-trees.test/ShapeMaps-missing-shape-property/ref-1.ttl
 
   test/shape-trees.test.js - installed in shape-trees.test/some/deep/path
@@ -760,27 +760,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/
       post /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ hierarchy -- can't GET referenced shape
       plant /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/
       post /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ hierarchy -- POSTed data does not validate
       plant /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1 -- Does not match available ShapeTree steps
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/malformed-ref-1.ttl
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2 -- misspelled caption property
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-invalid-2.ttl
       post /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3 -- type link is Container when Resource expected
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
@@ -791,14 +791,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
       post /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
         ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
       post /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1
-        ✓ should POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
+        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
   test/apps/cal.test.js installed in Data
