@@ -193,13 +193,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       PUT tests
         plant /shape-trees.test/ShapeMaps-PUT-tests/
@@ -307,7 +307,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
@@ -332,13 +332,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       PUT tests
         plant /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
@@ -446,7 +446,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
@@ -531,13 +531,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /shape-trees.test/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/ShouldNotExist
         ✓ should !GET /shape-trees.test/ShouldNotExist/
       PUT tests
         plant /shape-trees.test/ShapeMaps-PUT-tests/
@@ -645,7 +645,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
@@ -670,13 +670,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should fail to delete /doesnotexist
     PLANT
       should fail with bad Turtle
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSON
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       should fail with bad JSONLD
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShouldNotExist
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShouldNotExist
         ✓ should !GET /shape-trees.test/some/deep/path/ShouldNotExist/
       PUT tests
         plant /shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/
@@ -784,7 +784,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/ref-valid-3.ttl
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/ hierarchy -- malformed shapeTree: two static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
