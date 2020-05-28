@@ -1,13 +1,5 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
-@prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "Shared Data Container";
-    ldp:contains <Calendar/>, <Google/>, <Git/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
-<Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
-<Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.
-<Git/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.
-<NeverNotes/> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>.
-<Photos2020-01/> tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>.
-<Albums2019/> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>.
+    dcterms:title "Shared Data Container".
