@@ -3,7 +3,7 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for nested resource users/ericprud/subscriptions/";
+    dcterms:title "nested Container users/ericprud/subscriptions/ in <http://localhost:12345/gh/ghShapeTree#root>";
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
     tree:shapeTreeInstancePath "users/ericprud/subscriptions/";
     tree:shapeTreeInstanceRoot <../../../>;

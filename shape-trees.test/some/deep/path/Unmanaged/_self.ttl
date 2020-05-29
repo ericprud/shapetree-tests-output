@@ -2,5 +2,5 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "index for unmanaged Container /shape-trees.test/some/deep/path/Unmanaged/";
+    dcterms:title "unmanaged Container /shape-trees.test/some/deep/path/Unmanaged/";
     ldp:contains <Ericprud/>, <m33.jpeg>, <issues/>.
