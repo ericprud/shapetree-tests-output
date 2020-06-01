@@ -4,7 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "GhApp Directory";
+    dcterms:title "Container for /Apps/GhApp/";
     tree:installedIn _:b1.
 _:b1 tree:app <http://store.example/gh>;
     tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;

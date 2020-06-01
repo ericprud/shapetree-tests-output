@@ -70,12 +70,12 @@
     gh:archived "false"^^xsd:boolean;
     gh:disabled "false"^^xsd:boolean;
     gh:open_issues_count "1"^^xsd:integer;
-    gh:license _:b7;
+    gh:license _:b11;
     gh:forks "1"^^xsd:integer;
     gh:open_issues "1"^^xsd:integer;
     gh:watchers "1"^^xsd:integer;
     gh:default_branch "master".
-_:b7 gh:node_id "MDc6TGljZW5zZTEz";
+_:b11 gh:node_id "MDc6TGljZW5zZTEz";
     gh:name "MIT License";
     gh:url <https://api.github.com/licenses/mit>;
     gh:key "mit";

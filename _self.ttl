@@ -3,4 +3,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "DocRoot Container";
-    ldp:contains <Apps/>, <Cache/>, <Data/>.
+    ldp:contains <Apps/>, <Cache/>, <Data/>, <shape-trees.test/>.

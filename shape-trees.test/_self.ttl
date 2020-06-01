@@ -4,7 +4,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "/shape-trees.test";
-    ldp:contains <Unmanaged/>, <ShapeMaps-nonexistent-shape/>, <ShapeMaps-unGETtable-shape/>, <ShapeMaps-nonconformant-posts/>, <ShapeMaps-malformed-shapeTree-nested-two-names/>, <ShapeMaps-missing-shape-property/>.
+    ldp:contains <Unmanaged/>.
+<ShapeMaps-PUT-tests/> tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>.
 <ShapeMaps-nonexistent-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>.
 <ShapeMaps-unGETtable-shape/> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>.
 <ShapeMaps-nonconformant-posts/> tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>.
