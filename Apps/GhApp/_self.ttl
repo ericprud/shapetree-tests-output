@@ -7,12 +7,12 @@
     dcterms:title "GhApp Directory";
     tree:installedIn _:b7, _:b30, _:b73.
 _:b7 tree:app <http://store.example/gh>;
-    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-PUT-tests/>.
 _:b30 tree:app <http://store.example/gh>;
-    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-PUT-tests/>.
 <http://store.example/gh> tree:name "GhApp".
 _:b73 tree:app <http://store.example/gh>;
-    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
+    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath </Data/Git/>.

@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 6505
+content-length: 7001
 content-type: application/octet-stream
-etag: W/%221969-1713a209624%22
-last-modified: Thu%2C%2002%20Apr%202020%2009%3A02%3A26%20GMT
+etag: W/%221b59-172a245ef1c%22
+last-modified: Thu%2C%2011%20Jun%202020%2007%3A26%3A31%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -30,6 +30,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   gh:number xsd:integer ;
   gh:title xsd:string ;
   gh:state xsd:string
+}
+
+<#OrgShape> EXTENDS @<#Entity> CLOSED {
+  gh:avatar_url IRI ;
+  gh:events_url gdt:urlTemplate ;
+  gh:followers_url IRI ;
+  gh:following_url gdt:urlTemplate ;
+  gh:gists_url gdt:urlTemplate ;
+  gh:gravatar_id xsd:string ;
+  gh:html_url gdt:urlTemplate ; # sometimes an IRI?
+  gh:login xsd:string ;
+  gh:organizations_url IRI ;
+  gh:received_events_url IRI ;
+  gh:repos_url IRI ;
+  gh:site_admin xsd:boolean ;
+  gh:starred_url gdt:urlTemplate ? ;
+  gh:subscriptions_url IRI ;
+  gh:type ["User"]
 }
 
 <#IssueShape> EXTENDS @<#WorkflowEntity> CLOSED {

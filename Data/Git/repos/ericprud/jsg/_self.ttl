@@ -6,11 +6,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "nested Container for repos/ericprud/jsg/ in <http://localhost:12345/gh/ghShapeTree#root>";
-    tree:shapeTreeRoot <http://localhost:12345/gh/ghShapeTree#root>;
+    dcterms:title "nested Container for repos/ericprud/jsg/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
+    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath "repos/ericprud/jsg/";
     tree:shapeTreeInstanceRoot <../../../>;
-    ldp:contains <issues/>, <labels/>, <milestones/>.
+    ldp:contains <labels/>, <issues/>, <milestones/>.
 <#jsg> gh:id "46061512"^^xsd:integer;
     gh:node_id "MDEwOlJlcG9zaXRvcnk0NjA2MTUxMg==";
     gh:name "jsg";
