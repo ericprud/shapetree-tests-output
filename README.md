@@ -13,6 +13,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── GhApp2
 │   │   └── _self.ttl
+│   ├── GhFlat
+│   │   └── _self.ttl
 │   ├── MultiCalApp
 │   │   └── _self.ttl
 │   ├── NeverNoteApp
@@ -40,6 +42,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTree
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTreettl
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTreetxt
+│   ├── httplocalhost12345gh-flatgh-flat-Schema
+│   ├── httplocalhost12345gh-flatgh-flat-ShapeTree
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
 │   ├── httplocalhost12345photoPhotoShapeTree
@@ -81,6 +85,25 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │       │       ├── _self.ttl
 │   │       │       └── subscr1.ttl
 │   │       └── _self.ttl
+│   ├── Git-Comments
+│   │   └── _self.ttl
+│   ├── Git-Events
+│   │   └── _self.ttl
+│   ├── Git-Issues
+│   │   ├── 1.ttl
+│   │   └── _self.ttl
+│   ├── Git-Labels
+│   │   └── _self.ttl
+│   ├── Git-Milestones
+│   │   └── _self.ttl
+│   ├── Git-Orgs
+│   │   ├── ericprud
+│   │   │   └── _self.ttl
+│   │   └── _self.ttl
+│   ├── Git-Repos
+│   │   ├── jsg
+│   │   │   └── _self.ttl
+│   │   └── _self.ttl
 │   ├── Google
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
@@ -164,7 +187,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-61 directories, 96 files
+71 directories, 109 files
 ```
 
 
@@ -857,6 +880,49 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should GET /Data/Git/repos/ericprud/jsg/issues/1.ttl
         ✓ should !GET /Data/Git/repos/ericprud/jsg/issues/2.ttl
 
+  test/apps/gh-flat.test.js installed in Data
+    initial state
+      ✓ should GET /Data/
+      ✓ should !GET /Data/GitFlat/
+    create /Data/Git-Orgs/
+      ✓ should PLANT /Data/Git-Orgs
+      ✓ should GET /Data/Git-Orgs/
+    create /Data/Git-Repos/
+      ✓ should PLANT /Data/Git-Repos
+      ✓ should GET /Data/Git-Repos/
+    create /Data/Git-Issues/
+      ✓ should PLANT /Data/Git-Issues
+      ✓ should GET /Data/Git-Issues/
+    create /Data/Git-Comments/
+      ✓ should PLANT /Data/Git-Comments
+      ✓ should GET /Data/Git-Comments/
+    create /Data/Git-Events/
+      ✓ should PLANT /Data/Git-Events
+      ✓ should GET /Data/Git-Events/
+    create /Data/Git-Labels/
+      ✓ should PLANT /Data/Git-Labels
+      ✓ should GET /Data/Git-Labels/
+    create /Data/Git-Milestones/
+      ✓ should PLANT /Data/Git-Milestones
+      ✓ should GET /Data/Git-Milestones/
+    create /Data/Git-Orgs/ericprud/ hiearchy
+      create /Data/Git-Orgs/ericprud/
+        ✓ should POST /Data/Git-Orgs/ericprud
+        ✓ should GET /Data/Git-Orgs/ericprud/
+        ✓ should !GET /Data/Git-Orgs/ericprud-1/
+        ✓ should !GET /Data/Git-Orgs/ericprud/jsg/
+      create /Data/Git-Repos/jsg/
+        ✓ should POST /Data/Git-Repos/jsg
+        ✓ should GET /Data/Git-Repos/jsg/
+        ✓ should GET /Data/Git-Issues/
+        ✓ should GET /Data/Git-Labels/
+        ✓ should GET /Data/Git-Milestones/
+        ✓ should !GET /Data/Git-Issues/1.ttl
+      create /Data/Git-Issues/1
+        ✓ should POST /Data/Git-Issues/1.ttl
+        ✓ should GET /Data/Git-Issues/1.ttl
+        ✓ should !GET /Data/Git-Issues/2.ttl
+
   test/apps/nevernote.test.js installid in Data
     initial state
       ✓ should GET /Data/
@@ -905,7 +971,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  275 passing (6s)
+  304 passing (6s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------

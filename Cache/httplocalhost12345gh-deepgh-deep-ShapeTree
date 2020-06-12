@@ -4,8 +4,8 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 4298
 content-type: application/ld+json
-etag: W/%2210ca-172a251db84%22
-last-modified: Thu%2C%2011%20Jun%202020%2007%3A39%3A33%20GMT
+etag: W/%2210ca-172a79b1e77%22
+last-modified: Fri%2C%2012%20Jun%202020%2008%3A17%3A40%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -17,8 +17,8 @@ x-powered-by: Express
       {        "@id":      "#repo", "expectedType":"ldp:Container"        , "uriTemplate":"{repoName}"     , "shape": "gh-deep-Schema#RepoShape"       , "contents":[
         {      "@id":    "#issues", "expectedType":"ldp:Container"        , "name":"issues"                , "shape": "gh-deep-Schema#C_IssueShape"    , "contents":[
           {    "@id":     "#issue", "expectedType":"ldp:Resource"         , "uriTemplate":"{issueNo}"      , "shape": "gh-deep-Schema#IssueShape"      , "contents":[
-            {  "@id":    "#cmnt_C", "expectedType":"ldp:Container"        , "name"       :"comments"       , "shape": "gh-deep-Schema#C_LabelShape"    , "contents":[
-              {"@id":    "#comnts", "expectedType":"ldp:Resource"         , "uriTemplate":"{commentNo}"    , "shape": "gh-deep-Schema#LabelShape"      }
+            {  "@id":    "#cmnt_C", "expectedType":"ldp:Container"        , "name"       :"comments"       , "shape": "gh-deep-Schema#C_CommentShape"  , "contents":[
+              {"@id":    "#comnts", "expectedType":"ldp:Resource"         , "uriTemplate":"{commentNo}"    , "shape": "gh-deep-Schema#CommentShape"    }
             ]},
             {  "@id":     "#evt_C", "expectedType":"ldp:Container"        , "name"       :"events"         , "shape": "gh-deep-Schema#C_EventShape"    , "contents":[
               {"@id":    "#events", "expectedType":"ldp:Resource"         , "uriTemplate":"{eventNo}"      , "shape": "gh-deep-Schema#EventShape"      }
