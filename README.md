@@ -97,13 +97,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Git-Milestones
 │   │   └── _self.ttl
 │   ├── Git-Orgs
-│   │   ├── ericprud
-│   │   │   └── _self.ttl
 │   │   └── _self.ttl
 │   ├── Git-Repos
 │   │   ├── jsg
 │   │   │   └── _self.ttl
-│   │   └── _self.ttl
+│   │   ├── _self.ttl
+│   │   └── shapetree.js
+│   │       └── _self.ttl
 │   ├── Google
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
@@ -906,11 +906,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should PLANT /Data/Git-Milestones
       ✓ should GET /Data/Git-Milestones/
     create /Data/Git-Orgs/ericprud/ hiearchy
-      create /Data/Git-Orgs/ericprud/
-        ✓ should POST /Data/Git-Orgs/ericprud
-        ✓ should GET /Data/Git-Orgs/ericprud/
-        ✓ should !GET /Data/Git-Orgs/ericprud-1/
-        ✓ should !GET /Data/Git-Orgs/ericprud/jsg/
+      create /Data/Git-Repos/shapetree.js/
+        ✓ should POST /Data/Git-Repos/shapetree.js
+        ✓ should GET /Data/Git-Repos/shapetree.js/
+        ✓ should !GET /Data/Git-Repos/shapetree.js-1/
+        ✓ should !GET /Data/Git-Repos/shapetree.js/jsg/
       create /Data/Git-Repos/jsg/
         ✓ should POST /Data/Git-Repos/jsg
         ✓ should GET /Data/Git-Repos/jsg/

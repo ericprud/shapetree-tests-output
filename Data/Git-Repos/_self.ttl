@@ -7,4 +7,4 @@
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
     tree:shapeTreeInstancePath ".";
     tree:shapeTreeInstanceRoot <>;
-    ldp:contains <jsg/>.
+    ldp:contains <shapetree.js/>, <jsg/>.

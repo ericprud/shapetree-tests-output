@@ -5,26 +5,26 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "GhFlat Directory";
-    tree:installedIn _:b77, _:b79, _:b81, _:b83, _:b85, _:b87, _:b89.
-_:b77 tree:app <http://store.example/gh-flat>;
+    tree:installedIn _:b86, _:b88, _:b90, _:b92, _:b94, _:b96, _:b98.
+_:b86 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#orgs>;
     tree:shapeTreeInstancePath </Data/Git-Orgs/>.
-_:b79 tree:app <http://store.example/gh-flat>;
+_:b88 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
     tree:shapeTreeInstancePath </Data/Git-Repos/>.
-_:b81 tree:app <http://store.example/gh-flat>;
+_:b90 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issues>;
     tree:shapeTreeInstancePath </Data/Git-Issues/>.
-_:b83 tree:app <http://store.example/gh-flat>;
+_:b92 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#cmnt_C>;
     tree:shapeTreeInstancePath </Data/Git-Comments/>.
-_:b85 tree:app <http://store.example/gh-flat>;
+_:b94 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#evt_C>;
     tree:shapeTreeInstancePath </Data/Git-Events/>.
-_:b87 tree:app <http://store.example/gh-flat>;
+_:b96 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#lbl_C>;
     tree:shapeTreeInstancePath </Data/Git-Labels/>.
 <http://store.example/gh-flat> tree:name "GhFlat".
-_:b89 tree:app <http://store.example/gh-flat>;
+_:b98 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#mlt_C>;
     tree:shapeTreeInstancePath </Data/Git-Milestones/>.

@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 749
+content-length: 747
 content-type: text/plain%3B%20charset%3DUTF-8
-etag: W/%222ed-1713a209624%22
-last-modified: Thu%2C%2002%20Apr%202020%2009%3A02%3A26%20GMT
+etag: W/%222eb-172b17ba070%22
+last-modified: Sun%2C%2014%20Jun%202020%2006%3A19%3A28%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -24,7 +24,7 @@ x-powered-by: Express
 │               └── {milestoneName} @gh:MilestoneShape
 │                   └── _self.ttl
 └── users
-    └── {userName} @gh:PersonShape
+    └── {userName} @gh:UserShape
         ├── _self.ttl
         ├── orgs
         ├── received_events

@@ -4,8 +4,8 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 4298
 content-type: application/ld+json
-etag: W/%2210ca-172a79b1e77%22
-last-modified: Fri%2C%2012%20Jun%202020%2008%3A17%3A40%20GMT
+etag: W/%2210ca-172b17bcf2c%22
+last-modified: Sun%2C%2014%20Jun%202020%2006%3A19%3A40%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -35,9 +35,9 @@ x-powered-by: Express
     ]}
   ]},
   {            "@id":     "#users", "expectedType":"ldp:Container"        , "name":"users"                                                       , "contents":[
-    {          "@id":      "#user", "expectedType":"ldp:Container"        , "uriTemplate":"{userName}"     , "shape": "gh-deep-Schema#PersonShape"     , "contents":[
+    {          "@id":      "#user", "expectedType":"ldp:Container"        , "uriTemplate":"{userName}"     , "shape": "gh-deep-Schema#UserShape"       , "contents":[
       {        "@id": "#followers", "expectedType":"ldp:IndirectContainer", "name":"followers"             , "shape": "gh-deep-Schema#C_UserShape"     , "contents":[
-        {      "@id":  "#follower", "expectedType":"ldp:Resource"         , "uriTemplate":"{userName}"     , "shape": "gh-deep-Schema#PersonShape"     }
+        {      "@id":  "#follower", "expectedType":"ldp:Resource"         , "uriTemplate":"{userName}"     , "shape": "gh-deep-Schema#UserShape"       }
       ]},
       {        "@id": "#user-orgs", "expectedType":"ldp:IndirectContainer", "name":"orgs"                  , "shape": "gh-deep-Schema#C_OrgShape"      , "contents":[
         {      "@id":  "#user-org", "expectedType":"ldp:Resource"         , "uriTemplate":"{orgName}"      , "shape": "gh-deep-Schema#OrgShape"        }
