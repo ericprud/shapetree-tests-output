@@ -99,11 +99,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Git-Orgs
 │   │   └── _self.ttl
 │   ├── Git-Repos
-│   │   ├── jsg
-│   │   │   └── _self.ttl
+│   │   ├── jsg.ttl
 │   │   ├── _self.ttl
-│   │   └── shapetree.js
-│   │       └── _self.ttl
+│   │   └── shapetree.js.ttl
 │   ├── Google
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
@@ -187,7 +185,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-71 directories, 109 files
+69 directories, 109 files
 ```
 
 
@@ -905,15 +903,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/Git-Milestones/
       ✓ should PLANT /Data/Git-Milestones
       ✓ should GET /Data/Git-Milestones/
-    create /Data/Git-Orgs/ericprud/ hiearchy
-      create /Data/Git-Repos/shapetree.js/
-        ✓ should POST /Data/Git-Repos/shapetree.js
-        ✓ should GET /Data/Git-Repos/shapetree.js/
-        ✓ should !GET /Data/Git-Repos/shapetree.js-1/
-        ✓ should !GET /Data/Git-Repos/shapetree.js/jsg/
+    create /Data/Git-Reos/ members
+      create /Data/Git-Repos/shapetree.js
+        ✓ should POST /Data/Git-Repos/shapetree.js.ttl
+        ✓ should GET /Data/Git-Repos/shapetree.js.ttl
+        ✓ should !GET /Data/Git-Repos/shapetree.js-1.ttl
       create /Data/Git-Repos/jsg/
-        ✓ should POST /Data/Git-Repos/jsg
-        ✓ should GET /Data/Git-Repos/jsg/
+        ✓ should POST /Data/Git-Repos/jsg.ttl
+        ✓ should GET /Data/Git-Repos/jsg.ttl
         ✓ should GET /Data/Git-Issues/
         ✓ should GET /Data/Git-Labels/
         ✓ should GET /Data/Git-Milestones/
@@ -922,6 +919,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/Git-Issues/1.ttl
         ✓ should GET /Data/Git-Issues/1.ttl
         ✓ should !GET /Data/Git-Issues/2.ttl
+    shapetree navigation
+      ✓ should traverse shapetree references (walkReferencedTrees)
+      ✓ should traverse referenced shapetree instance members (walkReferencedResources(start))
 
   test/apps/nevernote.test.js installid in Data
     initial state
@@ -971,24 +971,24 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  304 passing (6s)
+  305 passing (6s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   94.46 |    91.09 |   92.81 |   94.54 |                                 
+All files                |    96.9 |    94.19 |   95.88 |   96.83 |                                 
  servers                 |     100 |    98.53 |     100 |     100 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |     100 |    98.21 |     100 |     100 | 263                             
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   93.74 |    89.58 |   91.01 |   93.98 |                                 
+ shapetree.js/lib        |   98.57 |    94.93 |   96.74 |   98.53 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
-  shape-tree-fetch.js    |      80 |    73.21 |   66.67 |   80.79 | ...-225,227-229,232,235-237,267 
-  shape-tree.js          |     100 |      100 |    96.3 |     100 |                                 
+  shape-tree-fetch.js    |   94.66 |    85.42 |   92.31 |   94.57 | 68,160,161,182-184,223          
+  shape-tree.js          |     100 |      100 |   96.77 |     100 |                                 
  shapetree.js/storage    |   86.23 |    79.31 |   89.47 |   85.98 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |     100 |    92.31 |     100 |     100 | 125                             

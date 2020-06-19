@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 2470
+content-length: 3036
 content-type: application/ld+json
-etag: W/%229a6-172a789b303%22
-last-modified: Fri%2C%2012%20Jun%202020%2007%3A58%3A38%20GMT
+etag: W/%22bdc-172cc19e9d0%22
+last-modified: Fri%2C%2019%20Jun%202020%2010%3A22%3A29%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -13,21 +13,25 @@ x-powered-by: Express
   "@id": "#dontUseMe",
   "expectedType":"ldp:Container", "contents":[
   {            "@id":      "#orgs", "expectedType":"ldp:Container"                                                                                     , "contents":[
-    {          "@id":       "#org", "expectedType":"ldp:Container"        , "uriTemplate":"{orgName}"      , "shape": "gh-flat-Schema#OrgShape"}
+    {          "@id":       "#org", "expectedType":"ldp:Resource"         , "uriTemplate":"{orgName}"      , "shape": "gh-flat-Schema#OrgShape"        , "references":[
+			{ "treeStep": "#repo", "shapePath": "@gh-flat-Schema#OrgShape/gh:repo" }]}
   ]},
   {            "@id":     "#repos", "expectedType":"ldp:Container"                                                                                     , "contents":[
-    {          "@id":      "#repo", "expectedType":"ldp:Container"        , "uriTemplate":"{repoName}"     , "shape": "gh-flat-Schema#RepoShape"       , "contents":[
-    ]}
+    {          "@id":      "#repo", "expectedType":"ldp:Resource"         , "uriTemplate":"{repoName}"     , "shape": "gh-flat-Schema#RepoShape"       , "references":[
+			{ "treeStep": "#issue", "shapePath": "@gh-flat-Schema#RepoShape/gh:issue" },
+                        { "treeStep": "#labels", "shapePath": "@gh-flat-Schema#RepoShape/gh:label" },
+                        { "treeStep": "#milestones", "shapePath": "@gh-flat-Schema#RepoShape/gh:milestone" }]}
   ]},
         {      "@id":    "#issues", "expectedType":"ldp:Container"                                         , "shape": "gh-flat-Schema#C_IssueShape"    , "contents":[
-          {    "@id":     "#issue", "expectedType":"ldp:Resource"         , "uriTemplate":"{issueNo}"      , "shape": "gh-flat-Schema#IssueShape"      , "contents":[
-          ]}
+          {    "@id":     "#issue", "expectedType":"ldp:Resource"         , "uriTemplate":"{issueNo}"      , "shape": "gh-flat-Schema#IssueShape"      , "references":[
+			{ "treeStep": "#comment", "shapePath": "@gh-flat-Schema#IssueShape/gh:comment" },
+                        { "treeStep": "#event", "shapePath": "@gh-flat-Schema#IssueShape/gh:event" }]}
         ]},
             {  "@id":    "#cmnt_C", "expectedType":"ldp:Container"                                         , "shape": "gh-flat-Schema#C_CommentShape"  , "contents":[
-              {"@id":    "#comnts", "expectedType":"ldp:Resource"         , "uriTemplate":"{commentNo}"    , "shape": "gh-flat-Schema#CommentShape"    }
+              {"@id":   "#comment", "expectedType":"ldp:Resource"         , "uriTemplate":"{commentNo}"    , "shape": "gh-flat-Schema#CommentShape"    }
             ]},
             {  "@id":     "#evt_C", "expectedType":"ldp:Container"                                         , "shape": "gh-flat-Schema#C_EventShape"    , "contents":[
-              {"@id":    "#events", "expectedType":"ldp:Resource"         , "uriTemplate":"{eventNo}"      , "shape": "gh-flat-Schema#EventShape"      }
+              {"@id":     "#event", "expectedType":"ldp:Resource"         , "uriTemplate":"{eventNo}"      , "shape": "gh-flat-Schema#EventShape"      }
             ]},
         {      "@id":     "#lbl_C", "expectedType":"ldp:Container"                                         , "shape": "gh-flat-Schema#C_LabelShape"    , "contents":[
           {    "@id":    "#labels", "expectedType":"ldp:Resource"         , "uriTemplate":"{labelName}"    , "shape": "gh-flat-Schema#LabelShape"      }
