@@ -5,38 +5,38 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "PhotoAlbumApp Directory";
-    tree:installedIn _:b19, _:b22, _:b25, _:b29, _:b32, _:b46, _:b49, _:b52, _:b56, _:b59, _:b112.
-_:b19 tree:app <http://store.example/PhotoAlbumApp>;
+    tree:installedIn _:b18, _:b21, _:b24, _:b28, _:b31, _:b44, _:b47, _:b50, _:b54, _:b57, _:b110.
+_:b18 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-nonexistent-shape/>.
-_:b22 tree:app <http://store.example/PhotoAlbumApp>;
+_:b21 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-unGETtable-shape/>.
-_:b25 tree:app <http://store.example/PhotoAlbumApp>;
+_:b24 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-nonconformant-posts/>.
-_:b29 tree:app <http://store.example/PhotoAlbumApp>;
+_:b28 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/>.
-_:b32 tree:app <http://store.example/PhotoAlbumApp>;
+_:b31 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>;
     tree:shapeTreeInstancePath </shape-trees.test/ShapeMaps-missing-shape-property/>.
-_:b46 tree:app <http://store.example/PhotoAlbumApp>;
+_:b44 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingSchema#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-nonexistent-shape/>.
-_:b49 tree:app <http://store.example/PhotoAlbumApp>;
+_:b47 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeMissingShape#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-unGETtable-shape/>.
-_:b52 tree:app <http://store.example/PhotoAlbumApp>;
+_:b50 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-nonconformant-posts/>.
-_:b56 tree:app <http://store.example/PhotoAlbumApp>;
+_:b54 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNestedTwoStaticNames#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/>.
-_:b59 tree:app <http://store.example/PhotoAlbumApp>;
+_:b57 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>;
     tree:shapeTreeInstancePath </shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/>.
 <http://store.example/PhotoAlbumApp> tree:name "PhotoAlbumApp".
-_:b112 tree:app <http://store.example/PhotoAlbumApp>;
+_:b110 tree:app <http://store.example/PhotoAlbumApp>;
     tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#root>;
     tree:shapeTreeInstancePath </Data/Albums2019/>.

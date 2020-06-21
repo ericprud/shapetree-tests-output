@@ -100,8 +100,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── Git-Repos
 │   │   ├── jsg.ttl
+│   │   ├── libxml-annot.ttl
 │   │   ├── _self.ttl
 │   │   └── shapetree.js.ttl
+│   ├── Git-Users
+│   │   ├── ericprud.ttl
+│   │   └── _self.ttl
 │   ├── Google
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
@@ -185,7 +189,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-69 directories, 109 files
+70 directories, 112 files
 ```
 
 
@@ -885,6 +889,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/Git-Orgs/
       ✓ should PLANT /Data/Git-Orgs
       ✓ should GET /Data/Git-Orgs/
+    create /Data/Git-Users/
+      ✓ should PLANT /Data/Git-Users
+      ✓ should GET /Data/Git-Users/
     create /Data/Git-Repos/
       ✓ should PLANT /Data/Git-Repos
       ✓ should GET /Data/Git-Repos/
@@ -903,6 +910,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/Git-Milestones/
       ✓ should PLANT /Data/Git-Milestones
       ✓ should GET /Data/Git-Milestones/
+    create /Data/Git-Users/ericprud.ttl
+      ✓ should POST /Data/Git-Users/ericprud.ttl
+      ✓ should GET /Data/Git-Users/ericprud.ttl
+      ✓ should !GET /Data/Git-Users/ericprud-1.ttl
     create /Data/Git-Reos/ members
       create /Data/Git-Repos/shapetree.js
         ✓ should POST /Data/Git-Repos/shapetree.js.ttl
@@ -911,6 +922,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       create /Data/Git-Repos/jsg/
         ✓ should POST /Data/Git-Repos/jsg.ttl
         ✓ should GET /Data/Git-Repos/jsg.ttl
+        ✓ should GET /Data/Git-Issues/
+        ✓ should GET /Data/Git-Labels/
+        ✓ should GET /Data/Git-Milestones/
+        ✓ should !GET /Data/Git-Issues/1.ttl
+      create /Data/Git-Repos/libxml-annot/
+        ✓ should POST /Data/Git-Repos/libxml-annot.ttl
+        ✓ should GET /Data/Git-Repos/libxml-annot.ttl
         ✓ should GET /Data/Git-Issues/
         ✓ should GET /Data/Git-Labels/
         ✓ should GET /Data/Git-Milestones/
@@ -971,7 +989,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  305 passing (6s)
+  316 passing (7s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------

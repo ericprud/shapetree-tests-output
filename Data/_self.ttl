@@ -4,11 +4,12 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "Shared Data Container";
-    ldp:contains <Calendar/>, <Google/>, <Git/>, <Git-Orgs/>, <Git-Repos/>, <Git-Issues/>, <Git-Comments/>, <Git-Events/>, <Git-Labels/>, <Git-Milestones/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
+    ldp:contains <Calendar/>, <Google/>, <Git/>, <Git-Orgs/>, <Git-Users/>, <Git-Repos/>, <Git-Issues/>, <Git-Comments/>, <Git-Events/>, <Git-Labels/>, <Git-Milestones/>, <NeverNotes/>, <Photos2020-01/>, <Albums2019/>.
 <Calendar/> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>.
 <Google/> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>.
 <Git/> tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>.
 <Git-Orgs/> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#orgs>.
+<Git-Users/> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#users>.
 <Git-Repos/> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>.
 <Git-Issues/> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issues>.
 <Git-Comments/> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#cmnt_C>.
