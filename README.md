@@ -90,14 +90,15 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── Git-Events
 │   │   └── _self.ttl
 │   ├── Git-Issues
-│   │   ├── 1.ttl
+│   │   ├── issue1.ttl
 │   │   └── _self.ttl
 │   ├── Git-Labels
 │   │   └── _self.ttl
 │   ├── Git-Milestones
 │   │   └── _self.ttl
 │   ├── Git-Orgs
-│   │   └── _self.ttl
+│   │   ├── _self.ttl
+│   │   └── shapetrees.ttl
 │   ├── Git-Repos
 │   │   ├── jsg.ttl
 │   │   ├── libxml-annot.ttl
@@ -189,7 +190,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-70 directories, 112 files
+70 directories, 113 files
 ```
 
 
@@ -910,33 +911,46 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     create /Data/Git-Milestones/
       ✓ should PLANT /Data/Git-Milestones
       ✓ should GET /Data/Git-Milestones/
+    create /Data/Git-Orgs/shapetrees.ttl
+      ✓ should POST /Data/Git-Orgs/shapetrees.ttl
+      ✓ should GET /Data/Git-Orgs/shapetrees.ttl
+      ✓ should !GET /Data/Git-Orgs/shapetrees-1.ttl
     create /Data/Git-Users/ericprud.ttl
       ✓ should POST /Data/Git-Users/ericprud.ttl
       ✓ should GET /Data/Git-Users/ericprud.ttl
       ✓ should !GET /Data/Git-Users/ericprud-1.ttl
-    create /Data/Git-Reos/ members
+    create /Data/Git-Repos/ members
       create /Data/Git-Repos/shapetree.js
         ✓ should POST /Data/Git-Repos/shapetree.js.ttl
         ✓ should GET /Data/Git-Repos/shapetree.js.ttl
         ✓ should !GET /Data/Git-Repos/shapetree.js-1.ttl
+        add shapetree.js repository to /Data/Git-Orgs/shapetrees
+          ✓ should PATCH /Data/Git-Orgs/shapetrees.ttl
+          ✓ should GET /Data/Git-Orgs/shapetrees.ttl
       create /Data/Git-Repos/jsg/
         ✓ should POST /Data/Git-Repos/jsg.ttl
         ✓ should GET /Data/Git-Repos/jsg.ttl
-        ✓ should GET /Data/Git-Issues/
-        ✓ should GET /Data/Git-Labels/
-        ✓ should GET /Data/Git-Milestones/
         ✓ should !GET /Data/Git-Issues/1.ttl
+        add jsg repository to /Data/Git-Users/ericprud
+          ✓ should PATCH /Data/Git-Users/ericprud.ttl
+          ✓ should GET /Data/Git-Users/ericprud.ttl
+        add jsg subscription to /Data/Git-Users/ericprud
+          ✓ should PATCH /Data/Git-Users/ericprud.ttl
+          ✓ should GET /Data/Git-Users/ericprud.ttl
       create /Data/Git-Repos/libxml-annot/
         ✓ should POST /Data/Git-Repos/libxml-annot.ttl
         ✓ should GET /Data/Git-Repos/libxml-annot.ttl
-        ✓ should GET /Data/Git-Issues/
-        ✓ should GET /Data/Git-Labels/
-        ✓ should GET /Data/Git-Milestones/
         ✓ should !GET /Data/Git-Issues/1.ttl
-      create /Data/Git-Issues/1
-        ✓ should POST /Data/Git-Issues/1.ttl
-        ✓ should GET /Data/Git-Issues/1.ttl
-        ✓ should !GET /Data/Git-Issues/2.ttl
+        add libxml-annot repository to /Data/Git-Users/ericprud
+          ✓ should PATCH /Data/Git-Users/ericprud.ttl
+          ✓ should GET /Data/Git-Users/ericprud.ttl
+      create /Data/Git-Issues/issue1
+        ✓ should POST /Data/Git-Issues/issue1.ttl
+        ✓ should GET /Data/Git-Issues/issue1.ttl
+        ✓ should !GET /Data/Git-Issues/issue2.ttl
+        add issue issue1 to /Data/Git-Users/ericprud
+          ✓ should PATCH /Data/Git-Users/ericprud.ttl
+          ✓ should GET /Data/Git-Users/ericprud.ttl
     shapetree navigation
       ✓ should traverse shapetree references (walkReferencedTrees)
       ✓ should traverse referenced shapetree instance members (walkReferencedResources(start))
@@ -989,16 +1003,16 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  316 passing (7s)
+  323 passing (7s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |    96.9 |    94.19 |   95.88 |   96.83 |                                 
- servers                 |     100 |    98.53 |     100 |     100 |                                 
+All files                |   96.67 |     92.8 |   95.32 |   96.59 |                                 
+ servers                 |   98.77 |    93.51 |   95.24 |   98.74 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
-  LDP.js                 |     100 |    98.21 |     100 |     100 | 263                             
+  LDP.js                 |    98.4 |    92.31 |   91.67 |   98.38 | 221,226,238                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
  shapetree.js/lib        |   98.57 |    94.93 |   96.74 |   98.53 |                                 

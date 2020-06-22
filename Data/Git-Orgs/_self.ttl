@@ -6,4 +6,5 @@
     dcterms:title "root of Container for http://localhost:12345/gh-flat/gh-flat-ShapeTree#orgs";
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#orgs>;
     tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <>.
+    tree:shapeTreeInstanceRoot <>;
+    ldp:contains <shapetrees.ttl>.

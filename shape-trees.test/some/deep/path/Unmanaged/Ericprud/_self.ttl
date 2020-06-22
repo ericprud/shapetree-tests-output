@@ -7,7 +7,7 @@
     dcterms:title "unmanaged Container /shape-trees.test/some/deep/path/Unmanaged/Ericprud/".
 <#ericprud> gh:url <http://github.example/user/ericprud>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
-    gh:node_id "ericprud1234";
+    gh:node_id "MDQ6VXNlcjU3MzQ3OA==";
     gh:login "ericprud";
     gh:avatar_url <http://github.example/user/ericprud-avatar>;
     gh:gravatar_id "g-allice1234";

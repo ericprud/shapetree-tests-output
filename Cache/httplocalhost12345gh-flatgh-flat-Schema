@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 7254
+content-length: 7285
 content-type: application/octet-stream
-etag: W/%221c56-172d72b9706%22
-last-modified: Sun%2C%2021%20Jun%202020%2013%3A57%3A37%20GMT
+etag: W/%221c75-172d96c4cd3%22
+last-modified: Mon%2C%2022%20Jun%202020%2000%3A27%3A32%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -117,7 +117,8 @@ ABSTRACT <#OrgBase> EXTENDS @<#Entity> CLOSED {
   gh:following xsd:integer MinInclusive 0 ;
   gh:html IRI // shx:urlTemplate "https://github.com/{Org}" ;
   gh:created_at xsd:dateTime ;
-  gh:updated_at xsd:dateTime
+  gh:updated_at xsd:dateTime ;
+  gh:type ["Organization"] ;
 } // shx:urlTemplate "https://api.github.com/orgs/{Org}"
 
 <#OrgOwnerView> EXTENDS @<#OrgReference> EXTENDS @<#EntityView> CLOSED {

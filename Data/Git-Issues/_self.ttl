@@ -7,4 +7,4 @@
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issues>;
     tree:shapeTreeInstancePath ".";
     tree:shapeTreeInstanceRoot <>;
-    ldp:contains <1.ttl>.
+    ldp:contains <issue1.ttl>.
