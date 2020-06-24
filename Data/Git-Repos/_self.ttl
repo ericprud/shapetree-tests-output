@@ -4,7 +4,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "root of Container for http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos";
-    tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
-    tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <>;
     ldp:contains <shapetree.js.ttl>, <jsg.ttl>, <libxml-annot.ttl>.

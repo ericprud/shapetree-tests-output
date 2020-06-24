@@ -4,7 +4,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "root of Container for http://localhost:12345/cal/GoogleShapeTree#top";
-    tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
-    tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <>;
     ldp:contains <Events/>.

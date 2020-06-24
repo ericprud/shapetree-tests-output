@@ -4,7 +4,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "root of Container for http://localhost:12345/nevernote/NeverNoteShapeTree#root";
-    tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
-    tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <>;
     ldp:contains <note1/>.

@@ -3,7 +3,4 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "nested Container repos/ericprud/jsg/milestones/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
-    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
-    tree:shapeTreeInstancePath "repos/ericprud/jsg/milestones/";
-    tree:shapeTreeInstanceRoot </Data/Git/>.
+    dcterms:title "nested Container repos/ericprud/jsg/milestones/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>".

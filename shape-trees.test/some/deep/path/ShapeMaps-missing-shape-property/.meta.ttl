@@ -1,0 +1,5 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<./> tree:shapeTreeRoot <http://localhost:12345/bad/ShapeTreeNoShapeProperty#root>;
+    tree:shapeTreeInstancePath ".";
+    tree:shapeTreeInstanceRoot <./>.

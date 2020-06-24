@@ -3,7 +3,4 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "root of Container for http://localhost:12345/gh-flat/gh-flat-ShapeTree#lbl_C";
-    tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#lbl_C>;
-    tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <>.
+    dcterms:title "root of Container for http://localhost:12345/gh-flat/gh-flat-ShapeTree#lbl_C".

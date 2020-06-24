@@ -3,7 +3,4 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <> a ldp:BasicContainer;
-    dcterms:title "nested Container users/Container/followers/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
-    tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
-    tree:shapeTreeInstancePath "users/Container/followers/";
-    tree:shapeTreeInstanceRoot <../../../>.
+    dcterms:title "nested Container users/Container/followers/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>".
