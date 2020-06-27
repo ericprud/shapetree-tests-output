@@ -955,7 +955,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should traverse shapetree references (walkReferencedTrees)
       ✓ should traverse referenced shapetree instance members (walkReferencedResources(start))
 
-  test/apps/nevernote.test.js installid in Data
+  test/apps/nevernote.test.js installed in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/NeverNotes/
@@ -976,7 +976,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /Data/NeverNotes/note1/inc-M33_IR.ttl
         ✓ should GET /Data/NeverNotes/note1/inc-M33_IR.ttl
 
-  test/apps/photo.test.js installid in Data
+  test/apps/photo.test.js installed in Data
     initial state
       ✓ should GET /Data/
       ✓ should !GET /Data/Photos2020-01/
