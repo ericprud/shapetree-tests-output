@@ -6,7 +6,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "nested Container for users/ericprud/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
-    ldp:contains <subscriptions/>, <followers/>, <received_events/>, <orgs/>, <repos/>.
+    ldp:contains <followers/>, <received_events/>, <subscriptions/>, <orgs/>, <repos/>.
 <#ericprud> gh:url <http://github.example/user/ericprud>;
     gh:id "1234"^^<http://www.w3.org/2001/XMLSchema#integer>;
     gh:node_id "MDQ6VXNlcjU3MzQ3OA==";
