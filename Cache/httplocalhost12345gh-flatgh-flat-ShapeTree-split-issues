@@ -1,0 +1,22 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 721
+content-type: application/ld+json
+etag: W/%222d1-1733ccb0aaa%22
+last-modified: Sat%2C%2011%20Jul%202020%2007%3A33%3A26%20GMT
+vary: Origin
+x-powered-by: Express
+
+{ "@context": "../ns/shapeTreeContext",
+  "@id": "#root2",
+  "expectedType":"ldp:Container", "contents":[
+        {      "@id":    "#issues", "expectedType":"ldp:Container"        , "name":"issues"                , "shape": "gh-flat-Schema#C_IssueShape"    , "contents":[
+          {    "@id":     "#issue", "expectedType":"ldp:Resource"         , "uriTemplate":"{issueNo}"      , "shape": "gh-flat-Schema#IssueShape"      , "references":[
+			{ "treeStep": "gh-flat-ShapeTree-split-org#comment"  , "shapePath": "@gh-flat-Schema#IssueShape/gh:comment"   },
+                        { "treeStep": "gh-flat-ShapeTree-split-org#event"    , "shapePath": "@gh-flat-Schema#IssueShape/gh:event"     }
+          ]}
+        ]}
+  ]
+}

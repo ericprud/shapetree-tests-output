@@ -44,6 +44,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTreetxt
 │   ├── httplocalhost12345gh-flatgh-flat-Schema
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree
+│   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-issues
+│   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-org
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
 │   ├── httplocalhost12345photoPhotoShapeTree
@@ -186,7 +188,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-68 directories, 111 files
+68 directories, 113 files
 ```
 
 
@@ -937,6 +939,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /Data/Git-Users/ericprud.ttl
     shapetree navigation
       ✓ should traverse shapetree references (walkReferencedTrees)
+      ✓ should traverse shapetree references (walkReferencedTrees)
 
   test/apps/nevernote.test.js installed in Data
     initial state
@@ -986,24 +989,24 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  318 passing (6s)
+  319 passing (6s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   91.51 |    84.21 |   89.22 |   91.61 |                                 
+All files                |   92.29 |    85.53 |   89.71 |   92.42 |                                 
  servers                 |   98.84 |    94.05 |   95.45 |   98.82 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |   98.53 |    93.06 |   92.31 |    98.5 | 227,232,245                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   89.88 |    81.66 |   87.07 |   89.86 |                                 
+ shapetree.js/lib        |   91.42 |    84.02 |   87.93 |   91.46 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
   shape-tree-fetch.js    |   91.79 |    81.63 |   92.31 |   91.67 | ...,150,154,166,167,188-190,229 
-  shape-tree.js          |   87.47 |    79.25 |   83.72 |   87.47 | ...,759-761,766,768,775,778,779 
+  shape-tree.js          |   89.82 |    83.02 |   84.88 |   89.92 | ...,759-761,766,768,775,778,779 
  shapetree.js/storage    |   83.17 |    73.33 |   86.96 |   83.74 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |   97.03 |       84 |    96.3 |   97.94 | 18,245                          
