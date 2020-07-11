@@ -147,8 +147,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ├── _self.ttl
 └── shape-trees.test
     ├── _self.ttl
-    ├── ShapeMaps-malformed-shapeTree-nested-two-names
-    │   └── _self.ttl
     ├── ShapeMaps-missing-shape-property
     │   └── _self.ttl
     ├── ShapeMaps-nonconformant-posts
@@ -161,8 +159,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
     │   ├── deep
     │   │   ├── path
     │   │   │   ├── _self.ttl
-    │   │   │   ├── ShapeMaps-malformed-shapeTree-nested-two-names
-    │   │   │   │   └── _self.ttl
     │   │   │   ├── ShapeMaps-missing-shape-property
     │   │   │   │   └── _self.ttl
     │   │   │   ├── ShapeMaps-nonconformant-posts
@@ -190,7 +186,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-70 directories, 113 files
+68 directories, 111 files
 ```
 
 
@@ -337,11 +333,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
-      post /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should !POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
     create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
@@ -476,11 +469,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-      post /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
@@ -490,7 +480,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  178 passing (18s)
+  174 passing (17s)
   2 pending
 
 
@@ -675,11 +665,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
-      post /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should !POST /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !PLANT /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should !GET /shape-trees.test/ShapeMaps-malformed-shapeTree-nested-two-names/
     create /shape-trees.test/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/ShapeMaps-missing-shape-property
@@ -814,11 +801,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ hierarchy -- malformed shapeTree: two nested static names
       plant /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-        ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
-        ✓ should GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
-      post /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1
-        ✓ should !POST /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
-        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/ref-1.ttl
+        ✓ should !PLANT /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names
+        ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-malformed-shapeTree-nested-two-names/
     create /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ hierarchy -- shapeTree step has no shape property
       plant /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/
         ✓ should PLANT /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property
@@ -953,7 +937,6 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
           ✓ should GET /Data/Git-Users/ericprud.ttl
     shapetree navigation
       ✓ should traverse shapetree references (walkReferencedTrees)
-      ✓ should traverse referenced shapetree instance members (walkReferencedResources(start))
 
   test/apps/nevernote.test.js installed in Data
     initial state
@@ -1003,27 +986,27 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  323 passing (7s)
+  318 passing (6s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   96.15 |    90.51 |   95.03 |   96.25 |                                 
+All files                |   91.51 |    84.21 |   89.22 |   91.61 |                                 
  servers                 |   98.84 |    94.05 |   95.45 |   98.82 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |   98.53 |    93.06 |   92.31 |    98.5 | 227,232,245                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   98.22 |    93.53 |   96.77 |   98.18 |                                 
+ shapetree.js/lib        |   89.88 |    81.66 |   87.07 |   89.86 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
-  shape-tree-fetch.js    |   93.28 |    81.63 |   92.31 |   93.18 | 68,150,154,166,167,188-190,229  
-  shape-tree.js          |     100 |      100 |   96.83 |     100 |                                 
- shapetree.js/storage    |   86.06 |    73.33 |   89.13 |    86.7 |                                 
+  shape-tree-fetch.js    |   91.79 |    81.63 |   92.31 |   91.67 | ...,150,154,166,167,188-190,229 
+  shape-tree.js          |   87.47 |    79.25 |   83.72 |   87.47 | ...,759-761,766,768,775,778,779 
+ shapetree.js/storage    |   83.17 |    73.33 |   86.96 |   83.74 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |   97.03 |       84 |    96.3 |   97.94 | 18,245                          
-  ldp-proxy.js           |   74.51 |    52.94 |   76.47 |   75.25 | ...,198,200,218,220,221,263,284 
+  ldp-proxy.js           |   68.63 |    52.94 |   70.59 |   69.31 | ...,213-216,218-221,223,263,284 
 -------------------------|---------|----------|---------|---------|---------------------------------
 ```
