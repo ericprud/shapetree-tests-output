@@ -105,4 +105,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     # "temp_clone_token": null ;
     gh:network_count 1 ;
     gh:subscribers_count 2
+    gh:issue <../Git-Orgs/issue1.ttl>.
 .

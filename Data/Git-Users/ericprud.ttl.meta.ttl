@@ -1,0 +1,6 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<ericprud.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#user>;
+    tree:shapeTreeInstancePath "Git-Users";
+    tree:shapeTreeInstanceRoot <../>;
+    tree:validationFocus <ericprud.ttl#ericprud>.
