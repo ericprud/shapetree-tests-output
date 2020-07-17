@@ -1,0 +1,6 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<shapetrees.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#org>;
+    tree:shapeTreeInstancePath "shapetrees.ttl";
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <shapetrees.ttl#shapetrees>.

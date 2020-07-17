@@ -2,4 +2,5 @@
 
 <./> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#cmnt_C>;
     tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <./>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <./>.

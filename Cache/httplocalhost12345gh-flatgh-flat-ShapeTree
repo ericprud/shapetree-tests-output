@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 4230
+content-length: 4516
 content-type: application/ld+json
-etag: W/%221086-1733ccb0aaa%22
-last-modified: Sat%2C%2011%20Jul%202020%2007%3A33%3A26%20GMT
+etag: W/%2211a4-17363d92dde%22
+last-modified: Sat%2C%2018%20Jul%202020%2021%3A34%3A04%20GMT
 vary: Origin
 x-powered-by: Express
 

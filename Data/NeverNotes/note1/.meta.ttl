@@ -2,4 +2,5 @@
 
 <./> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
     tree:shapeTreeInstancePath "note1/";
-    tree:shapeTreeInstanceRoot <../>.
+    tree:shapeTreeInstanceRoot <../>;
+    tree:validationRoot <./#note1>.

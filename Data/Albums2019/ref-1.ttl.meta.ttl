@@ -1,0 +1,6 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<ref-1.ttl> tree:shapeTreeRoot <http://localhost:12345/album/PhotoAlbumShapeTree#img-ref>;
+    tree:shapeTreeInstancePath "ref-1.ttl";
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <ref-1.ttl>.

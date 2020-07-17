@@ -2,4 +2,5 @@
 
 <./> tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>;
     tree:shapeTreeInstancePath ".";
-    tree:shapeTreeInstanceRoot <./>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <./>.

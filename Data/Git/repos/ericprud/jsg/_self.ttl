@@ -7,7 +7,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "nested Container for repos/ericprud/jsg/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
-    ldp:contains <labels/>, <issues/>, <milestones/>.
+    ldp:contains <issues/>, <labels/>, <milestones/>.
 <#jsg> gh:id "46061512"^^xsd:integer;
     gh:node_id "MDEwOlJlcG9zaXRvcnk0NjA2MTUxMg==";
     gh:name "jsg";

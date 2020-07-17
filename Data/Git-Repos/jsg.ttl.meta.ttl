@@ -1,6 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
 <jsg.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repo>;
-    tree:shapeTreeInstancePath "Git-Repos";
-    tree:shapeTreeInstanceRoot <../>;
-    tree:validationFocus <jsg.ttl#jsg>.
+    tree:shapeTreeInstancePath "jsg.ttl";
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <jsg.ttl#jsg>.
