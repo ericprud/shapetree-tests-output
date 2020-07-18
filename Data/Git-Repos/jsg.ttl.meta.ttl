@@ -1,0 +1,5 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<jsg.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
+    tree:shapeTreeInstancePath "jsg.ttl";
+    tree:shapeTreeInstanceRoot <jsg.ttl>.

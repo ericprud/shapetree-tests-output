@@ -1,0 +1,5 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<m33.jpeg> tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>;
+    tree:shapeTreeInstancePath "m33.jpeg";
+    tree:shapeTreeInstanceRoot <m33.jpeg>.

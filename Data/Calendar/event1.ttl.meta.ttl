@@ -1,0 +1,5 @@
+@prefix tree: <http://www.w3.org/ns/shapetree#>.
+
+<event1.ttl> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>;
+    tree:shapeTreeInstancePath "event1.ttl";
+    tree:shapeTreeInstanceRoot <event1.ttl>.
