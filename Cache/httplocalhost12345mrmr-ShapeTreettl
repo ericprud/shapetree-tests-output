@@ -1,0 +1,119 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 3430
+content-type: text/turtle%3B%20charset%3DUTF-8
+etag: W/%22d66-1736de8dd13%22
+last-modified: Mon%2C%2020%20Jul%202020%2020%3A27%3A24%20GMT
+vary: Origin
+x-powered-by: Express
+
+# @base <http://medrecord.example/shapetrees> .
+@prefix tree: <http://www.w3.org/ns/shapetree#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+    tree:hasShapeTreeDecoratorIndex <mr-ShapeTree-SKOS.ttl> .
+
+<#medicalRecords>
+    tree:contents <#medicalRecord> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> ;
+    tree:references
+      [ tree:treeStep <#patients> ] ,
+      [ tree:treeStep <#appointments> ] ,
+      [ tree:treeStep <#conditions> ] ,
+      [ tree:treeStep <#prescriptions> ] ,
+      [ tree:treeStep <#diagnosticTests> ]
+    .
+
+<#medicalRecord>
+    tree:shape <medrecord-schema#medicalRecord> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> ;
+    tree:references [
+        tree:treeStep <#patient> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:patient"
+    ],
+    [
+        tree:treeStep <#appointment> ;
+        tree:shapePath "<@medrecord-schema#medicalRecord>/medrecord:appointment"
+    ], 
+    [
+        tree:treeStep <#condition> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:condition"
+    ], 
+    [
+        tree:treeStep <#prescription> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:prescription"
+    ], 
+    [
+        tree:treeStep <#allergy> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:allergy"
+    ], 
+    [
+        tree:treeStep <#diagnosticTest> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:diagnosticTest"
+    ] .
+    
+<#patients>
+    rdfs:label "patients" ;
+    tree:contents <#patient> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    
+<#patient>
+    tree:shape <medrecord-schema#patientShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
+
+<#appointments>
+    rdfs:label "appointments" ;
+    tree:contents <#appointment> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+
+<#appointment>
+    tree:shape <medrecord-schema#appointmentShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
+
+<#conditions>
+    rdfs:label "conditions" ;
+    tree:contents <#condition> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+
+<#condition>
+    tree:shape <medrecord-schema#conditionShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
+
+<#prescriptions>
+    rdfs:label "prescriptions" ;
+    tree:contents <#prescription> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    
+<#prescription>
+    tree:shape <medrecord-schema#prescriptionShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
+
+<#allergies>
+    rdfs:label "allergies" ;
+    tree:contents <#allergy> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    
+<#allergy>
+    tree:shape <medrecord-schema#allergyShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
+
+<#diagnosticTests>
+    rdfs:label "diagnosticTests" ;
+    tree:contents <#diagnosticTest> ;
+    tree:contents <#condition> ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+
+<#diagnosticTest>
+    tree:shape <medrecord-schema#diagnosticTestShape> ;
+    tree:uriTemplate "{id}" ;
+    tree:expectedType <http://www.w3.org/ns/ldp#Resource> .
