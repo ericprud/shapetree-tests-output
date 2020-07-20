@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 2981
+content-length: 3041
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%22ba5-1736de79123%22
-last-modified: Mon%2C%2020%20Jul%202020%2020%3A25%3A59%20GMT
+etag: W/%22be1-1736e5b455e%22
+last-modified: Mon%2C%2020%20Jul%202020%2022%3A32%3A22%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -16,8 +16,8 @@ x-powered-by: Express
 
 
 <#dashboards>
-    tree:contents <#dashboard> ;
-    tree:expectedType <http://www.w3.org/ns/ldp#Container> ;
+    tree:contains <#dashboard> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
     tree:references
       [ tree:treeStep <#temporal-appointments> ] ,
       [ tree:treeStep <#current-conditions> ] ,
@@ -26,8 +26,8 @@ x-powered-by: Express
     .
     
 <#dashboard>
-    tree:shape <dashboard-schema#DashboardShape> ;
-    tree:uriTemplate "{id}" ;
+    tree:validatedBy <dashboard-schema#DashboardShape> ;
+    tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> ;
     tree:references [
         tree:treeStep <#temporal-appointment> ;
@@ -51,41 +51,41 @@ x-powered-by: Express
     ] .
 
 <#temporal-appointments>
-    tree:contents <#temporal-appointment> ;
-    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    tree:contains <#temporal-appointment> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#temporal-appointment>
     tree:supports <http://medrecord.example/shapetrees#appointment> ;
-    tree:shape <dashboard-schema#TemporalAppointmentShape> ;
-    tree:uriTemplate "{id}" ;
+    tree:validatedBy <dashboard-schema#TemporalAppointmentShape> ;
+    tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
 
 <#temporal-diagnosticReports>
-    tree:contents <#temporal-diagnosticReport> ;
-    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    tree:contains <#temporal-diagnosticReport> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#temporal-diagnosticReport>
     tree:supports <http://medrecord.example/shapetrees#diagnosticTest> ;
-    tree:shape <dashboard-schema#TemporalDiagnosticTestShape> ;
-    tree:uriTemplate "{id}" ;
+    tree:validatedBy <dashboard-schema#TemporalDiagnosticTestShape> ;
+    tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
 
 <#current-conditions>
-    tree:contents <#current-condition> ;
-    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    tree:contains <#current-condition> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#current-condition>
     tree:supports <http://medrecord.example/shapetrees#condition> ;
-    tree:shape <dashboard-schema#CurrentConditionShape> ;
-    tree:uriTemplate "{id}" ;
+    tree:validatedBy <dashboard-schema#CurrentConditionShape> ;
+    tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
 
 <#current-medicationRequests>
-    tree:contents <#current-medicationRequest> ;
-    tree:expectedType <http://www.w3.org/ns/ldp#Container> .
+    tree:contains <#current-medicationRequest> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#current-medicationRequest>
     tree:supports <http://medrecord.example/shapetrees#prescription> ;
-    tree:shape <dashboard-schema#CurrentMedicationRequestShape> ;
-    tree:uriTemplate "{id}" ;
+    tree:validatedBy <dashboard-schema#CurrentMedicationRequestShape> ;
+    tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .

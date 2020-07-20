@@ -46,6 +46,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-issues
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-org
+│   ├── httplocalhost12345mrdashboard-ShapeTreettl
+│   ├── httplocalhost12345mrmr-ShapeTreettl
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
 │   ├── httplocalhost12345photoPhotoShapeTree
@@ -53,9 +55,11 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 ├── Data
 │   ├── Albums2019
 │   │   ├── ref-1.ttl
+│   │   ├── ref-1.ttl.meta.ttl
 │   │   └── _self.ttl
 │   ├── Calendar
 │   │   ├── event1.ttl
+│   │   ├── event1.ttl.meta.ttl
 │   │   └── _self.ttl
 │   ├── Git
 │   │   ├── repos
@@ -63,6 +67,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   │   │   ├── jsg
 │   │   │   │   │   ├── issues
 │   │   │   │   │   │   ├── 1.ttl
+│   │   │   │   │   │   ├── 1.ttl.meta.ttl
 │   │   │   │   │   │   └── _self.ttl
 │   │   │   │   │   ├── labels
 │   │   │   │   │   │   └── _self.ttl
@@ -85,7 +90,8 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │       │   ├── _self.ttl
 │   │       │   └── subscriptions
 │   │       │       ├── _self.ttl
-│   │       │       └── subscr1.ttl
+│   │       │       ├── subscr1.ttl
+│   │       │       └── subscr1.ttl.meta.ttl
 │   │       └── _self.ttl
 │   ├── Git-Comments
 │   │   └── _self.ttl
@@ -93,6 +99,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── Git-Issues
 │   │   ├── issue1.ttl
+│   │   ├── issue1.ttl.meta.ttl
 │   │   └── _self.ttl
 │   ├── Git-Labels
 │   │   └── _self.ttl
@@ -100,29 +107,39 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   │   └── _self.ttl
 │   ├── Git-Orgs
 │   │   ├── _self.ttl
-│   │   └── shapetrees.ttl
+│   │   ├── shapetrees.ttl
+│   │   └── shapetrees.ttl.meta.ttl
 │   ├── Git-Repos
 │   │   ├── jsg.ttl
+│   │   ├── jsg.ttl.meta.ttl
 │   │   ├── libxml-annot.ttl
+│   │   ├── libxml-annot.ttl.meta.ttl
 │   │   ├── _self.ttl
-│   │   └── shapetree.js.ttl
+│   │   ├── shapetree.js.ttl
+│   │   └── shapetree.js.ttl.meta.ttl
 │   ├── Git-Users
 │   │   ├── ericprud.ttl
+│   │   ├── ericprud.ttl.meta.ttl
 │   │   └── _self.ttl
 │   ├── Google
 │   │   ├── Events
 │   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+│   │   │   ├── 09abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl.meta.ttl
 │   │   │   ├── 19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl
+│   │   │   ├── 19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl.meta.ttl
 │   │   │   └── _self.ttl
 │   │   └── _self.ttl
 │   ├── NeverNotes
 │   │   ├── note1
 │   │   │   ├── img-M33_IR.jpg
+│   │   │   ├── img-M33_IR.jpg.meta.ttl
 │   │   │   ├── inc-M33_IR.ttl
+│   │   │   ├── inc-M33_IR.ttl.meta.ttl
 │   │   │   └── _self.ttl
 │   │   └── _self.ttl
 │   ├── Photos2020-01
 │   │   ├── m33.jpeg
+│   │   ├── m33.jpeg.meta.ttl
 │   │   └── _self.ttl
 │   └── _self.ttl
 ├── no-slug
@@ -188,7 +205,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-68 directories, 113 files
+68 directories, 130 files
 ```
 
 
@@ -540,6 +557,14 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       create /no-slug/Container/users/Container/
         ✓ should POST /no-slug/Container/users/-TBD-
         ✓ should GET /no-slug/Container/users/Container/
+
+  apps, shapetrees and SKOS
+    end-to-end
+      ✓ parse App ID
+      ✓ parse med rec ShapeTree
+      ✓ parse dashboard ShapeTree
+      ✓ parse SKOSes
+      ✓ build UI
 
   test/shape-trees.test.js - installed in shape-trees.test
     initial state
@@ -937,6 +962,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         add issue issue1 to /Data/Git-Users/ericprud
           ✓ should PATCH /Data/Git-Users/ericprud.ttl
           ✓ should GET /Data/Git-Users/ericprud.ttl
+        add issue issue1 to /Data/Git-Repos/jsg
+          ✓ should PATCH /Data/Git-Repos/jsg.ttl
+          ✓ should GET /Data/Git-Repos/jsg.ttl
     shapetree navigation
       ✓ should iterate over shapetree gh-flat/gh-flat-ShapeTree#org references
       ✓ should iterate over shapetree gh-flat/gh-flat-ShapeTree#orgs references
@@ -948,6 +976,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
       ✓ should iterate with depth=[1, 0x3] over shapetree gh-flat/gh-flat-ShapeTree#orgs references
       ✓ should iterate with depth=[0, 0x3] over shapetree gh-flat/gh-flat-ShapeTree#orgs references
       ✓ should iterate with depth=[2, 0x0] over shapetree gh-flat/gh-flat-ShapeTree#orgs references
+      ✓ should iterate from /Data/Git-Users/ericprud.ttl#ericprud
 
   test/apps/nevernote.test.js installed in Data
     initial state
@@ -997,24 +1026,24 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  327 passing (6s)
+  335 passing (7s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |    92.7 |    84.74 |    92.5 |   92.84 |                                 
- servers                 |   98.84 |    94.05 |   95.45 |   98.82 |                                 
+All files                |      94 |    86.07 |   93.69 |    94.1 |                                 
+ servers                 |   98.84 |    94.68 |   95.45 |   98.82 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
-  LDP.js                 |   98.53 |    93.06 |   92.31 |    98.5 | 227,232,245                     
+  LDP.js                 |   98.53 |     93.9 |   92.31 |    98.5 | 227,232,245                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   92.23 |     82.8 |   92.86 |   92.31 |                                 
+ shapetree.js/lib        |   94.68 |    84.43 |   94.92 |   94.69 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
-  shape-tree-fetch.js    |   91.79 |    81.63 |   92.31 |   91.67 | ...,150,154,166,167,188-190,229 
-  shape-tree.js          |   91.07 |     81.3 |   91.46 |   91.25 | ...-781,784,786,789,790,794,795 
+  shape-tree-fetch.js    |   92.03 |     80.7 |   92.86 |   91.91 | ...,159,163,175,176,197-199,238 
+  shape-tree.js          |   94.71 |     84.4 |   94.25 |   94.79 | ...-579,584-586,697-702,746,881 
  shapetree.js/storage    |   83.17 |    73.33 |   86.96 |   83.74 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |   97.03 |       84 |    96.3 |   97.94 | 18,245                          

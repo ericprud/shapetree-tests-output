@@ -2,18 +2,18 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 773
+content-length: 789
 content-type: application/ld+json
-etag: W/%22305-1736af41b4c%22
-last-modified: Mon%2C%2020%20Jul%202020%2006%3A40%3A49%20GMT
+etag: W/%22315-1736e5b455a%22
+last-modified: Mon%2C%2020%20Jul%202020%2022%3A32%3A22%20GMT
 vary: Origin
 x-powered-by: Express
 
 { "@context": "../ns/shapeTreeContext",
   "@id": "#root2",
-  "expectedType":"ldp:Container", "contents":[
-        {      "@id":    "#issues", "expectedType":"ldp:Container"        , "name":"issues"                , "shape": "gh-flat-Schema#C_IssueShape"    , "contents":[
-          {    "@id":     "#issue", "expectedType":"ldp:Resource"         , "uriTemplate":"{issueNo}"      , "shape": "gh-flat-Schema#IssueShape"      , "references":[
+  "expectsType":"ldp:Container", "contains":[
+        {      "@id":    "#issues", "expectsType":"ldp:Container"        , "name":"issues"                , "validatedBy": "gh-flat-Schema#C_IssueShape"    , "contains":[
+          {    "@id":     "#issue", "expectsType":"ldp:Resource"         , "matchesUriTemplate":"{issueNo}"      , "validatedBy": "gh-flat-Schema#IssueShape"      , "references":[
 			{ "treeStep": "gh-flat-ShapeTree-split-org#comment"  , "shapePath": "@<gh-flat-Schema#IssueShape>/<http://github.example/ns#comment>"   },
                         { "treeStep": "gh-flat-ShapeTree-split-org#event"    , "shapePath": "@<gh-flat-Schema#IssueShape>/<http://github.example/ns#event>"     }
           ]}
