@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 4122
+content-length: 4054
 content-type: application/ld+json
-etag: W/%22101a-1736e5b455a%22
-last-modified: Mon%2C%2020%20Jul%202020%2022%3A32%3A22%20GMT
+etag: W/%22fd6-173b31ae3f4%22
+last-modified: Mon%2C%2003%20Aug%202020%2006%3A55%3A50%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -24,7 +24,6 @@ x-powered-by: Express
                         { "treeStep": "#milestones", "shapePath": "@<gh-flat-Schema#RepoShape>/<http://github.example/ns#milestone>" }
       ]}
   ]},
-        {      "@id":    "gh-flat-ShapeTree-split-issues#issues" },
             {  "@id":    "#cmnt_C", "expectsType":"ldp:Container"        , "name"       :"comments"       , "validatedBy": "gh-flat-Schema#C_CommentShape"  , "contains":[
               {"@id":   "#comment", "expectsType":"ldp:Resource"         , "matchesUriTemplate":"{commentNo}"    , "validatedBy": "gh-flat-Schema#CommentShape"    }
             ]},

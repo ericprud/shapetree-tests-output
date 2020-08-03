@@ -5,11 +5,11 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "GhApp2 Directory";
-    tree:installedIn _:b3, _:b5.
-_:b3 tree:app <http://store.example/gh2>;
+    tree:installedIn _:b45, _:b47.
+_:b45 tree:app <http://store.example/gh2>;
     tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath </no-slug/Container/>.
 <http://store.example/gh2> tree:name "GhApp2".
-_:b5 tree:app <http://store.example/gh2>;
+_:b47 tree:app <http://store.example/gh2>;
     tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath </no-slug/Container/>.

@@ -5,8 +5,8 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "PhotoApp Directory";
-    tree:installedIn _:b125.
-_:b125 tree:app <http://store.example/PhotoApp>;
+    tree:installedIn _:b197.
+_:b197 tree:app <http://store.example/PhotoApp>;
     tree:shapeTreeRoot <http://localhost:12345/photo/PhotoShapeTree#root>;
     tree:shapeTreeInstancePath </Data/Photos2020-01/>.
 <http://store.example/PhotoApp> tree:name "PhotoApp".

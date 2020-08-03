@@ -38,6 +38,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345calCalendarShapeTree
 │   ├── httplocalhost12345calGoogleCalendar
 │   ├── httplocalhost12345calGoogleShapeTree
+│   ├── httplocalhost12345crcr-ShapeTree
+│   ├── httplocalhost12345crcr-ShapeTree-SKOS-en-11
+│   ├── httplocalhost12345crcr-ShapeTree-SKOS-index
 │   ├── httplocalhost12345gh-deepgh-deep-Schema
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTree
 │   ├── httplocalhost12345gh-deepgh-deep-ShapeTreettl
@@ -46,7 +49,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-issues
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-org
+│   ├── httplocalhost12345mrdashboard-ShapeTree
 │   ├── httplocalhost12345mrdashboard-ShapeTreettl
+│   ├── httplocalhost12345mrmr-ShapeTree
 │   ├── httplocalhost12345mrmr-ShapeTreettl
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
@@ -205,7 +210,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-68 directories, 130 files
+68 directories, 135 files
 ```
 
 
@@ -499,7 +504,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  174 passing (17s)
+  174 passing (18s)
   2 pending
 
 
@@ -514,6 +519,10 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   ✓ LDP server should serve /
   ✓ AppStore server should serve /
+  apps, shapetrees and decorators
+    end-to-end
+      ✓ build UI
+
   test/local.test.js
     LDP server
       ✓ should return on empty path
@@ -558,12 +567,12 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /no-slug/Container/users/-TBD-
         ✓ should GET /no-slug/Container/users/Container/
 
-  apps, shapetrees and SKOS
+  apps, shapetrees and decorators
     end-to-end
       ✓ parse App ID
       ✓ parse med rec ShapeTree
       ✓ parse dashboard ShapeTree
-      ✓ parse SKOSes
+      ✓ parse decorators
       ✓ build UI
 
   test/shape-trees.test.js - installed in shape-trees.test
@@ -1026,24 +1035,24 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  335 passing (7s)
+  336 passing (7s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |      94 |    86.07 |   93.69 |    94.1 |                                 
+All files                |   93.99 |     85.4 |   93.78 |   94.16 |                                 
  servers                 |   98.84 |    94.68 |   95.45 |   98.82 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |   98.53 |     93.9 |   92.31 |    98.5 | 227,232,245                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   94.68 |    84.43 |   94.92 |   94.69 |                                 
+ shapetree.js/lib        |   94.64 |    83.33 |   95.04 |   94.79 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
   shape-tree-fetch.js    |   92.03 |     80.7 |   92.86 |   91.91 | ...,159,163,175,176,197-199,238 
-  shape-tree.js          |   94.71 |     84.4 |   94.25 |   94.79 | ...-579,584-586,697-702,746,881 
+  shape-tree.js          |   94.65 |    82.76 |   94.44 |   94.93 | ...-608,613-615,726-731,775,914 
  shapetree.js/storage    |   83.17 |    73.33 |   86.96 |   83.74 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |   97.03 |       84 |    96.3 |   97.94 | 18,245                          

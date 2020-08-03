@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 3041
+content-length: 2948
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%22be1-1736e5b455e%22
-last-modified: Mon%2C%2020%20Jul%202020%2022%3A32%3A22%20GMT
+etag: W/%22b84-1737d28bb25%22
+last-modified: Thu%2C%2023%20Jul%202020%2019%3A31%3A28%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -42,7 +42,7 @@ x-powered-by: Express
         tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:prescription"
     ], 
     # [
-    #     tree:treeStep <#temporal-allergie> ;
+    #     tree:treeStep <#temporal-allergy> ;
     #     tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:allergy"
     # ], 
     [
@@ -55,7 +55,7 @@ x-powered-by: Express
     tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#temporal-appointment>
-    tree:supports <http://medrecord.example/shapetrees#appointment> ;
+    tree:supports <mr-ShapeTree#appointment> ;
     tree:validatedBy <dashboard-schema#TemporalAppointmentShape> ;
     tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
@@ -65,7 +65,7 @@ x-powered-by: Express
     tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#temporal-diagnosticReport>
-    tree:supports <http://medrecord.example/shapetrees#diagnosticTest> ;
+    tree:supports <mr-ShapeTree#diagnosticTest> ;
     tree:validatedBy <dashboard-schema#TemporalDiagnosticTestShape> ;
     tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
@@ -75,7 +75,7 @@ x-powered-by: Express
     tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#current-condition>
-    tree:supports <http://medrecord.example/shapetrees#condition> ;
+    tree:supports <mr-ShapeTree#condition> ;
     tree:validatedBy <dashboard-schema#CurrentConditionShape> ;
     tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
@@ -85,7 +85,7 @@ x-powered-by: Express
     tree:expectsType <http://www.w3.org/ns/ldp#Container> .
 
 <#current-medicationRequest>
-    tree:supports <http://medrecord.example/shapetrees#prescription> ;
+    tree:supports <mr-ShapeTree#prescription> ;
     tree:validatedBy <dashboard-schema#CurrentMedicationRequestShape> ;
     tree:matchesUriTemplate "{id}" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
