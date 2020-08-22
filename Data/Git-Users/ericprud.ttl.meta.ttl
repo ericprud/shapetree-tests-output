@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<ericprud.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#users>;
+<ericprud.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#user>;
     tree:shapeTreeInstancePath "ericprud.ttl";
-    tree:shapeTreeInstanceRoot <ericprud.ttl>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <ericprud.ttl#ericprud>.

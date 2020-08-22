@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<1.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
+<1.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#issue>;
     tree:shapeTreeInstancePath "repos/ericprud/jsg/issues/1.ttl";
-    tree:shapeTreeInstanceRoot </Data/Git/>.
+    tree:shapeTreeInstanceRoot </Data/Git/>;
+    tree:validationRoot <1.ttl#issue1>.

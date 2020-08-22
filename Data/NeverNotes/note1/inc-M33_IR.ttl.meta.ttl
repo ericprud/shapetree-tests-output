@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<inc-M33_IR.ttl> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
+<inc-M33_IR.ttl> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#inclusion>;
     tree:shapeTreeInstancePath "note1/inc-M33_IR.ttl";
-    tree:shapeTreeInstanceRoot <../>.
+    tree:shapeTreeInstanceRoot <../>;
+    tree:validationRoot <inc-M33_IR.ttl#m33>.

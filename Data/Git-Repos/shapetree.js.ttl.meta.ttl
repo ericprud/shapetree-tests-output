@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<shapetree.js.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
+<shapetree.js.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repo>;
     tree:shapeTreeInstancePath "shapetree.js.ttl";
-    tree:shapeTreeInstanceRoot <shapetree.js.ttl>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <shapetree.js.ttl#shapetree.js>.

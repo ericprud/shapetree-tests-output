@@ -19,6 +19,6 @@
     gh:received_events_url <http://github.example/user/ericprud/events/>;
     gh:type "User";
     gh:site_admin "false"^^<http://www.w3.org/2001/XMLSchema#boolean>;
-    gh:repository <../Git-Repos/jsg.ttl>, <../Git-Orgs/libxml-annot.ttl>;
-    gh:subscription <../Git-Repos/jsg.ttl>;
-    gh:issue <../Git-Orgs/issue1.ttl>.
+    gh:repository <../Git-Repos/jsg.ttl#jsg>, <../Git-Repos/libxml-annot.ttl#libxml-annot>;
+    gh:subscription <../Git-Repos/jsg.ttl#jsg>;
+    gh:issue <../Git-Issues/issue1.ttl#issue1>.

@@ -1,0 +1,97 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 3220
+content-type: text/turtle%3B%20charset%3DUTF-8
+etag: W/%22c94-1741548c43a%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
+vary: Origin
+x-powered-by: Express
+
+# @base <http://dashboard.example/shapetrees> .
+@prefix tree: <http://www.w3.org/ns/shapetree#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+    tree:hasShapeTreeDecoratorIndex <dashboard-ShapeTree-SKOS-index#idx> .
+
+<#dashboards>
+    tree:contains <#dashboard> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
+    tree:references
+      [ tree:treeStep <#temporal-appointments> ] ,
+      [ tree:treeStep <#current-conditions> ] ,
+      [ tree:treeStep <#current-medicationRequests> ] ,
+      [ tree:treeStep <#temporal-diagnosticReports> ]
+    .
+    
+<#dashboard>
+    tree:validatedBy <dashboard-schema#DashboardShape> ;
+    tree:matchesUriTemplate "{id}" ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> ;
+    tree:references [
+        tree:treeStep <#temporal-appointment> ;
+        tree:shapePath "<@medrecord-schema#medicalRecord>/medrecord:appointment"
+    ], 
+    [
+        tree:treeStep <#current-condition> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:condition"
+    ], 
+    [
+        tree:treeStep <#current-medicationRequest> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:prescription"
+    ], 
+    # [
+    #     tree:treeStep <#temporal-allergy> ;
+    #     tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:allergy"
+    # ], 
+    [
+        tree:treeStep <#temporal-diagnosticReport> ;
+        tree:shapePath "@<medrecord-schema#medicalRecord>/medrecord:diagnosticTest"
+    ] .
+
+<#temporal-appointments>
+    tree:supports <mr-ShapeTree#appointments> ;
+    tree:contains <#temporal-appointment> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
+
+<#temporal-appointment>
+    tree:supports <mr-ShapeTree#appointment> ;
+    tree:validatedBy <dashboard-schema#TemporalAppointmentShape> ;
+    tree:matchesUriTemplate "{id}" ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
+
+<#temporal-diagnosticReports>
+    tree:supports <mr-ShapeTree#diagnosticTests> ;
+    tree:contains <#temporal-diagnosticReport> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
+
+<#temporal-diagnosticReport>
+    tree:supports <mr-ShapeTree#diagnosticTest> ;
+    tree:validatedBy <dashboard-schema#TemporalDiagnosticTestShape> ;
+    tree:matchesUriTemplate "{id}" ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
+
+<#current-conditions>
+    tree:supports <mr-ShapeTree#conditions> ;
+    tree:contains <#current-condition> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
+
+<#current-condition>
+    tree:supports <mr-ShapeTree#condition> ;
+    tree:validatedBy <dashboard-schema#CurrentConditionShape> ;
+    tree:matchesUriTemplate "{id}" ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
+
+<#current-medicationRequests>
+    tree:supports <mr-ShapeTree#prescriptions> ;
+    tree:contains <#current-medicationRequest> ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
+
+<#current-medicationRequest>
+    tree:supports <mr-ShapeTree#prescription> ;
+    tree:validatedBy <dashboard-schema#CurrentMedicationRequestShape> ;
+    tree:matchesUriTemplate "{id}" ;
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> .

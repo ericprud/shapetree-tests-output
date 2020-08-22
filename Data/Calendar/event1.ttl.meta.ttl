@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<event1.ttl> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#calendar>;
+<event1.ttl> tree:shapeTreeRoot <http://localhost:12345/cal/CalendarShapeTree#appointment>;
     tree:shapeTreeInstancePath "event1.ttl";
-    tree:shapeTreeInstanceRoot <event1.ttl>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <event1.ttl#Alice-Bob-2020-01-02>.

@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<libxml-annot.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
+<libxml-annot.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repo>;
     tree:shapeTreeInstancePath "libxml-annot.ttl";
-    tree:shapeTreeInstanceRoot <libxml-annot.ttl>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <libxml-annot.ttl#libxml-annot>.

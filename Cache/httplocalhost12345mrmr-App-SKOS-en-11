@@ -1,0 +1,36 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 943
+content-type: text/turtle%3B%20charset%3DUTF-8
+etag: W/%223af-1741548c43a%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
+vary: Origin
+x-powered-by: Express
+
+PREFIX med: <http://medrecord.example/shapetrees#>
+PREFIX tree: <http://www.w3.org/ns/shapetree#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX eco: <http://www.w3.org/ns/solid/ecosystem#>
+
+<#tasks> a skos:ConceptScheme .
+<#details> a skos:ConceptScheme .
+
+<#generalLabel>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#tasks> ;
+    eco:accessGroup <mr-App#general> ;
+    # tree:treeStep <mr-App#general> ;
+    skos:prefLabel "display medical records"@en ;
+    skos:definition "This grants permission to the app at the top of the screen to read yor medical records."@en .
+
+<#med-managementLabel>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#tasks> ;
+    eco:accessGroup <mr-App#med-management> ;
+    # tree:treeStep <mr-App#med-management> ;
+    skos:prefLabel "manage medical records"@en ;
+    skos:definition "This grants permission to update yor medical records."@en .
+

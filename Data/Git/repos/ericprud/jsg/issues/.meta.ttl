@@ -2,4 +2,5 @@
 
 <./> tree:shapeTreeRoot <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>;
     tree:shapeTreeInstancePath "repos/ericprud/jsg/issues/";
-    tree:shapeTreeInstanceRoot </Data/Git/>.
+    tree:shapeTreeInstanceRoot </Data/Git/>;
+    tree:validationRoot <./>.

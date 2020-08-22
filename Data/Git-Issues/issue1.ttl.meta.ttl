@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<issue1.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issues>;
+<issue1.ttl> tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issue>;
     tree:shapeTreeInstancePath "issue1.ttl";
-    tree:shapeTreeInstanceRoot <issue1.ttl>.
+    tree:shapeTreeInstanceRoot <./>;
+    tree:validationRoot <issue1.ttl#issue1>.

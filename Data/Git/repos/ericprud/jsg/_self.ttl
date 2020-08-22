@@ -7,7 +7,7 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "nested Container for repos/ericprud/jsg/ in <http://localhost:12345/gh-deep/gh-deep-ShapeTree#root>";
-    ldp:contains <labels/>, <issues/>, <milestones/>.
+    ldp:contains <issues/>, <labels/>, <milestones/>.
 <#jsg> gh:id "46061512"^^xsd:integer;
     gh:node_id "MDEwOlJlcG9zaXRvcnk0NjA2MTUxMg==";
     gh:name "jsg";
@@ -74,14 +74,14 @@
     gh:archived "false"^^xsd:boolean;
     gh:disabled "false"^^xsd:boolean;
     gh:open_issues_count "1"^^xsd:integer;
-    gh:license _:b77;
+    gh:license _:b3059;
     gh:forks "1"^^xsd:integer;
     gh:open_issues "1"^^xsd:integer;
     gh:watchers "1"^^xsd:integer;
     gh:default_branch "master";
     gh:network_count "1"^^xsd:integer;
     gh:subscribers_count "2"^^xsd:integer.
-_:b77 gh:node_id "MDc6TGljZW5zZTEz";
+_:b3059 gh:node_id "MDc6TGljZW5zZTEz";
     gh:name "MIT License";
     gh:url <https://api.github.com/licenses/mit>;
     gh:key "mit";

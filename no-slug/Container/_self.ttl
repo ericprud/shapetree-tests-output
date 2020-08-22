@@ -4,4 +4,4 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "root of Container for http://localhost:12345/gh-deep/gh-deep-ShapeTree#root";
-    ldp:contains <users/>, <repos/>.
+    ldp:contains <repos/>, <users/>.

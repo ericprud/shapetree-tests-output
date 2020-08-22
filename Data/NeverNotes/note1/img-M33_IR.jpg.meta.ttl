@@ -1,5 +1,5 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<img-M33_IR.jpg> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#root>;
+<img-M33_IR.jpg> tree:shapeTreeRoot <http://localhost:12345/nevernote/NeverNoteShapeTree#image>;
     tree:shapeTreeInstancePath "note1/img-M33_IR.jpg";
     tree:shapeTreeInstanceRoot <../>.

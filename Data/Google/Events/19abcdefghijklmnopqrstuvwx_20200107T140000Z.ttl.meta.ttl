@@ -1,5 +1,6 @@
 @prefix tree: <http://www.w3.org/ns/shapetree#>.
 
-<19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#top>;
+<19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl> tree:shapeTreeRoot <http://localhost:12345/cal/GoogleShapeTree#Event>;
     tree:shapeTreeInstancePath "Events/19abcdefghijklmnopqrstuvwx_20200107T140000Z.ttl";
-    tree:shapeTreeInstanceRoot <../>.
+    tree:shapeTreeInstanceRoot <../>;
+    tree:validationRoot <19abcdefghijklmnopqrstuvwx_20200107T140000Z>.
