@@ -4,8 +4,8 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 4054
 content-type: application/ld+json
-etag: W/%22fd6-173b31ae3f4%22
-last-modified: Mon%2C%2003%20Aug%202020%2006%3A55%3A50%20GMT
+etag: W/%22fd6-1741548c436%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
 vary: Origin
 x-powered-by: Express
 

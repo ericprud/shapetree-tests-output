@@ -1,0 +1,139 @@
+accept-ranges: bytes
+access-control-allow-credentials: true
+cache-control: public%2C%20max-age%3D0
+connection: close
+content-length: 4230
+content-type: text/turtle%3B%20charset%3DUTF-8
+etag: W/%221086-1741548c43a%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
+vary: Origin
+x-powered-by: Express
+
+#@prefix med: <http://medrecord.example/shapetrees#> .
+@prefix tree: <http://www.w3.org/ns/shapetree#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#containerManagement> a tree:ContainerScheme .
+<#instanceManagement> a tree:InstanceScheme .
+
+# RDFS recorded here for orientation -- not needed:
+tree:ContainerScheme rdfs:subClassOf skos:ConceptScheme .
+tree:InstanceScheme rdfs:subClassOf skos:ConceptScheme .
+
+<#medicalRecords>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#medicalRecords> ;
+    skos:prefLabel "Medical Records"@en ;
+    skos:definition "A collection of Medical Records"@en .
+
+<#medicalRecord>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#medicalRecord> ;
+    skos:prefLabel "Medical Record"@en ;
+    skos:definition "An extensive view of your medical history" .
+
+<#patients>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#patients> ;
+    skos:prefLabel "Patients."@en ;
+    skos:definition "Describes a receiver of medical care" .
+
+<#patient>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#patient> ;
+    skos:prefLabel "Patient"@en ;
+    skos:definition "Describes a receiver of medical care" .
+
+<#appointments>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#appointments> ;
+    skos:prefLabel "Appointments."@en ;
+    skos:definition "A time and place with someone" .
+
+<#appointment>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#appointment> ;
+    skos:prefLabel "Appointment."@en ;
+    skos:definition "A time and place with someone" .
+
+<#conditions>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#conditions> ;
+    skos:narrower <#prescriptions>, <#allergies> ; # to test hierarchy
+    skos:prefLabel "Conditions."@en ;
+    skos:definition "A diagnosed issue" .
+
+<#condition>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#condition> ;
+    skos:narrower <#prescription>, <#allergy> ; # to test hierarchy
+    skos:prefLabel "Condition."@en ;
+    skos:definition "A diagnosed issue" .
+
+<#prescriptions>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#prescriptions> ;
+    skos:prefLabel "prescriptions."@en ;
+    skos:definition "prescriptions" .
+
+<#prescription>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#prescription> ;
+    skos:prefLabel "prescription."@en ;
+    skos:definition "prescription" .
+
+<#allergies>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#allergies> ;
+    skos:prefLabel "allergies."@en ;
+    skos:definition "allergies" .
+
+<#allergy>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#allergy> ;
+    skos:prefLabel "allergy."@en ;
+    skos:definition "allergy" .
+
+<#diagnosticTests>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <mr-ShapeTree#diagnosticTests> ;
+    skos:prefLabel "diagnosticTests."@en ;
+    skos:definition "diagnosticTests" .
+
+<#diagnosticTest>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <mr-ShapeTree#diagnosticTest> ;
+    skos:prefLabel "diagnosticTest."@en ;
+    skos:definition "diagnosticTest" .
+
+# playing around with dashbord rules (though it's a supports)
+
+<#dashboards>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#containerManagement> ;
+    tree:treeStep <dashboard-ShapeTree#dashboards> ;
+    skos:prefLabel "Dashboards"@en ;
+    skos:definition "A collection of Dashboards"@en .
+
+<#dashboard>
+    a tree:ShapeTreeLabel ;
+    skos:inScheme <#instanceManagement> ;
+    tree:treeStep <dashboard-ShapeTree#dashboard> ;
+    skos:prefLabel "Dashboard"@en ;
+    skos:definition "A summary view of your actionable medical status" .
+

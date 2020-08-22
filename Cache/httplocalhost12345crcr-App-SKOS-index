@@ -2,9 +2,9 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 666
+content-length: 633
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%2229a-1741548c436%22
+etag: W/%22279-1741548c436%22
 last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
 vary: Origin
 x-powered-by: Express
@@ -12,24 +12,24 @@ x-powered-by: Express
 PREFIX eco: <http://www.w3.org/ns/solid/ecosystem#>
 
 <#idx>
-    a eco:ShapeTreeDecoratorIndex ;
+    a eco:AccessDecoratorIndex ;
     eco:fallbackLanguage "en" ;
     eco:hasSeries <#series-en> .
 
 <#series-en>
-    a eco:ShapeTreeDecoratorSeries ;
+    a eco:AccessDecoratorSeries ;
     eco:languageCode "en" ;
     eco:hasVersion <#en-v10>, <#en-v11> .
 
 <#en-v10>
-    a eco:ShapeTreeDecoratorLineage ;
-    eco:isVersion "1.0.0" ; # don't require sermver comparisons?
-    eco:hasSHA3256 "SHA3256 of 1.0" ;
-    eco:hasDecoratorResource <cr-ShapeTree-SKOS-en-1.0> .
+    a eco:AccessDecoratorVersion ;
+    eco:isVersion "1.0.0" ;
+    eco:hasSHA256 "98198123981273981273918273912738" ;
+    eco:hasDecoratorResource <DoesNotExist> .
 
 <#en-v11>
-    a eco:ShapeTreeDecoratorLineage ;
+    a eco:AccessDecoratorVersion ;
     eco:isVersion "1.1.0" ;
-    eco:hasSHA3256 "SHA3256 of 1.1" ;
-    eco:hasDecoratorResource <cr-ShapeTree-SKOS-en-1.1> .
+    eco:hasSHA256 "12312312371273712731872371273712" ;
+    eco:hasDecoratorResource <cr-App-SKOS-en-1.1> .
 

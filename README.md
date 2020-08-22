@@ -38,6 +38,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345calCalendarShapeTree
 │   ├── httplocalhost12345calGoogleCalendar
 │   ├── httplocalhost12345calGoogleShapeTree
+│   ├── httplocalhost12345crcr-App
+│   ├── httplocalhost12345crcr-App-SKOS-en-11
+│   ├── httplocalhost12345crcr-App-SKOS-index
 │   ├── httplocalhost12345crcr-ShapeTree
 │   ├── httplocalhost12345crcr-ShapeTree-SKOS-en-11
 │   ├── httplocalhost12345crcr-ShapeTree-SKOS-index
@@ -50,9 +53,13 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-issues
 │   ├── httplocalhost12345gh-flatgh-flat-ShapeTree-split-org
 │   ├── httplocalhost12345mrdashboard-ShapeTree
-│   ├── httplocalhost12345mrdashboard-ShapeTreettl
+│   ├── httplocalhost12345mrdashboard-ShapeTree-SKOS
+│   ├── httplocalhost12345mrdashboard-ShapeTree-SKOS-index
+│   ├── httplocalhost12345mrmr-App-SKOS-en-11
+│   ├── httplocalhost12345mrmr-App-SKOS-index
 │   ├── httplocalhost12345mrmr-ShapeTree
-│   ├── httplocalhost12345mrmr-ShapeTreettl
+│   ├── httplocalhost12345mrmr-ShapeTree-SKOS-en-10ttl
+│   ├── httplocalhost12345mrmr-ShapeTree-SKOS-index
 │   ├── httplocalhost12345nevernoteNeverNote
 │   ├── httplocalhost12345nevernoteNeverNoteShapeTree
 │   ├── httplocalhost12345photoPhotoShapeTree
@@ -210,7 +217,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ├── m33.jpeg
         └── _self.ttl
 
-68 directories, 135 files
+68 directories, 142 files
 ```
 
 
@@ -504,7 +511,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /shape-trees.test/some/deep/path/ShapeMaps-missing-shape-property/ref-1.ttl
 
 
-  174 passing (18s)
+  174 passing (17s)
   2 pending
 
 
@@ -519,9 +526,9 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
 
   ✓ LDP server should serve /
   ✓ AppStore server should serve /
-  apps, shapetrees and decorators
+  CR apps, shapetrees and decorators
     end-to-end
-      ✓ build UI
+      ✓ build UI (574ms)
 
   test/local.test.js
     LDP server
@@ -567,7 +574,7 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should POST /no-slug/Container/users/-TBD-
         ✓ should GET /no-slug/Container/users/Container/
 
-  apps, shapetrees and decorators
+  MR apps, shapetrees and decorators
     end-to-end
       ✓ parse App ID
       ✓ parse med rec ShapeTree
@@ -1035,24 +1042,24 @@ This repo captures the output of [footprint-tests](../../../footprint-tests).
         ✓ should !GET /Data/Albums2019/ref-2.ttl
 
 
-  336 passing (7s)
+  336 passing (8s)
   2 pending
 
 -------------------------|---------|----------|---------|---------|---------------------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 -------------------------|---------|----------|---------|---------|---------------------------------
-All files                |   93.99 |     85.4 |   93.78 |   94.16 |                                 
+All files                |   94.08 |    86.03 |   93.84 |   94.16 |                                 
  servers                 |   98.84 |    94.68 |   95.45 |   98.82 |                                 
   AppStore.js            |     100 |      100 |     100 |     100 |                                 
   LDP.js                 |   98.53 |     93.9 |   92.31 |    98.5 | 227,232,245                     
  shapetree.js/ecosystems |     100 |      100 |     100 |     100 |                                 
   simple-apps.js         |     100 |      100 |     100 |     100 |                                 
- shapetree.js/lib        |   94.64 |    83.33 |   95.04 |   94.79 |                                 
+ shapetree.js/lib        |   94.81 |     84.4 |   95.12 |   94.79 |                                 
   mutex.js               |     100 |      100 |     100 |     100 |                                 
   prefixes.js            |     100 |      100 |     100 |     100 |                                 
   rdf-errors.js          |     100 |      100 |     100 |     100 |                                 
   shape-tree-fetch.js    |   92.03 |     80.7 |   92.86 |   91.91 | ...,159,163,175,176,197-199,238 
-  shape-tree.js          |   94.65 |    82.76 |   94.44 |   94.93 | ...-608,613-615,726-731,775,914 
+  shape-tree.js          |    94.9 |    84.35 |   94.57 |   94.94 | ...-613,618-620,731-736,780,919 
  shapetree.js/storage    |   83.17 |    73.33 |   86.96 |   83.74 |                                 
   fetch-self-signed.js   |     100 |      100 |     100 |     100 |                                 
   fs-promises.js         |   97.03 |       84 |    96.3 |   97.94 | 18,245                          

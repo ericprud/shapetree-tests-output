@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 3270
+content-length: 3551
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%22cc6-173a9ed5837%22
-last-modified: Sat%2C%2001%20Aug%202020%2012%3A09%3A30%20GMT
+etag: W/%22ddf-1741548c436%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -15,7 +15,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <>
-    tree:hasShapeTreeDecoratorIndex <cr-ShapeTree-SKOS-index> .
+    tree:hasShapeTreeDecoratorIndex <cr-ShapeTree-SKOS-index#idx> .
 
 <#cr-root>
     rdfs:label "cr-root" ;
@@ -25,7 +25,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label "cr-c1" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
     tree:validatedBy <cr-schema#c1> ;
-    tree:contains <#c1r> .
+    tree:contains <#c1r> ;
+    tree:references
+      [ tree:treeStep <#c1> ] ,
+      [ tree:treeStep <#c2> ] ,
+      [ tree:treeStep <#c3c1> ] .
 
 <#c1r>
     tree:matchesUriTemplate "{id}" ;
@@ -40,7 +44,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label "cr-c2" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
     tree:validatedBy <cr-schema#c2> ;
-    tree:contains <#c2ra>, <#c2rb> .
+    tree:contains <#c2ra>, <#c2rb> ;
+    tree:references [
+        tree:treeStep <#c1> ;
+    ] .
 
 <#c2ra>
     tree:matchesUriTemplate "C2RA{id}" ;
@@ -73,7 +80,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label "cr-c3c1" ;
     tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
     tree:validatedBy <cr-schema#c3c1> ;
-    tree:contains <#c3c1r> .
+    tree:contains <#c3c1r> ;
+    tree:references [
+        tree:treeStep <#c1> ;
+    ], [
+        tree:treeStep <#c2> ;
+    ] .
 
 <#c3c1r>
     tree:matchesUriTemplate "C2RA{id}" ;

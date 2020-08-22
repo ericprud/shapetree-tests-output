@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 3503
+content-length: 3628
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%22daf-173995673a3%22
-last-modified: Wed%2C%2029%20Jul%202020%2006%3A50%3A46%20GMT
+etag: W/%22e2c-1741548c43a%22
+last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -15,7 +15,7 @@ x-powered-by: Express
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <>
-    tree:hasShapeTreeDecoratorIndex <mr-ShapeTree-SKOS> .
+    tree:hasShapeTreeDecoratorIndex <mr-ShapeTree-SKOS-index#idx> .
 
 <#medicalRecords>
     tree:contains <#medicalRecord> ;
@@ -90,12 +90,16 @@ x-powered-by: Express
 <#prescriptions>
     rdfs:label "prescriptions" ;
     tree:contains <#prescription> ;
-    tree:expectsType <http://www.w3.org/ns/ldp#Container> .
+    tree:expectsType <http://www.w3.org/ns/ldp#Container> ;
+    tree:references
+      [ tree:treeStep <#patients> ] .
     
 <#prescription>
     tree:validatedBy <medrecord-schema#prescriptionShape> ;
     tree:matchesUriTemplate "{id}" ;
-    tree:expectsType <http://www.w3.org/ns/ldp#Resource> .
+    tree:expectsType <http://www.w3.org/ns/ldp#Resource> ;
+    tree:references
+      [ tree:treeStep <#patient> ] .
 
 <#allergies>
     rdfs:label "allergies" ;
