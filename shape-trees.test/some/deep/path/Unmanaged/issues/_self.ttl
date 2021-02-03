@@ -12,7 +12,7 @@
     gh:url <https://api.github.com/repos/ericprud/jsg>;
     gh:html_url <https://github.com/ericprud/jsg>;
     gh:events_url <https://api.github.com/repos/ericprud/jsg/events>;
-    gh:owner _:b3021;
+    gh:owner _:b2527;
     gh:description "json-grammar";
     gh:fork "false"^^xsd:boolean;
     gh:forks_url <https://api.github.com/repos/ericprud/jsg/forks>;
@@ -70,14 +70,14 @@
     gh:archived "false"^^xsd:boolean;
     gh:disabled "false"^^xsd:boolean;
     gh:open_issues_count "1"^^xsd:integer;
-    gh:license _:b3022;
+    gh:license _:b2528;
     gh:forks "1"^^xsd:integer;
     gh:open_issues "1"^^xsd:integer;
     gh:watchers "1"^^xsd:integer;
     gh:default_branch "master";
     gh:network_count "1"^^xsd:integer;
     gh:subscribers_count "2"^^xsd:integer.
-_:b3021 gh:id "573478"^^xsd:integer;
+_:b2527 gh:id "573478"^^xsd:integer;
     gh:node_id "MDQ6VXNlcjU3MzQ3OA==";
     gh:url <https://api.github.com/users/ericprud>;
     gh:html_url <https://github.com/ericprud>;
@@ -95,7 +95,7 @@ _:b3021 gh:id "573478"^^xsd:integer;
     gh:received_events_url <https://api.github.com/users/ericprud/received_events>;
     gh:type "User";
     gh:site_admin "false"^^xsd:boolean.
-_:b3022 gh:node_id "MDc6TGljZW5zZTEz";
+_:b2528 gh:node_id "MDc6TGljZW5zZTEz";
     gh:name "MIT License";
     gh:url <https://api.github.com/licenses/mit>;
     gh:key "mit";

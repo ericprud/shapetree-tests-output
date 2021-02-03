@@ -5,29 +5,29 @@
 
 <> a ldp:BasicContainer;
     dcterms:title "GhFlat Directory";
-    tree:installedIn _:b3061, _:b3063, _:b3065, _:b3067, _:b3069, _:b3071, _:b3073, _:b3075.
-_:b3061 tree:app <http://store.example/gh-flat>;
+    tree:installedIn _:b2567, _:b2569, _:b2571, _:b2573, _:b2575, _:b2577, _:b2579, _:b2581.
+_:b2567 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#orgs>;
     tree:shapeTreeInstancePath </Data/Git-Orgs/>.
-_:b3063 tree:app <http://store.example/gh-flat>;
+_:b2569 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#users>;
     tree:shapeTreeInstancePath </Data/Git-Users/>.
-_:b3065 tree:app <http://store.example/gh-flat>;
+_:b2571 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#repos>;
     tree:shapeTreeInstancePath </Data/Git-Repos/>.
-_:b3067 tree:app <http://store.example/gh-flat>;
+_:b2573 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#issues>;
     tree:shapeTreeInstancePath </Data/Git-Issues/>.
-_:b3069 tree:app <http://store.example/gh-flat>;
+_:b2575 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#cmnt_C>;
     tree:shapeTreeInstancePath </Data/Git-Comments/>.
-_:b3071 tree:app <http://store.example/gh-flat>;
+_:b2577 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#evt_C>;
     tree:shapeTreeInstancePath </Data/Git-Events/>.
-_:b3073 tree:app <http://store.example/gh-flat>;
+_:b2579 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#lbl_C>;
     tree:shapeTreeInstancePath </Data/Git-Labels/>.
 <http://store.example/gh-flat> tree:name "GhFlat".
-_:b3075 tree:app <http://store.example/gh-flat>;
+_:b2581 tree:app <http://store.example/gh-flat>;
     tree:shapeTreeRoot <http://localhost:12345/gh-flat/gh-flat-ShapeTree#mlt_C>;
     tree:shapeTreeInstancePath </Data/Git-Milestones/>.

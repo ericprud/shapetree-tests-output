@@ -2,10 +2,10 @@ accept-ranges: bytes
 access-control-allow-credentials: true
 cache-control: public%2C%20max-age%3D0
 connection: close
-content-length: 1705
+content-length: 1703
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%226a9-1741548c436%22
-last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
+etag: W/%226a7-17762a1928c%22
+last-modified: Tue%2C%2002%20Feb%202021%2012%3A04%3A51%20GMT
 vary: Origin
 x-powered-by: Express
 
@@ -24,12 +24,12 @@ PREFIX tree: <http://www.w3.org/ns/shapetree#>
 
 <#grp1>
     a eco:AccessNeedGroup ;
-    eco:requestsAccess <#top1-r>, <#top2-rw> ;
+    eco:hasAccessNeed <#top1-r>, <#top2-rw> ;
     eco:authenticatesAsAgent <acl:Pilot> .
 
 <#grp2>
     a eco:AccessNeedGroup ;
-    eco:requestsAccess <#top1-rw> ;
+    eco:hasAccessNeed <#top1-rw> ;
     eco:authenticatesAsAgent <acl:Pilot> .
 
 # "root" rules (referenced by the AccessNeedsGroup)

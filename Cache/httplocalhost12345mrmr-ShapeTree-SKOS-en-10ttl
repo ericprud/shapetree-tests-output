@@ -4,8 +4,8 @@ cache-control: public%2C%20max-age%3D0
 connection: close
 content-length: 4230
 content-type: text/turtle%3B%20charset%3DUTF-8
-etag: W/%221086-1741548c43a%22
-last-modified: Sat%2C%2022%20Aug%202020%2008%3A28%3A44%20GMT
+etag: W/%221086-17762a1928c%22
+last-modified: Tue%2C%2002%20Feb%202021%2012%3A04%3A51%20GMT
 vary: Origin
 x-powered-by: Express
 
